@@ -613,8 +613,7 @@
                     <!-- Left Side: Content Card -->
                     <div style="flex: 1.2; min-width: 350px; z-index: 5;">
                         <div class="glass-content-card">
-                            <div style="color: var(--primary); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem;">
-                                <div style="width: 30px; height: 1px; background: var(--primary);"></div>
+                            <div style="color: var(--primary); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; background: rgba(74, 144, 226, 0.1); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 99px;">
                                 Clinical Excellence
                             </div>
                             <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 1.5rem; color: var(--primary-dark);">
@@ -727,78 +726,116 @@
             </style>
         </section>
 
-        <!-- 4. Why microsuction? -->
-        <section class="custom-list-section" style="padding: 5rem 0; background: var(--bg-card);">
-            <div class="container text-img-grid" style="align-items: center; gap: 5rem;">
-                <div class="img-wrapper" style="order: 1; position: relative; animation: float 6s ease-in-out infinite;">
-                    <div
-                        style="position: absolute; top: -10%; left: -10%; width: 120%; height: 120%; background: var(--primary); opacity: 0.1; z-index: 0; animation: blob-morph 10s linear infinite; animation-delay: -2s;">
+        <!-- 4. Why microsuction? (Data Tree Redesign) -->
+        <section class="data-tree-section" style="padding: 100px 0; background: #fdfdfd; overflow: hidden; position: relative;">
+            <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(74, 144, 226, 0.05) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
+
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 80px;">
+                    <div style="color: var(--primary); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; background: rgba(74, 144, 226, 0.1); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 99px;">
+                        The Clinical Advantage
                     </div>
-                    <img src="assets/ear_treatment.png" alt="Microsuction Benefits"
-                        style="position: relative; z-index: 1; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; box-shadow: 0 30px 60px rgba(32, 79, 96, 0.15); width: 100%;">
-                    <!-- Decorative particles -->
-                    <div style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: rgba(74, 144, 226, 0.2); border-radius: 50%; animation: float 4s ease-in-out infinite; z-index: 0;"></div>
-                    <div style="position: absolute; bottom: 10%; left: -5%; width: 25px; height: 25px; background: rgba(194, 224, 249, 0.3); border-radius: 50%; animation: float 5s ease-in-out infinite; z-index: 0;"></div>
+                    <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Why <span class="text-gradient">Microsuction?</span></h2>
+                    <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: var(--text-muted); line-height: 1.7;">
+                        Our specialist clinicians use hospital-grade microsuction technology to provide a safe, dry, and highly effective ear cleaning service. This procedure is widely considered the gold standard for precision and patient comfort.
+                    </p>
                 </div>
-                <div style="order: 2;">
-                    <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 2rem;">Why microsuction?</h2>
-                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
-                        <div
-                            style="display: flex; align-items: flex-start; gap: 1rem; background: white; padding: 1.2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); border: 1px solid var(--glass-border);">
-                            <div
-                                style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--secondary), var(--primary-light)); color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-                                <i class="ph-bold ph-check"></i>
+
+                <div class="tree-grid-container">
+                    <div class="tree-branch left-branch">
+                        <div class="tree-node">
+                            <div class="node-icon"><i class="ph-duotone ph-shield-check"></i></div>
+                            <div class="node-content">
+                                <h4>NHS Gold Standard</h4>
+                                <p>Practiced and supported by NICE guidance for ear care.</p>
                             </div>
-                            <p style="margin: 0; color: var(--text-main); font-size: 1.05rem; line-height: 1.5;">We only
-                                practice microsuction, which is the NHS gold-standard for ear wax removal and is
-                                supported by NICE guidance.</p>
+                            <div class="node-line"></div>
                         </div>
-                        <div
-                            style="display: flex; align-items: flex-start; gap: 1rem; background: white; padding: 1.2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); border: 1px solid var(--glass-border);">
-                            <div
-                                style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--secondary), var(--primary-light)); color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-                                <i class="ph-bold ph-check"></i>
+                        <div class="tree-node">
+                            <div class="node-icon"><i class="ph-duotone ph-warning-circle"></i></div>
+                            <div class="node-content">
+                                <h4>Lower Risk</h4>
+                                <p>Significantly safer for your eardrum than irrigation.</p>
                             </div>
-                            <p style="margin: 0; color: var(--text-main); font-size: 1.05rem; line-height: 1.5;">Our clinicians are trained to the highest standards, ensuring a safe and professional environment in your home.</p>
+                            <div class="node-line"></div>
                         </div>
-                        <div
-                            style="display: flex; align-items: flex-start; gap: 1rem; background: white; padding: 1.2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); border: 1px solid var(--glass-border);">
-                            <div
-                                style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--secondary), var(--primary-light)); color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-                                <i class="ph-bold ph-check"></i>
+                        <div class="tree-node">
+                            <div class="node-icon"><i class="ph-duotone ph-heartbeat"></i></div>
+                            <div class="node-content">
+                                <h4>Better Tolerated</h4>
+                                <p>Safer, cleaner, and highly comfortable for all patients.</p>
                             </div>
-                            <p style="margin: 0; color: var(--text-main); font-size: 1.05rem; line-height: 1.5;">Unlike
-                                ear candling, syringing or irrigation, microsuction has a significantly lower risk of
-                                causing damage to your eardrum.</p>
-                        </div>
-                        <div
-                            style="display: flex; align-items: flex-start; gap: 1rem; background: white; padding: 1.2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); border: 1px solid var(--glass-border);">
-                            <div
-                                style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--secondary), var(--primary-light)); color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-                                <i class="ph-bold ph-check"></i>
-                            </div>
-                            <p style="margin: 0; color: var(--text-main); font-size: 1.05rem; line-height: 1.5;">It is
-                                also an important part of the treatment of swimmer’s ear, or otitis externa, which can
-                                cause discharge and itchy ears.</p>
-                        </div>
-                        <div
-                            style="display: flex; align-items: flex-start; gap: 1rem; background: white; padding: 1.2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); border: 1px solid var(--glass-border);">
-                            <div
-                                style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--secondary), var(--primary-light)); color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-                                <i class="ph-bold ph-check"></i>
-                            </div>
-                            <p style="margin: 0; color: var(--text-main); font-size: 1.05rem; line-height: 1.5;">Safer,
-                                cleaner and better tolerated by our patients.</p>
+                            <div class="node-line"></div>
                         </div>
                     </div>
-                    <div
-                        style="background: rgba(32, 79, 96, 0.05); padding: 1.5rem; border-left: 4px solid var(--primary); border-radius: 0 12px 12px 0;">
-                        <p style="margin: 0; font-style: italic; color: var(--primary-dark);">Once the procedure is
-                            complete, our patients notice an immediate relief of their symptoms and often an instant
-                            improvement in hearing, from the comfort of their home. No more blocked ears!</p>
+
+                    <div class="tree-core">
+                        <div class="core-image-wrap">
+                            <div class="core-glow"></div>
+                            <img src="assets/ear_treatment.png" alt="Clinical Core">
+                        </div>
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-ring" style="animation-delay: -1s;"></div>
+                    </div>
+
+                    <div class="tree-branch right-branch">
+                        <div class="tree-node">
+                            <div class="node-line"></div>
+                            <div class="node-icon" style="color: var(--secondary);"><i class="ph-duotone ph-stethoscope"></i></div>
+                            <div class="node-content">
+                                <h4>Expert Standards</h4>
+                                <p>Clinicians trained to professional NHS & private standards.</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="node-line"></div>
+                            <div class="node-icon" style="color: var(--secondary);"><i class="ph-duotone ph-drop"></i></div>
+                            <div class="node-content">
+                                <h4>Itchy Ear Relief</h4>
+                                <p>Vital treatment for swimmer’s ear & otitis externa.</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="node-line"></div>
+                            <div class="node-icon" style="color: var(--secondary);"><i class="ph-duotone ph-waveform"></i></div>
+                            <div class="node-content">
+                                <h4>Instant Hearing</h4>
+                                <p>Immediate relief and clear hearing from your first visit.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <style>
+                .tree-grid-container { display: grid; grid-template-columns: 1fr 400px 1fr; align-items: center; position: relative; }
+                .tree-branch { display: flex; flex-direction: column; gap: 60px; }
+                .tree-node { display: flex; align-items: center; position: relative; padding: 2rem; background: white; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.03); transition: all 0.4s ease; z-index: 2; }
+                .tree-node:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(74, 144, 226, 0.1); border-color: rgba(74, 144, 226, 0.2); }
+                .left-branch .tree-node { text-align: left; justify-content: flex-start; }
+                .right-branch .tree-node { text-align: left; justify-content: flex-start; }
+                .node-icon { width: 50px; height: 50px; background: rgba(74, 144, 226, 0.08); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary); flex-shrink: 0; margin-right: 1.5rem; }
+                .node-content h4 { font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary-dark); font-weight: 800; }
+                .node-content p { font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+                .node-line { position: absolute; top: 50%; width: 60px; height: 2px; z-index: 1; }
+                .left-branch .node-line { right: -60px; background: linear-gradient(to left, rgba(74, 144, 226, 0.2), transparent); }
+                .right-branch .node-line { left: -60px; background: linear-gradient(to right, rgba(74, 144, 226, 0.2), transparent); }
+                .tree-core { position: relative; display: flex; justify-content: center; align-items: center; }
+                .core-image-wrap { width: 300px; height: 300px; border-radius: 50%; padding: 15px; background: white; box-shadow: 0 20px 60px rgba(0,0,0,0.1); position: relative; z-index: 3; }
+                .core-image-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+                .core-glow { position: absolute; inset: -20px; background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, transparent 70%); z-index: 0; animation: float 4s ease-in-out infinite; }
+                .pulse-ring { position: absolute; width: 350px; height: 350px; border: 1px solid rgba(74, 144, 226, 0.2); border-radius: 50%; animation: ring-pulse 3s linear infinite; }
+                @keyframes ring-pulse { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; } }
+                @media (max-width: 1200px) {
+                    .tree-grid-container { grid-template-columns: 1fr; gap: 40px; }
+                    .tree-core { order: 1; }
+                    .left-branch { order: 2; }
+                    .right-branch { order: 3; }
+                    .node-line { display: none; }
+                    .left-branch .tree-node { text-align: left; justify-content: flex-start; }
+                    .left-branch .node-icon { order: 1; margin-left: 0; margin-right: 1.5rem; }
+                }
+            </style>
         </section>
 
         <!-- 5. Other Ear Treatments -->
