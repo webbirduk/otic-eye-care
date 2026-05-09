@@ -1083,73 +1083,160 @@
             </div>
         </section>
 
-        <!-- 7. Corporate & Emergency -->
-        <section class="container"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; padding: 6rem 0;">
-            <div class="corporate-section"
-                style="padding: 3.5rem 2.5rem; background: white; border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease;">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
-                        <div
-                            style="width: 75px; height: 75px; background: rgba(32, 79, 96, 0.08); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; color: var(--primary);">
-                            <i class="ph-duotone ph-buildings"></i>
+        <!-- 7. Corporate & Emergency (Vibrant Redesign) -->
+        <section class="container" style="padding: 100px 0;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+                
+                <!-- Corporate Section -->
+                <div class="corporate-card" style="background: white; border-radius: 40px; padding: 50px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 50px rgba(0,0,0,0.03); position: relative; overflow: hidden; transition: all 0.4s ease;">
+                    <div style="position: absolute; top: -20%; right: -10%; width: 300px; height: 300px; background: rgba(57, 134, 255, 0.05); border-radius: 50%; filter: blur(50px); z-index: 0;"></div>
+                    
+                    <div style="position: relative; z-index: 2;">
+                        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                            <div style="width: 80px; height: 80px; background: #f0f7ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #3986FF; font-size: 2.5rem; box-shadow: 0 10px 20px rgba(57, 134, 255, 0.1);">
+                                <i class="ph-duotone ph-buildings"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2.2rem; color: #1e293b; font-family: 'Outfit'; margin: 0; line-height: 1.1;">Corporate <br>Partnerships</h3>
+                            </div>
                         </div>
-                        <h3
-                            style="color: var(--primary-dark); font-size: 1.8rem; font-family: 'Outfit'; margin:0; line-height: 1.2;">
-                            Corporate<br>Ear Cleaning Clients</h3>
+                        
+                        <p style="font-size: 1.2rem; line-height: 1.6; color: #64748b; margin-bottom: 25px;">
+                            We are proud to provide professional ear care to some of the most prestigious music and media companies in London.
+                        </p>
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: #64748b; margin-bottom: 40px;">
+                            Boost employee wellbeing with our on-site or clinic-based ear cleaning services. Contact us for bespoke corporate rates.
+                        </p>
+
+                        <a href="mailto:info@oticearcare.co.uk" class="btn-vibrant" style="background: #1e293b; color: white; padding: 18px 35px; border-radius: 100px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s; box-shadow: 0 10px 25px rgba(30, 41, 59, 0.2);">
+                            <i class="ph-bold ph-envelope-simple"></i> Email Corporate Team
+                        </a>
                     </div>
-                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--text-muted);">
-                        Over the years we’re proud to have provided professional ear treatments to some of the most
-                        prestigious music companies in London.</p>
-                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2.5rem; color: var(--text-muted);">If
-                        you are interested in procuring our ear cleaning service for your employees, please email to
-                        discuss our corporate rates.</p>
                 </div>
-                <a href="mailto:contact@aurisearcare.co.uk" class="btn btn-primary"
-                    style="align-self: flex-start; padding: 1rem 2rem; font-size: 1.1rem;"><i
-                        class="ph-bold ph-envelope-simple"></i> Email Corporate Team</a>
+
+                <!-- Emergency Section -->
+                <div class="emergency-card" style="background: linear-gradient(135deg, #0D2E85, #0852C6); border-radius: 40px; padding: 50px; color: white; position: relative; overflow: hidden; box-shadow: 0 30px 70px rgba(13, 46, 133, 0.3); transition: all 0.4s ease;">
+                    <!-- Animated Medical Grid -->
+                    <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none;"></div>
+                    
+                    <div style="position: relative; z-index: 2;">
+                        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; position: relative; backdrop-filter: blur(10px);">
+                                <i class="ph-duotone ph-ambulance"></i>
+                                <span style="position: absolute; top: -5px; right: -5px; width: 15px; height: 15px; background: #F87171; border-radius: 50%; border: 3px solid #0D2E85; animation: pulse 2s infinite;"></span>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2.2rem; font-family: 'Outfit'; margin: 0; line-height: 1.1;">Emergency <br>Appointments</h3>
+                            </div>
+                        </div>
+
+                        <p style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85); margin-bottom: 25px;">
+                            Immediate mobile ear wax removal clinics across London and the Home Counties. Available 24/7 for urgent relief.
+                        </p>
+
+                        <div style="background: rgba(255,255,255,0.08); padding: 25px; border-radius: 24px; border: 1px dashed rgba(255,255,255,0.2); margin-bottom: 40px; backdrop-filter: blur(5px);">
+                            <p style="margin: 0; font-size: 1.15rem; line-height: 1.5; font-weight: 500;">
+                                Emergency appointments incur an additional fee of <span style="color: #8BE09E; font-size: 1.6rem; font-weight: 900; margin-left: 5px;">£175</span>
+                            </p>
+                        </div>
+
+                        <a href="tel:+447852992668" class="btn-vibrant" style="background: white; color: #0D2E85; padding: 18px 35px; border-radius: 100px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s; box-shadow: 0 10px 30px rgba(255,255,255,0.15);">
+                            <i class="ph-bold ph-phone-call"></i> (+44) 7852 992 668
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="emergency-section"
-                style="padding: 3.5rem 2.5rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border-radius: 20px; box-shadow: 0 20px 40px rgba(32, 79, 96, 0.4); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease;">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
-                        <div
-                            style="width: 75px; height: 75px; background: rgba(255, 255, 255, 0.15); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; color: white;">
-                            <i class="ph-duotone ph-ambulance"></i>
-                        </div>
-                        <h3 style="font-size: 1.8rem; font-family: 'Outfit'; margin:0; line-height: 1.2;">
-                            Emergency<br>Appointments</h3>
-                    </div>
-                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 1.5rem;">We offer mobile
-                        emergency ear wax removal clinics across London and the Home Counties between 7.00pm to 7.00am
-                        daily.</p>
-                    <div
-                        style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; border: 1px dashed rgba(255,255,255,0.4); backdrop-filter: blur(5px); margin-bottom: 2.5rem;">
-                        <p style="margin: 0; font-weight: 500; font-size: 1.1rem; line-height: 1.5;">The cost for an
-                            emergency ear wax removal appointment is an additional <span
-                                style="color: var(--secondary); font-size: 1.4rem; font-weight: 700; display: inline-block; transform: translateY(1px);">£175</span>
-                            to the standard fee.</p>
-                    </div>
-                </div>
-                <a href="tel:+447539248324" class="btn btn-outline"
-                    style="align-self: flex-start; border-color: rgba(255,255,255,0.6); color: white; font-size: 1.1rem; padding: 1rem 2rem; background: rgba(0,0,0,0.15); box-shadow: inset 0 2px 4px rgba(255,255,255,0.1);"><i
-                        class="ph-bold ph-phone-call"></i> (+44) 7539 248 324</a>
-            </div>
+            <style>
+                .corporate-card:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.08); }
+                .emergency-card:hover { transform: translateY(-10px); box-shadow: 0 50px 100px rgba(13, 46, 133, 0.4); }
+                .btn-vibrant:hover { transform: scale(1.05); filter: brightness(1.1); }
+            </style>
         </section>
 
-        <!-- 8. Mobile Ear Wax Removal Across London (Map) -->
-        <section class="text-img-section">
-            <div class="container text-img-grid">
-                <div>
-                    <h2 class="section-title">Mobile Ear Wax Removal Across London</h2>
-                    <p style="margin-bottom: 1rem;">Our home visit ear wax removal clinic service is available across
-                        London and the Home Counties.</p>
-                    <p>We also regularly provide same day micro-suction ear wax removal appointments for emergencies.
-                    </p>
-                </div>
-                <div class="img-wrapper">
-                    <img src="assets/map.png" alt="London Map">
+        <!-- 8. Mobile Ear Wax Removal Across London (Redesign) -->
+        <section class="location-section" style="padding: 100px 0; background: #f8fafc; position: relative; overflow: hidden;">
+            <!-- Background Decorative Elements -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#3986FF 0.5px, transparent 0.5px); background-size: 30px 30px; opacity: 0.05; pointer-events: none;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="text-img-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 60px; align-items: center;">
+                    
+                    <!-- Left: Location Details -->
+                    <div>
+                        <div class="location-badge" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(57, 134, 255, 0.1); color: #3986FF; padding: 8px 20px; border-radius: 100px; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(57, 134, 255, 0.2);">
+                            <i class="ph-fill ph-map-pin"></i>
+                            London Coverage
+                        </div>
+                        
+                        <h2 style="font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: #1e293b; font-family: 'Outfit'; margin-bottom: 30px;">
+                            Mobile Ear Wax Removal <br><span style="background: linear-gradient(135deg, #3986FF, #0852C6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Across London</span>
+                        </h2>
+
+                        <!-- Travel Fee Highlights -->
+                        <div style="display: flex; gap: 20px; margin-bottom: 40px;">
+                            <div style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); flex: 1; border: 1px solid rgba(57, 134, 255, 0.1); text-align: center;">
+                                <i class="ph-bold ph-car" style="font-size: 2rem; color: #3986FF; margin-bottom: 10px;"></i>
+                                <h4 style="margin: 0; font-size: 1rem; color: #64748b; font-weight: 600;">Travel Included</h4>
+                                <p style="margin: 5px 0 0; font-size: 1.1rem; color: #1e293b; font-weight: 700;">Within Zones</p>
+                            </div>
+                            <div style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); flex: 1; border: 1px solid rgba(57, 134, 255, 0.1); text-align: center;">
+                                <i class="ph-bold ph-currency-gbp" style="font-size: 2rem; color: #8BE09E; margin-bottom: 10px;"></i>
+                                <h4 style="margin: 0; font-size: 1rem; color: #64748b; font-weight: 600;">Travel Charge</h4>
+                                <p style="margin: 5px 0 0; font-size: 1.1rem; color: #1e293b; font-weight: 700;">£50 - £100</p>
+                            </div>
+                        </div>
+
+                        <!-- Area List -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;">
+                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                                <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> North London
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                                <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> East London
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                                <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> West London
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                                <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> North West London
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                                <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> South East London
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                                <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> South West London
+                            </div>
+                        </div>
+
+                        <!-- Outside London Alert -->
+                        <div style="background: #fef2f2; padding: 25px; border-radius: 20px; border-left: 5px solid #F87171; box-shadow: 0 10px 30px rgba(248, 113, 113, 0.05);">
+                            <p style="margin: 0; font-size: 1.1rem; color: #991b1b; line-height: 1.6;">
+                                <i class="ph-bold ph-warning-circle" style="margin-right: 8px; font-size: 1.2rem; transform: translateY(2px);"></i>
+                                If you require an appointment outside of the London areas we cover, a minimum travel fee of <strong style="font-size: 1.3rem;">£175</strong> will be charged.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Map Image -->
+                    <div class="img-wrapper" style="position: relative;">
+                        <div style="position: absolute; inset: -40px; background: radial-gradient(circle, rgba(57, 134, 255, 0.1) 0%, transparent 70%); z-index: 0;"></div>
+                        <img src="assets/map.png" alt="London Map" style="width: 100%; border-radius: 40px; box-shadow: 0 40px 80px rgba(0,0,0,0.1); position: relative; z-index: 1; border: 1px solid rgba(255,255,255,0.8);">
+                        
+                        <!-- Floating Tech Elements -->
+                        <div style="position: absolute; bottom: 10%; right: 5%; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); z-index: 2; display: flex; align-items: center; gap: 12px; animation: float 5s ease-in-out infinite;">
+                            <div style="width: 45px; height: 45px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #3986FF;">
+                                <i class="ph-fill ph-navigation-arrow" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; font-size: 0.9rem; color: #64748b;">Clinician Tracking</h4>
+                                <p style="margin: 0; font-weight: 800; color: #1e293b;">Live Updates</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -1257,100 +1344,237 @@
                     }
                 }
             </style>
-        </section>
-
-        <!-- 10. Frequently Asked Questions -->
-        <section class="faq-section" style="padding: 6rem 0; background: white;">
-            <div class="container text-img-grid" style="align-items: flex-start;">
-                <div>
-                    <h2 class="section-title" style="font-size: 2.8rem; margin-bottom: 1.5rem;">Frequently Asked
-                        Questions</h2>
-                    <p style="margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.7; color: var(--text-muted);">
-                        Have questions about our mobile ear wax removal service? We've compiled the most common
-                        inquiries to give you peace of mind before you book.</p>
-                    <a href="book.html" class="btn btn-primary btn-lg"
-                        style="box-shadow: 0 10px 20px rgba(32, 79, 96, 0.2);">Book Your Visit <i
-                            class="ph-bold ph-arrow-right"></i></a>
+        <!-- 10. Frequently Asked Questions (Functional Medical Dashboard) -->
+        <section class="faq-dashboard" style="padding: 120px 0; background: #fdfdfd; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: linear-gradient(135deg, rgba(57, 134, 255, 0.02) 0%, transparent 100%); z-index: 0;"></div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <div style="text-align: center; margin-bottom: 80px;">
+                    <div style="display: inline-flex; align-items: center; gap: 10px; background: white; padding: 10px 25px; border-radius: 100px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); color: #3986FF; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border: 1px solid rgba(0,0,0,0.05);">
+                        <i class="ph-fill ph-info"></i> Clinical Intelligence
+                    </div>
+                    <h2 style="font-size: 4rem; font-weight: 900; color: #1e293b; font-family: 'Outfit'; margin: 0;">
+                        Knowledge <span style="background: linear-gradient(135deg, #3986FF, #0852C6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Base</span>
+                    </h2>
                 </div>
-                <div class="faq-accordion" style="display: flex; flex-direction: column; gap: 1rem;">
 
-                    <details class="faq-item"
-                        style="background: var(--bg-card); border-radius: 12px; border: 1px solid var(--glass-border); overflow: hidden; transition: all 0.3s ease;">
-                        <summary
-                            style="padding: 1.5rem; font-size: 1.15rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
-                            Is microsuction painful?
-                            <i class="ph-bold ph-caret-down"
-                                style="color: var(--primary); transition: transform 0.3s ease;"></i>
-                        </summary>
-                        <div style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); line-height: 1.6;">
-                            No. Microsuction is widely considered the safest, most comfortable, and pain-free method of
-                            ear wax removal. You may feel a gentle pull or hear a slight whooshing sound from the
-                            suction machine, but it should not cause any pain.
+                <div class="faq-dashboard-wrapper" style="display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 40px; background: white; border-radius: 40px; padding: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05);">
+                    
+                    <!-- Left: Navigation Sidebar -->
+                    <div class="faq-nav-container" style="border-right: 1px solid #f1f5f9; padding-right: 40px;">
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <button class="faq-nav-btn active" onclick="switchFaqCategory('general', this)">
+                                <i class="ph-bold ph-first-aid"></i> General Services
+                            </button>
+                            <button class="faq-nav-btn" onclick="switchFaqCategory('procedure', this)">
+                                <i class="ph-bold ph-microscope"></i> Procedure Details
+                            </button>
+                            <button class="faq-nav-btn" onclick="switchFaqCategory('safety', this)">
+                                <i class="ph-bold ph-shield-check"></i> Safety & CQC
+                            </button>
+                            <button class="faq-nav-btn" onclick="switchFaqCategory('pricing', this)">
+                                <i class="ph-bold ph-currency-gbp"></i> Pricing & Booking
+                            </button>
                         </div>
-                    </details>
 
-                    <details class="faq-item"
-                        style="background: var(--bg-card); border-radius: 12px; border: 1px solid var(--glass-border); overflow: hidden; transition: all 0.3s ease;">
-                        <summary
-                            style="padding: 1.5rem; font-size: 1.15rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
-                            Do I need to put in olive oil drops before you visit?
-                            <i class="ph-bold ph-caret-down"
-                                style="color: var(--primary); transition: transform 0.3s ease;"></i>
-                        </summary>
-                        <div style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); line-height: 1.6;">
-                            While it can be helpful if wax is heavily impacted, it is not strictly necessary for our ENT
-                            doctors to use microsuction successfully. We carry clinical-grade drops and instruments to
-                            soften wax safely on-site if required.
+                        <!-- Mini CTA Card -->
+                        <div style="margin-top: 60px; padding: 30px; background: #1e293b; border-radius: 30px; color: white; position: relative; overflow: hidden;">
+                            <div style="position: absolute; bottom: -20px; right: -20px; font-size: 8rem; opacity: 0.05; transform: rotate(-15deg); pointer-events: none;"><i class="ph-fill ph-phone-call"></i></div>
+                            <h4 style="margin: 0 0 10px; font-size: 1.2rem; font-family: 'Outfit';">Need Help?</h4>
+                            <p style="margin: 0 0 20px; font-size: 0.9rem; opacity: 0.7;">Speak with an ENT clinician 24/7 for emergency care.</p>
+                            <a href="tel:+447852992668" style="color: #3986FF; font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 8px; font-size: 1.1rem; transition: all 0.3s;">
+                                +44 7852 992 668 <i class="ph-bold ph-arrow-up-right"></i>
+                            </a>
                         </div>
-                    </details>
+                    </div>
 
-                    <details class="faq-item"
-                        style="background: var(--bg-card); border-radius: 12px; border: 1px solid var(--glass-border); overflow: hidden; transition: all 0.3s ease;">
-                        <summary
-                            style="padding: 1.5rem; font-size: 1.15rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
-                            Are there any hidden travel fees?
-                            <i class="ph-bold ph-caret-down"
-                                style="color: var(--primary); transition: transform 0.3s ease;"></i>
-                        </summary>
-                        <div style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); line-height: 1.6;">
-                            No hidden fees. When you enter your postcode during the booking process, your final fee
-                            includes all travel expenses for the ENT doctor directly to your home anywhere across our
-                            London service network.
+                    <!-- Right: Accordion Content -->
+                    <div class="faq-content-container" style="padding-left: 20px;">
+                        
+                        <!-- General Services Content -->
+                        <div id="faq-general" class="faq-category-content active-category" style="display: flex; flex-direction: column; gap: 15px;">
+                            <details class="dashboard-faq-item">
+                                <summary><span>What ear care services do you provide?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">We specialize in mobile microsuction ear wax removal, ear infection management, safe foreign body extraction, and dedicated pediatric ear cleaning for children and babies across London.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Are you available 24/7?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Yes. We provide standard clinical visits throughout the day and operate a specialized emergency mobile clinic service between 7:00pm and 7:00am daily.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Which areas of London do you cover?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">We cover the entire Greater London area, including North, East, West, North West, South East, and South West London, as well as the Home Counties.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Do I need a GP referral?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">No referral is necessary. You can book an appointment directly with our ENT specialists via our website or by calling our clinical team.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Is your service strictly mobile?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Yes, we are a dedicated mobile service. We bring hospital-grade microsuction equipment and high-resolution microscopy directly to your home or office for maximum convenience.</div>
+                            </details>
                         </div>
-                    </details>
 
-                    <details class="faq-item"
-                        style="background: var(--bg-card); border-radius: 12px; border: 1px solid var(--glass-border); overflow: hidden; transition: all 0.3s ease;">
-                        <summary
-                            style="padding: 1.5rem; font-size: 1.15rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
-                            How long does an appointment take?
-                            <i class="ph-bold ph-caret-down"
-                                style="color: var(--primary); transition: transform 0.3s ease;"></i>
-                        </summary>
-                        <div style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); line-height: 1.6;">
-                            Usually, an appointment takes around 20–30 minutes, though we allocate ample time to ensure
-                            you are never rushed. We ensure comprehensive cleaning and provide post-procedure advice
-                            before departing.
+                        <!-- Procedure Details Content -->
+                        <div id="faq-procedure" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
+                            <details class="dashboard-faq-item">
+                                <summary><span>How does microsuction ear wax removal work?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Microsuction uses a gentle suction device and high-resolution microscopy to safely remove wax without water. It is the cleanest and safest method currently available.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>How long does a typical appointment take?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">A comprehensive clinical session typically takes between 20 to 30 minutes, ensuring all wax is removed and your ears are thoroughly examined.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Do I need to use ear drops before my appointment?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">While 2-3 days of olive oil drops can help soften the wax, our clinicians carry specialized softening tools and can often complete the procedure without prior preparation.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Will ear microsuction be painful?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">No, microsuction is completely painless. You may hear a suction sound or feel a slight tickle, but most patients find it very comfortable compared to old-fashioned syringing.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Can you treat ear infections during the visit?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Yes. Our ENT doctors can diagnose infections on-site and provide targeted intervention, including cleaning the infected area and advising on appropriate medication.</div>
+                            </details>
                         </div>
-                    </details>
 
+                        <!-- Safety & CQC Content -->
+                        <div id="faq-safety" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
+                            <details class="dashboard-faq-item">
+                                <summary><span>Are you regulated by the CQC?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Yes, Auris Ear Care is fully regulated by the Care Quality Commission (CQC), ensuring we meet the highest national standards for safety and quality of care.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Are your clinicians qualified ENT doctors?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Yes, all our clinicians are highly experienced Ear, Nose, and Throat (ENT) specialists with medical degrees and extensive clinical backgrounds.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Is microsuction safe for children and babies?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Absolutely. We have a dedicated pediatric service and our clinicians are experts in gentle microsuction for babies, toddlers, and older children.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>What are your sterilization protocols?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">We use single-use, sterile clinical instruments for every patient. Our specialists follow strict hospital-grade hygiene protocols to ensure absolute patient safety.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>What if I have a perforated eardrum?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Microsuction is the only safe method for wax removal if you have a perforated eardrum, as it does not involve the use of water or pressure.</div>
+                            </details>
+                        </div>
+
+                        <!-- Pricing & Booking Content -->
+                        <div id="faq-pricing" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
+                            <details class="dashboard-faq-item">
+                                <summary><span>How much does ear wax removal cost?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Our pricing is transparent and includes the home visit. Please check our booking page for the current flat-rate fee for standard clinical sessions.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Is there an additional fee for emergencies?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Yes, emergency mobile appointments between 7:00pm and 7:00am incur an additional clinical fee of £175 on top of the standard treatment cost.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>Are there travel charges for my area?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">Travel within our core London zones is included. Some areas may incur a £50-£100 travel fee, while locations outside London have a minimum £175 travel charge.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>How do I book an appointment?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">You can book instantly via our secure online system by clicking 'Book Now', or call our clinical team directly for emergency or same-day visits.</div>
+                            </details>
+                            <details class="dashboard-faq-item">
+                                <summary><span>How quickly can you visit?</span><i class="ph-bold ph-caret-down"></i></summary>
+                                <div class="faq-dash-content">We often provide same-day appointments. For emergencies, our mobile team aims to reach you as quickly as possible, usually within a few hours.</div>
+                            </details>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
             <style>
-                .faq-item summary::-webkit-details-marker {
-                    display: none;
+                .faq-nav-btn {
+                    width: 100%;
+                    padding: 20px 25px;
+                    border: none;
+                    background: transparent;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: #64748b;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    text-align: left;
+                    font-family: 'Outfit';
                 }
+                .faq-nav-btn i { font-size: 1.2rem; }
+                .faq-nav-btn.active { background: #f0f7ff; color: #3986FF; }
+                .faq-nav-btn:hover:not(.active) { background: #f8fafc; color: #1e293b; }
 
-                .faq-item[open] summary .ph-caret-down {
-                    transform: rotate(180deg);
+                .dashboard-faq-item {
+                    background: #f8fafc;
+                    border-radius: 25px;
+                    overflow: hidden;
+                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    border: 1px solid transparent;
                 }
-
-                .faq-item:hover {
-                    border-color: rgba(32, 79, 96, 0.3);
-                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+                .dashboard-faq-item summary {
+                    padding: 25px 30px;
+                    font-size: 1.15rem;
+                    font-weight: 700;
+                    color: #1e293b;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    list-style: none;
+                    font-family: 'Outfit';
+                }
+                .dashboard-faq-item summary i { transition: transform 0.4s; color: #3986FF; flex-shrink: 0; }
+                .dashboard-faq-item[open] { background: white; border-color: #3986FF; box-shadow: 0 15px 40px rgba(57, 134, 255, 0.08); transform: scale(1.01); }
+                .dashboard-faq-item[open] summary i { transform: rotate(180deg); }
+                .faq-dash-content {
+                    padding: 0 30px 30px 30px;
+                    color: #64748b;
+                    font-size: 1.1rem;
+                    line-height: 1.7;
+                    animation: fadeInDown 0.4s ease-out;
+                }
+                
+                @keyframes fadeInDown {
+                    from { opacity: 0; transform: translateY(-10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                
+                @media (max-width: 1024px) {
+                    .faq-dashboard-wrapper { grid-template-columns: 1fr; padding: 25px; }
+                    .faq-nav-container { border-right: none; padding-right: 0; padding-bottom: 40px; border-bottom: 1px solid #f1f5f9; }
+                    .faq-content-container { padding-left: 0; padding-top: 40px; }
                 }
             </style>
-        </section>
+
+            <script>
+                function switchFaqCategory(category, btn) {
+                    // Hide all categories
+                    document.querySelectorAll('.faq-category-content').forEach(el => {
+                        el.style.display = 'none';
+                        el.classList.remove('active-category');
+                    });
+                    // Deactivate all buttons
+                    document.querySelectorAll('.faq-nav-btn').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    // Show selected category
+                    const selected = document.getElementById('faq-' + category);
+                    selected.style.display = 'flex';
+                    selected.classList.add('active-category');
+                    // Activate button
+                    btn.classList.add('active');
+                }
+            </script>
+        </section>     </section>
 
     </main>
 
@@ -1390,9 +1614,9 @@
             <div class="footer-contact">
                 <h4 style="color: white; margin-bottom: 1.5rem; font-family: 'Outfit';">Get in Touch</h4>
                 <p style="color: #C2E0F9; margin-bottom: 1rem;"><i class="ph-fill ph-phone"
-                        style="color: var(--primary); margin-right: 0.5rem;"></i> 0753 924 8324</p>
+                        style="color: var(--primary); margin-right: 0.5rem;"></i> 07852 992 668</p>
                 <p style="color: #C2E0F9;"><i class="ph-fill ph-envelope"
-                        style="color: var(--primary); margin-right: 0.5rem;"></i> contact@aurisearcare.co.uk</p>
+                        style="color: var(--primary); margin-right: 0.5rem;"></i> info@oticearcare.co.uk</p>
             </div>
         </div>
         <div class="container footer-bottom"
