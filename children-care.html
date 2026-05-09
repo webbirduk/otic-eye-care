@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Children's Ear Wax Removal London | Otic Ear Care</title>
-    <meta name="description" content="Specialist mobile ear wax removal for children in London. Safe microsuction by pediatric experts at your home.">
+    <meta name="description"
+        content="Specialist mobile ear wax removal for children in London. Safe microsuction by pediatric experts at your home.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(194, 224, 249, 0.4) 100%), url('assets/hero_bg.png') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            color: var(--primary-dark);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(74, 144, 226, 0.15);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; gap: 4rem; }
+            .hero-text h1 { font-size: 3rem; }
+            .img-wrapper { max-width: 500px; margin: 0 auto; }
+        }
+    </style>
 </head>
+
 <body>
 
     <header class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/user_logo_2.jpg" alt="Otic Ear Care" style="height: 40px; mix-blend-mode: multiply;">
+                <img src="assets/user_logo_2.png" alt="Otic Ear Care" style="height: 60px; mix-blend-mode: multiply;">
             </a>
             <nav class="nav-links">
                 <a href="ear-wax-removal.html">Ear Wax Removal</a>
@@ -32,7 +84,8 @@
                 <a href="team.html">Team</a>
                 <a href="insights.html">Insights & Advice</a>
             </nav>
-            <a href="book.html" class="btn btn-primary nav-cta">Book Appointment <i class="ph-bold ph-arrow-right"></i></a>
+            <a href="book.html" class="btn btn-primary nav-cta">Book Appointment <i
+                    class="ph-bold ph-arrow-right"></i></a>
             <button class="menu-toggle" id="mobile-menu-btn"><i class="ph ph-list"></i></button>
         </div>
         <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
@@ -41,51 +94,70 @@
             <a href="index.html">Home</a>
             <a href="ear-wax-removal.html">Ear Wax Removal</a>
             <div style="padding: 1rem 0; font-weight: 700; color: var(--primary);">Ear Treatments</div>
-            <a href="ear-infection.html" style="padding-left: 1rem; border-bottom: none; font-size: 1rem;">Ear Infection Treatment</a>
-            <a href="foreign-body.html" style="padding-left: 1rem; border-bottom: none; font-size: 1rem;">Ear Foreign Body & Object Removal</a>
+            <a href="ear-infection.html" style="padding-left: 1rem; border-bottom: none; font-size: 1rem;">Ear Infection
+                Treatment</a>
+            <a href="foreign-body.html" style="padding-left: 1rem; border-bottom: none; font-size: 1rem;">Ear Foreign
+                Body & Object Removal</a>
             <a href="children-care.html" style="padding-left: 1rem; font-size: 1rem;">Children’s Ear Wax Removal</a>
             <a href="fees.html">Fees</a>
             <a href="team.html">Team</a>
             <a href="insights.html">Insights & Advice</a>
-            <a href="book.html" class="btn btn-primary" style="text-align: center; color: white !important; border:none; margin-top: 1rem;">Book Appointment</a>
+            <a href="book.html" class="btn btn-primary"
+                style="text-align: center; color: white !important; border:none; margin-top: 1rem;">Book Appointment</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero" style="padding: 6rem 0; background: linear-gradient(rgba(240,240,240,0.8), rgba(240,240,240,0.9)), url('assets/hero_bg.png') no-repeat center center/cover;">
-            <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: center;">
+        <section class="hero">
+            <div class="container hero-content">
                 <div class="hero-text">
                     <div class="badge"><i class="ph-fill ph-baby"></i> Pediatric Ear Specialists</div>
-                    <h1 style="font-size: 3.5rem; color: var(--primary-dark);">Children's <span class="text-gradient">Ear Wax Removal</span> London</h1>
-                    <p style="font-size: 1.25rem; margin: 1.5rem 0; line-height: 1.6;">Ear wax is natural, but too much can affect your child's learning and development. We offer specialist home visits by Dr. Rampuri, who has performed over <strong>2,000 treatments</strong> for children with impacted wax.</p>
+                    <h1>Children's <span class="text-gradient">Ear Wax Removal</span> London</h1>
+                    <p>Ear wax is natural, but too much can affect your child's learning and development. We offer specialist home visits by Dr. Rampuri, who has performed over <strong>2,000 treatments</strong> for children with impacted wax.</p>
                     <div class="hero-actions">
-                        <a href="book.html" class="btn btn-primary btn-lg">Book Child visit <i class="ph-bold ph-arrow-right"></i></a>
+                        <a href="book.html" class="btn btn-primary btn-lg">Book Child visit <i
+                                class="ph-bold ph-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="assets/child_ear_care.png" alt="Happy child after ear treatment" style="width: 100%; border-radius: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
+                    <img src="assets/child_ear_care.png" alt="Happy child after ear treatment">
                 </div>
             </div>
         </section>
 
         <!-- Why Removal -->
         <section style="padding: 6rem 0; background: white;">
-            <div class="container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start;">
+            <div class="container"
+                style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start;">
                 <div>
-                     <h2 class="section-title">Why Children May Need Ear Wax Removal</h2>
-                     <p style="margin-bottom: 2rem; color: var(--text-muted); line-height: 1.8;">While routine wax often clears itself, some children experience symptoms of build-up that can interfere with speech developement and concentration at school.</p>
-                     <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
-                        <li style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); padding: 1rem; border-radius: 12px; border: 1px solid var(--glass-border);"><i class="ph-bold ph-check" style="color: var(--primary);"></i> Reduced hearing or difficulty hearing</li>
-                        <li style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); padding: 1rem; border-radius: 12px; border: 1px solid var(--glass-border);"><i class="ph-bold ph-check" style="color: var(--primary);"></i> Tugging or scratching at the ears</li>
-                        <li style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); padding: 1rem; border-radius: 12px; border: 1px solid var(--glass-border);"><i class="ph-bold ph-check" style="color: var(--primary);"></i> Irritability during play or bedtime</li>
-                        <li style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); padding: 1rem; border-radius: 12px; border: 1px solid var(--glass-border);"><i class="ph-bold ph-check" style="color: var(--primary);"></i> Repeated ear infections</li>
-                     </ul>
+                    <h2 class="section-title" style="color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 1.5rem;">Why Children May Need Ear Wax Removal</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-muted); line-height: 1.8;">While routine wax often
+                        clears itself, some children experience symptoms of build-up that can interfere with speech
+                        developement and concentration at school.</p>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+                        <li
+                            style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); padding: 1.2rem; border-radius: 16px; border: 1px solid var(--glass-border);">
+                            <i class="ph-bold ph-check" style="color: var(--primary); font-size: 1.2rem;"></i> <span>Reduced hearing or difficulty hearing</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); padding: 1.2rem; border-radius: 16px; border: 1px solid var(--glass-border);">
+                            <i class="ph-bold ph-check" style="color: var(--primary); font-size: 1.2rem;"></i> <span>Tugging or scratching at the ears</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); padding: 1.2rem; border-radius: 16px; border: 1px solid var(--glass-border);">
+                            <i class="ph-bold ph-check" style="color: var(--primary); font-size: 1.2rem;"></i> <span>Irritability during play or bedtime</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: center; gap: 1rem; background: var(--bg-card); padding: 1.2rem; border-radius: 16px; border: 1px solid var(--glass-border);">
+                            <i class="ph-bold ph-check" style="color: var(--primary); font-size: 1.2rem;"></i> <span>Repeated ear infections</span>
+                        </li>
+                    </ul>
                 </div>
-                <div style="background: var(--bg-card); padding: 3rem; border-radius: 30px; border: 1px solid var(--glass-border);">
-                    <h3 style="margin-bottom: 1.5rem;">Specialist Home Visits</h3>
-                    <p style="line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">At Auris Ear Care, we specialise exclusively in mobile ear wax removal – bringing expert care directly to your child's bed or sofa where they feel most comfortable. We do not offer clinic appointments to ensure a stress-free experience.</p>
-                    <p style="line-height: 1.8; color: var(--text-muted);">Dr. Rampuri and the team also support children in schools, hospitals, hotels, and care homes across London.</p>
+                <div
+                    style="background: var(--bg-card); padding: 3.5rem; border-radius: 32px; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.02);">
+                    <h3 style="margin-bottom: 1.5rem; font-family: 'Outfit'; color: var(--primary-dark); font-size: 1.8rem;">Specialist Home Visits</h3>
+                    <p style="line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem;">At Otic Ear Care, we specialise exclusively in mobile ear wax removal – bringing expert care directly to your child's bed or sofa where they feel most comfortable. We do not offer clinic appointments to ensure a stress-free experience.</p>
+                    <p style="line-height: 1.8; color: var(--text-muted); font-size: 1.05rem;">Dr. Rampuri and the team also support children in schools, hospitals, hotels, and care homes across London.</p>
                 </div>
             </div>
         </section>
@@ -93,22 +165,34 @@
         <!-- Safe Techniques -->
         <section style="padding: 6rem 0; background: var(--bg-card);">
             <div class="container">
-                <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2 class="section-title">Safe & Comfortable Ear Wax Removal for Kids</h2>
-                    <p style="max-width: 800px; margin: 0 auto;">We understand children can be nervous. Our clinicians provide a calm, reassuring environment using safe, non-invasive techniques.</p>
+                <div class="text-center" style="margin-bottom: 4rem; text-align: center;">
+                    <h2 class="section-title" style="color: var(--primary-dark); font-size: 2.8rem;">Safe & Comfortable Ear Wax Removal for Kids</h2>
+                    <p style="max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem;">We understand children can be nervous. Our clinicians provide a calm, reassuring environment using safe, non-invasive techniques.</p>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                        <h4 style="color: var(--primary); margin-bottom: 1rem;">Microsuction</h4>
-                        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">A gentle, precise method that does not involve water pressure. Controlled, quick, and adapted for smaller ear canals.</p>
+                    <div
+                        style="background: white; padding: 3rem; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid var(--glass-border);">
+                        <div style="width: 50px; height: 50px; background: rgba(74, 144, 226, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--primary); font-size: 1.8rem;">
+                            <i class="ph-fill ph-wind"></i>
+                        </div>
+                        <h4 style="color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.4rem;">Microsuction</h4>
+                        <p style="font-size: 1rem; line-height: 1.7; color: var(--text-muted);">A gentle, precise method that does not involve water pressure. Controlled, quick, and adapted for smaller ear canals.</p>
                     </div>
-                    <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                        <h4 style="color: var(--primary); margin-bottom: 1rem;">Visual Inspection</h4>
-                        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">High magnification ensures we only remove excess wax that is causing symptoms.</p>
+                    <div
+                        style="background: white; padding: 3rem; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid var(--glass-border);">
+                        <div style="width: 50px; height: 50px; background: rgba(74, 144, 226, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--primary); font-size: 1.8rem;">
+                            <i class="ph-fill ph-eye"></i>
+                        </div>
+                        <h4 style="color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.4rem;">Visual Inspection</h4>
+                        <p style="font-size: 1rem; line-height: 1.7; color: var(--text-muted);">High magnification ensures we only remove excess wax that is causing symptoms.</p>
                     </div>
-                    <div style="background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                        <h4 style="color: var(--primary); margin-bottom: 1rem;">Child-friendly</h4>
-                        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">We use multimedia, balloons, and animal stickers to keep the experience positive.</p>
+                    <div
+                        style="background: white; padding: 3rem; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid var(--glass-border);">
+                        <div style="width: 50px; height: 50px; background: rgba(74, 144, 226, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--primary); font-size: 1.8rem;">
+                            <i class="ph-fill ph-smiley-wink"></i>
+                        </div>
+                        <h4 style="color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.4rem;">Child-friendly</h4>
+                        <p style="font-size: 1rem; line-height: 1.7; color: var(--text-muted);">We use multimedia, balloons, and animal stickers to keep the experience positive.</p>
                     </div>
                 </div>
             </div>
@@ -116,39 +200,58 @@
 
         <!-- Emergency & Related -->
         <section style="padding: 6rem 0; background: white;">
-            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
-                 <div style="padding: 3rem; background: #fff5f5; border-radius: 24px; border-left: 5px solid #c53030;">
-                    <h3 style="color: #c53030; margin-bottom: 1.5rem;">Emergency Care</h3>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.7;">Sudden ear pain or blocked ears can be distressing for children. We offer <strong>emergency appointments</strong> between 7:00pm and 7:00am daily.</p>
-                    <p style="font-weight: 700; color: #742a2a;">Standard Fee + £175 Out-of-hours charge.</p>
+            <div class="container"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                <div style="padding: 3.5rem; background: #fff5f5; border-radius: 32px; border-left: 8px solid #c53030; box-shadow: 0 20px 40px rgba(197, 48, 48, 0.05);">
+                    <h3 style="color: #c53030; margin-bottom: 1.5rem; font-family: 'Outfit'; font-size: 1.8rem;">Emergency Care</h3>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.7; font-size: 1.1rem; color: #742a2a;">Sudden ear pain or blocked ears can be distressing for children. We offer <strong>emergency appointments</strong> between 7:00pm and 7:00am daily.</p>
+                    <div style="background: rgba(197, 48, 48, 0.1); padding: 1.2rem; border-radius: 12px;">
+                        <p style="font-weight: 700; color: #c53030; margin: 0; font-size: 1.1rem;">Standard Fee + £175 Out-of-hours charge.</p>
+                    </div>
                 </div>
                 <div>
-                     <h2 class="section-title">Related Treatments</h2>
-                     <a href="ear-infection.html" style="display: block; text-decoration: none; background: var(--bg-card); padding: 1.5rem; border-radius: 16px; margin-bottom: 1.5rem; border: 1px solid var(--glass-border);">
-                         <h4 style="color: var(--primary-dark); margin-bottom: 0.5rem;">Children’s Ear Infection Treatment</h4>
-                         <p style="font-size: 0.9rem; color: var(--text-muted);">Assessment for pain, discharge, or signs of Otitis Externa.</p>
-                     </a>
-                     <a href="foreign-body.html" style="display: block; text-decoration: none; background: var(--bg-card); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--glass-border);">
-                         <h4 style="color: var(--primary-dark); margin-bottom: 0.5rem;">Foreign Body Removal</h4>
-                         <p style="font-size: 0.9rem; color: var(--text-muted);">Gentle removal of beads, toys, or objects stuck in ears.</p>
-                     </a>
+                    <h2 class="section-title" style="color: var(--primary-dark); font-size: 2.5rem; margin-bottom: 2rem;">Related Treatments</h2>
+                    <a href="ear-infection.html"
+                        style="display: flex; align-items: center; gap: 1.5rem; text-decoration: none; background: var(--bg-card); padding: 2rem; border-radius: 20px; margin-bottom: 1.5rem; border: 1px solid var(--glass-border); transition: transform 0.3s ease;">
+                        <div style="width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary); flex-shrink: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                            <i class="ph-duotone ph-pill"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-dark); margin-bottom: 0.3rem; font-size: 1.25rem;">Children’s Ear Infection Treatment</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0;">Assessment for pain, discharge, or signs of Otitis Externa.</p>
+                        </div>
+                    </a>
+                    <a href="foreign-body.html"
+                        style="display: flex; align-items: center; gap: 1.5rem; text-decoration: none; background: var(--bg-card); padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); transition: transform 0.3s ease;">
+                        <div style="width: 60px; height: 60px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--secondary); flex-shrink: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                            <i class="ph-duotone ph-magnifying-glass-plus"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-dark); margin-bottom: 0.3rem; font-size: 1.25rem;">Foreign Body Removal</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0;">Gentle removal of beads, toys, or objects stuck in ears.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
+        
         <!-- Areas We Cover -->
         <section style="padding: 6rem 0; background: white;">
-            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+            <div class="container"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
                 <div>
-                    <h2 class="section-title">Children's Ear Care Across London</h2>
-                    <p style="margin-bottom: 2rem; color: var(--text-muted); line-height: 1.8;">We understand the challenges of traveling with children. Our mobile service covers all of London, bringing specialized pediatric ear care directly to your child's home or school.</p>
+                    <h2 class="section-title" style="color: var(--primary-dark); font-size: 2.8rem; margin-bottom: 1.5rem;">Children's Ear Care Across London</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-muted); line-height: 1.8; font-size: 1.1rem;">We understand the
+                        challenges of traveling with children. Our mobile service covers all of London, bringing
+                        specialized pediatric ear care directly to your child's home or school.</p>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <ul style="list-style: none; padding: 0; color: var(--text-muted); line-height: 2;">
+                        <ul style="list-style: none; padding: 0; color: var(--text-muted); line-height: 2.2;">
                             <li><i class="ph-bold ph-map-pin" style="color: var(--primary);"></i> Central London</li>
                             <li><i class="ph-bold ph-map-pin" style="color: var(--primary);"></i> West London</li>
                             <li><i class="ph-bold ph-map-pin" style="color: var(--primary);"></i> North London</li>
                             <li><i class="ph-bold ph-map-pin" style="color: var(--primary);"></i> South London</li>
                         </ul>
-                        <ul style="list-style: none; padding: 0; color: var(--text-muted); line-height: 2;">
+                        <ul style="list-style: none; padding: 0; color: var(--text-muted); line-height: 2.2;">
                             <li><i class="ph-bold ph-map-pin" style="color: var(--primary);"></i> East London</li>
                             <li><i class="ph-bold ph-map-pin" style="color: var(--primary);"></i> Surrey</li>
                             <li><i class="ph-bold ph-map-pin" style="color: var(--primary);"></i> Kent</li>
@@ -157,76 +260,93 @@
                     </div>
                 </div>
                 <div class="img-wrapper">
-                    <img src="assets/map.png" alt="Areas We Cover London" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                    <img src="assets/map.png" alt="Areas We Cover London"
+                        style="width: 100%; border-radius: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
                 </div>
             </div>
         </section>
 
         <!-- Page Specific FAQ -->
-        <section class="faq-section">
+        <section class="faq-section" style="padding: 6rem 0; background: var(--bg-card);">
             <div class="container faq-container">
-                <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2 class="section-title">Children's Ear Care FAQ</h2>
+                <div class="text-center" style="margin-bottom: 4rem; text-align: center;">
+                    <h2 class="section-title" style="color: var(--primary-dark); font-size: 2.8rem;">Children's Ear Care FAQ</h2>
                 </div>
-                <div style="display: flex; flex-direction: column;">
-                    <details class="faq-card">
-                        <summary>Is microsuction safe for my child?</summary>
-                        <div class="faq-content">
-                            <p>Yes, microsuction is the gold-standard method for ear cleaning in children. It is dry, highly precise, and allows the doctor to see the entire ear canal under high magnification, ensuring absolute safety.</p>
+                <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 900px; margin: 0 auto;">
+                    <details class="faq-item" style="background: white; border-radius: 16px; border: 1px solid var(--glass-border); overflow: hidden;">
+                        <summary style="padding: 1.5rem; font-size: 1.15rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
+                            Is microsuction safe for my child?
+                            <i class="ph-bold ph-caret-down" style="color: var(--primary);"></i>
+                        </summary>
+                        <div style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+                            Yes, microsuction is the gold-standard method for ear cleaning in children. It is dry, highly precise, and allows the doctor to see the entire ear canal under high magnification, ensuring absolute safety.
                         </div>
                     </details>
-                    <details class="faq-card">
-                        <summary>What if my child won't stay still?</summary>
-                        <div class="faq-content">
-                            <p>Our specialists are experts in pediatric care. We use distraction techniques and take our time to allow your child to become comfortable with the equipment. Most children tolerate the procedure remarkably well when in their own home.</p>
+                    <details class="faq-item" style="background: white; border-radius: 16px; border: 1px solid var(--glass-border); overflow: hidden;">
+                        <summary style="padding: 1.5rem; font-size: 1.15rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
+                            What if my child won't stay still?
+                            <i class="ph-bold ph-caret-down" style="color: var(--primary);"></i>
+                        </summary>
+                        <div style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+                            Our specialists are experts in pediatric care. We use distraction techniques and take our time to allow your child to become comfortable with the equipment. Most children tolerate the procedure remarkably well when in their own home.
                         </div>
                     </details>
-                    <details class="faq-card">
-                        <summary>Are parents allowed to stay during the visit?</summary>
-                        <div class="faq-content">
-                            <p>Absolutely. We encourage parents to be present. Your child can sit on your lap or next to you during the treatment to help them feel secure.</p>
+                    <details class="faq-item" style="background: white; border-radius: 16px; border: 1px solid var(--glass-border); overflow: hidden;">
+                        <summary style="padding: 1.5rem; font-size: 1.15rem; font-weight: 600; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none;">
+                            Are parents allowed to stay during the visit?
+                            <i class="ph-bold ph-caret-down" style="color: var(--primary);"></i>
+                        </summary>
+                        <div style="padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+                            Absolutely. We encourage parents to be present. Your child can sit on your lap or next to you during the treatment to help them feel secure.
                         </div>
                     </details>
                 </div>
             </div>
+            <style>
+                .faq-item summary::-webkit-details-marker { display: none; }
+                .faq-item[open] summary .ph-caret-down { transform: rotate(180deg); }
+            </style>
         </section>
     </main>
 
     <footer>
-        <div class="container footer-grid">
+        <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem; padding: 4rem 0;">
             <div class="footer-brand">
-                <a href="index.html" class="logo" style="background: white; padding: 10px 15px; border-radius: 8px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 1.5rem;">
-                    <img src="assets/user_logo_2.jpg" alt="Otic Ear Care" style="height: 45px; mix-blend-mode: normal;">
+                <a href="index.html" class="logo"
+                    style="background: white; padding: 10px 15px; border-radius: 8px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 1.5rem;">
+                    <img src="assets/user_logo_2.png" alt="Otic Ear Care" style="height: 45px; mix-blend-mode: normal;">
                 </a>
-                <p style="color: #e2e8f0;">Bringing professional, advanced ear care directly to you. Safe, comfortable, and reliable.</p>
+                <p style="color: #C2E0F9;">Bringing professional, advanced ear care directly to you. Safe, comfortable,
+                    and reliable.</p>
             </div>
             <div class="footer-links">
-                <h4>Treatments</h4>
-                <ul>
-                    <li><a href="ear-wax-removal.html">Ear Wax Removal</a></li>
-                    <li><a href="ear-infection.html">Infection Treatment</a></li>
-                    <li><a href="children-care.html">Children's Care</a></li>
-                    <li><a href="foreign-body.html">Object Removal</a></li>
+                <h4 style="color: white; margin-bottom: 1.5rem; font-family: 'Outfit';">Treatments</h4>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                    <li><a href="ear-wax-removal.html" style="color: #C2E0F9; text-decoration: none;">Ear Wax Removal</a></li>
+                    <li><a href="ear-infection.html" style="color: #C2E0F9; text-decoration: none;">Infection Treatment</a></li>
+                    <li><a href="children-care.html" style="color: #C2E0F9; text-decoration: none;">Children's Care</a></li>
+                    <li><a href="foreign-body.html" style="color: #C2E0F9; text-decoration: none;">Object Removal</a></li>
                 </ul>
             </div>
             <div class="footer-links">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="fees.html">Fees & Pricing</a></li>
-                    <li><a href="insights.html">Insights & Advice</a></li>
+                <h4 style="color: white; margin-bottom: 1.5rem; font-family: 'Outfit';">Company</h4>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                    <li><a href="team.html" style="color: #C2E0F9; text-decoration: none;">Our Team</a></li>
+                    <li><a href="fees.html" style="color: #C2E0F9; text-decoration: none;">Fees & Pricing</a></li>
+                    <li><a href="insights.html" style="color: #C2E0F9; text-decoration: none;">Insights & Advice</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
-                <h4>Get in Touch</h4>
-                <p style="color: #e2e8f0;"><i class="ph-fill ph-phone" style="color: var(--primary);"></i> 0753 924 8324</p>
-                <p style="color: #e2e8f0;"><i class="ph-fill ph-envelope" style="color: var(--primary);"></i> contact@aurisearcare.co.uk</p>
+                <h4 style="color: white; margin-bottom: 1.5rem; font-family: 'Outfit';">Get in Touch</h4>
+                <p style="color: #C2E0F9; margin-bottom: 1rem;"><i class="ph-fill ph-phone" style="color: var(--primary); margin-right: 0.5rem;"></i> 0753 924 8324</p>
+                <p style="color: #C2E0F9;"><i class="ph-fill ph-envelope" style="color: var(--primary); margin-right: 0.5rem;"></i> contact@aurisearcare.co.uk</p>
             </div>
         </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 WebBird. All rights reserved.</p>
+        <div class="container footer-bottom" style="padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+            <p>&copy; 2026 Otic Ear Care. All rights reserved.</p>
         </div>
     </footer>
     <script src="app.js"></script>
 </body>
+
 </html>

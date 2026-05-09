@@ -5,13 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
-            navbar.style.padding = '0.8rem 0';
+            navbar.classList.add('navbar-scrolled');
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
-            navbar.style.boxShadow = 'none';
-            navbar.style.padding = '1.2rem 0';
+            navbar.classList.remove('navbar-scrolled');
         }
     });
 
@@ -55,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 3000);
             }, 1500);
         });
-    }    // Mobile Menu
+    }
+
+    // Mobile Menu
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const closeBtn = document.getElementById('close-menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
