@@ -115,6 +115,24 @@ h1, h2, h3, h4, .badge, .logo span {
     padding-bottom: 0.25rem;
 }
 
+.navbar:not(.navbar-scrolled) .logo-dark {
+    display: none;
+}
+
+.navbar.navbar-scrolled .logo-white {
+    display: none;
+}
+
+.navbar:not(.navbar-scrolled) .nav-links a,
+.navbar:not(.navbar-scrolled) .dropbtn,
+.navbar:not(.navbar-scrolled) .menu-toggle {
+    color: #FFFFFF !important;
+}
+
+.navbar:not(.navbar-scrolled) .nav-links a::after {
+    background: #FFFFFF;
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -305,7 +323,7 @@ h1, h2, h3, h4, .badge, .logo span {
     display: flex;
     align-items: center;
     padding: 120px 0 80px 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(194, 224, 249, 0.4) 100%), url('assets/hero_bg.png') no-repeat center center/cover;
+    background: #000;
     overflow: hidden;
 }
 
