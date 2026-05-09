@@ -512,16 +512,48 @@
         <section style="padding: 6rem 0; background: white;">
             <div class="container">
                 <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center;">
-                    <div class="img-wrapper" style="position: relative;">
-                        <img src="assets/professional_ear_wax_removal_procedure_1776407982983.png"
-                            alt="Clinical Ear Wax Removal"
-                            style="width: 100%; border-radius: 32px; box-shadow: 0 30px 60px rgba(0,0,0,0.1);">
+                    <div class="img-wrapper" style="position: relative; display: flex; justify-content: center; align-items: center; min-height: 500px;">
+                        <!-- Rotating Ring -->
+                        <div style="position: absolute; width: 450px; height: 450px; border: 2px dashed rgba(74, 144, 226, 0.2); border-radius: 50%; animation: rotate-slow 20s linear infinite;"></div>
+                        <div style="position: absolute; width: 480px; height: 480px; border: 1px solid rgba(74, 144, 226, 0.1); border-radius: 50%;"></div>
+                        
+                        <!-- Main Circular Image -->
+                        <div style="position: relative; width: 380px; height: 380px; border-radius: 50%; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.15); border: 8px solid white; z-index: 2;">
+                            <img src="assets/professional_ear_wax_removal_procedure_1776407982983.png"
+                                alt="Clinical Ear Wax Removal"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 40%);"></div>
+                        </div>
+
+                        <!-- Floating Stats -->
                         <div
-                            style="position: absolute; bottom: -20px; right: -20px; background: var(--primary); color: white; padding: 2rem; border-radius: 20px; box-shadow: 0 15px 30px rgba(74, 144, 226, 0.3);">
-                            <p
-                                style="font-size: 2.5rem; font-weight: 800; line-height: 1; margin: 0; font-family: 'Outfit';">
-                                20k+</p>
-                            <p style="font-size: 0.9rem; margin: 0; opacity: 0.9;">Procedures Performed</p>
+                            style="position: absolute; bottom: 10%; right: 5%; background: var(--primary); color: white; padding: 1.5rem 2rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(74, 144, 226, 0.3); z-index: 3; text-align: center;">
+                            <div style="color: #FBBF24; font-size: 1rem; margin-bottom: 0.5rem; display: flex; justify-content: center; gap: 2px;">
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-size: 2.5rem; font-weight: 800; line-height: 1; margin: 0; font-family: 'Outfit';">20k+</p>
+                            <p style="font-size: 0.8rem; margin: 0; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px;">Procedures</p>
+                        </div>
+
+                        <!-- Feature Badges -->
+                        <div
+                            style="position: absolute; top: 15%; left: 0%; background: white; padding: 0.8rem 1.2rem; border-radius: 99px; box-shadow: 0 10px 25px rgba(0,0,0,0.06); z-index: 3; display: flex; align-items: center; gap: 0.8rem; border: 1px solid rgba(0,0,0,0.03); animation: float 5s ease-in-out infinite;">
+                            <div style="width: 32px; height: 32px; background: rgba(74, 144, 226, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                <i class="ph-bold ph-shield-check"></i>
+                            </div>
+                            <span style="font-weight: 700; font-size: 0.9rem; color: var(--primary-dark);">Safe & Gentle</span>
+                        </div>
+
+                        <div
+                            style="position: absolute; bottom: 25%; left: -5%; background: white; padding: 0.8rem 1.2rem; border-radius: 99px; box-shadow: 0 10px 25px rgba(0,0,0,0.06); z-index: 3; display: flex; align-items: center; gap: 0.8rem; border: 1px solid rgba(0,0,0,0.03); animation: float 6s ease-in-out infinite; animation-delay: 1s;">
+                            <div style="width: 32px; height: 32px; background: rgba(224, 159, 156, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                                <i class="ph-bold ph-house"></i>
+                            </div>
+                            <span style="font-weight: 700; font-size: 0.9rem; color: var(--primary-dark);">Home Visit</span>
                         </div>
                     </div>
                     <div>
