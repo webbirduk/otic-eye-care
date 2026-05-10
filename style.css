@@ -1081,3 +1081,18 @@ footer {
         font-size: 1.6rem !important;
     }
 }
+@media (max-width: 768px) {
+    /* Insights Grid */
+    .insights-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .faq-dashboard h2 {
+        text-align: center !important;
+    }
+
+    .faq-nav-container [style*="margin-top: 60px"] {
+        margin-top: 30px !important;
+    }
+}
