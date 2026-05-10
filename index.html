@@ -168,27 +168,6 @@
             to { transform: rotate(360deg); }
         }
 
-        @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 3.5rem;
-            }
-
-            .hero-text p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-form-card {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-        }
     </style>
 </head>
 
@@ -220,20 +199,64 @@
         </div>
         <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
         <div class="mobile-nav" id="mobile-nav">
-            <button class="close-menu" id="close-menu-btn">&times;</button>
-            <a href="index.html">Home</a>
-            <a href="ear-wax-removal.html">Ear Wax Removal</a>
-            <div style="padding: 1rem 0; font-weight: 700; color: var(--primary);">Ear Treatments</div>
-            <a href="ear-infection.html" style="padding-left: 1rem; border-bottom: none; font-size: 1rem;">Ear Infection
-                Treatment</a>
-            <a href="foreign-body.html" style="padding-left: 1rem; border-bottom: none; font-size: 1rem;">Ear Foreign
-                Body & Object Removal</a>
-            <a href="children-care.html" style="padding-left: 1rem; font-size: 1rem;">Children’s Ear Wax Removal</a>
-            <a href="fees.html">Fees</a>
-            <a href="team.html">Team</a>
-            <a href="insights.html">Insights & Advice</a>
-            <a href="book.html" class="btn btn-primary"
-                style="text-align: center; color: white !important; border:none; margin-top: 1rem;">Book Appointment</a>
+            <div class="mobile-nav-header">
+                <a href="index.html" class="mobile-logo">
+                    <img src="assets/user_logo_2.png" alt="Otic Ear Care" style="height: 70px;">
+                </a>
+                <button class="close-menu" id="close-menu-btn"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="mobile-nav-body">
+                <a href="index.html" class="mobile-nav-link">
+                    <i class="ph ph-house"></i>
+                    <span>Home</span>
+                    <i class="ph ph-caret-right chevron-right"></i>
+                </a>
+                <a href="ear-wax-removal.html" class="mobile-nav-link">
+                    <i class="ph ph-ear"></i>
+                    <span>Ear Wax Removal</span>
+                    <i class="ph ph-caret-right chevron-right"></i>
+                </a>
+                <div class="mobile-nav-dropdown">
+                    <button class="mobile-nav-link dropdown-toggle" id="mobile-dropdown-toggle" style="width: 100%; text-align: left; background: none; border: none; border-bottom: 1px solid rgba(0,0,0,0.02);">
+                        <i class="ph ph-plus-circle"></i>
+                        <span>Ear Treatments</span>
+                        <i class="ph ph-caret-down chevron-down"></i>
+                    </button>
+                    <div class="mobile-dropdown-content" id="mobile-dropdown-content">
+                        <a href="ear-infection.html">Ear Infection Treatment</a>
+                        <a href="foreign-body.html">Foreign Body Removal</a>
+                        <a href="children-care.html">Children’s Ear Wax Removal</a>
+                    </div>
+                </div>
+                <a href="fees.html" class="mobile-nav-link">
+                    <i class="ph ph-currency-circle-dollar"></i>
+                    <span>Fees</span>
+                    <i class="ph ph-caret-right chevron-right"></i>
+                </a>
+                <a href="team.html" class="mobile-nav-link">
+                    <i class="ph ph-users"></i>
+                    <span>Team</span>
+                    <i class="ph ph-caret-right chevron-right"></i>
+                </a>
+                <a href="insights.html" class="mobile-nav-link">
+                    <i class="ph ph-lightbulb"></i>
+                    <span>Insights & Advice</span>
+                    <i class="ph ph-caret-right chevron-right"></i>
+                </a>
+            </div>
+            <div class="mobile-nav-footer">
+                <div class="mobile-contact-box">
+                    <div class="contact-icon"><i class="ph ph-phone"></i></div>
+                    <div class="contact-info">
+                        <span>24/7 DIRECT LINE</span>
+                        <strong>+44 7852 992 668</strong>
+                    </div>
+                </div>
+                <a href="book.html" class="btn btn-primary mobile-cta">
+                    <span>Book Appointment</span>
+                    <i class="ph ph-calendar-blank"></i>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -509,7 +532,7 @@
         </section>
 
         <!-- 2. Why Choose Us -->
-        <section style="padding: 6rem 0; background: white;">
+        <section class="why-choose-section" style="padding: 6rem 0; background: white;">
             <div class="container">
                 <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center;">
                     <div class="img-wrapper" style="position: relative; display: flex; justify-content: center; align-items: center; min-height: 500px;">
@@ -778,12 +801,6 @@
                 </div>
             </div>
 
-            <style>
-                @media (max-width: 1200px) {
-                    .microsuction-editorial div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 4rem !important; }
-                    .microsuction-editorial div[style*="left: -15%"] { left: 20px !important; bottom: 20px !important; }
-                }
-            </style>
         </section>
         </section>
 
@@ -887,15 +904,6 @@
                 .core-glow { position: absolute; inset: -20px; background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, transparent 70%); z-index: 0; animation: float 4s ease-in-out infinite; }
                 .pulse-ring { position: absolute; width: 350px; height: 350px; border: 1px solid rgba(74, 144, 226, 0.2); border-radius: 50%; animation: ring-pulse 3s linear infinite; }
                 @keyframes ring-pulse { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; } }
-                @media (max-width: 1200px) {
-                    .tree-grid-container { grid-template-columns: 1fr; gap: 40px; }
-                    .tree-core { order: 1; }
-                    .left-branch { order: 2; }
-                    .right-branch { order: 3; }
-                    .node-line { display: none; }
-                    .left-branch .tree-node { text-align: left; justify-content: flex-start; }
-                    .left-branch .node-icon { order: 1; margin-left: 0; margin-right: 1.5rem; }
-                }
             </style>
         </section>
 
@@ -1084,7 +1092,7 @@
         </section>
 
         <!-- 7. Corporate & Emergency (Vibrant Redesign) -->
-        <section class="container" style="padding: 100px 0;">
+        <section class="corporate-emergency-section container" style="padding: 100px 0;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
                 
                 <!-- Corporate Section -->
