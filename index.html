@@ -1374,41 +1374,30 @@
                     </h2>
                 </div>
 
-                <div class="faq-dashboard-wrapper" style="display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 40px; background: white; border-radius: 40px; padding: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05);">
-                    
-                    <!-- Left: Navigation Sidebar -->
-                    <div class="faq-nav-container" style="border-right: 1px solid #f1f5f9; padding-right: 40px;">
-                        <div style="display: flex; flex-direction: column; gap: 10px;">
-                            <button class="faq-nav-btn active" onclick="switchFaqCategory('general', this)">
-                                <i class="ph-bold ph-first-aid"></i> General Services
-                            </button>
-                            <button class="faq-nav-btn" onclick="switchFaqCategory('procedure', this)">
-                                <i class="ph-bold ph-microscope"></i> Procedure Details
-                            </button>
-                            <button class="faq-nav-btn" onclick="switchFaqCategory('safety', this)">
-                                <i class="ph-bold ph-shield-check"></i> Safety & CQC
-                            </button>
-                            <button class="faq-nav-btn" onclick="switchFaqCategory('pricing', this)">
-                                <i class="ph-bold ph-currency-gbp"></i> Pricing & Booking
-                            </button>
-                        </div>
-
-                        <!-- Mini CTA Card -->
-                        <div style="margin-top: 60px; padding: 30px; background: #1e293b; border-radius: 30px; color: white; position: relative; overflow: hidden;">
-                            <div style="position: absolute; bottom: -20px; right: -20px; font-size: 8rem; opacity: 0.05; transform: rotate(-15deg); pointer-events: none;"><i class="ph-fill ph-phone-call"></i></div>
-                            <h4 style="margin: 0 0 10px; font-size: 1.2rem; font-family: 'Outfit';">Need Help?</h4>
-                            <p style="margin: 0 0 20px; font-size: 0.9rem; opacity: 0.7;">Speak with an ENT clinician 24/7 for emergency care.</p>
-                            <a href="tel:+447852992668" style="color: #3986FF; font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 8px; font-size: 1.1rem; transition: all 0.3s;">
-                                +44 7852 992 668 <i class="ph-bold ph-arrow-up-right"></i>
-                            </a>
-                        </div>
+                <div class="faq-nav-container">
+                    <div class="faq-nav-wrapper">
+                        <button class="faq-nav-btn active" onclick="switchFaqCategory('general', this)">
+                            <i class="ph-bold ph-first-aid"></i> General Services
+                        </button>
+                        <button class="faq-nav-btn" onclick="switchFaqCategory('procedure', this)">
+                            <i class="ph-bold ph-microscope"></i> Procedure Details
+                        </button>
+                        <button class="faq-nav-btn" onclick="switchFaqCategory('safety', this)">
+                            <i class="ph-bold ph-shield-check"></i> Safety & CQC
+                        </button>
+                        <button class="faq-nav-btn" onclick="switchFaqCategory('pricing', this)">
+                            <i class="ph-bold ph-currency-gbp"></i> Pricing & Booking
+                        </button>
                     </div>
+                </div>
 
+                <div class="faq-dashboard-wrapper">
+                    
                     <!-- Right: Accordion Content -->
-                    <div class="faq-content-container" style="padding-left: 20px;">
+                    <div class="faq-content-container">
                         
                         <!-- General Services Content -->
-                        <div id="faq-general" class="faq-category-content active-category" style="display: flex; flex-direction: column; gap: 15px;">
+                        <div id="faq-general" class="faq-category-content active-category">
                             <details class="dashboard-faq-item">
                                 <summary><span>What ear care services do you provide?</span><i class="ph-bold ph-caret-down"></i></summary>
                                 <div class="faq-dash-content">We specialize in mobile microsuction ear wax removal, ear infection management, safe foreign body extraction, and dedicated pediatric ear cleaning for children and babies across London.</div>
@@ -1432,7 +1421,7 @@
                         </div>
 
                         <!-- Procedure Details Content -->
-                        <div id="faq-procedure" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
+                        <div id="faq-procedure" class="faq-category-content">
                             <details class="dashboard-faq-item">
                                 <summary><span>How does microsuction ear wax removal work?</span><i class="ph-bold ph-caret-down"></i></summary>
                                 <div class="faq-dash-content">Microsuction uses a gentle suction device and high-resolution microscopy to safely remove wax without water. It is the cleanest and safest method currently available.</div>
@@ -1456,7 +1445,7 @@
                         </div>
 
                         <!-- Safety & CQC Content -->
-                        <div id="faq-safety" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
+                        <div id="faq-safety" class="faq-category-content">
                             <details class="dashboard-faq-item">
                                 <summary><span>Are you regulated by the CQC?</span><i class="ph-bold ph-caret-down"></i></summary>
                                 <div class="faq-dash-content">Yes, Auris Ear Care is fully regulated by the Care Quality Commission (CQC), ensuring we meet the highest national standards for safety and quality of care.</div>
@@ -1480,7 +1469,7 @@
                         </div>
 
                         <!-- Pricing & Booking Content -->
-                        <div id="faq-pricing" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
+                        <div id="faq-pricing" class="faq-category-content">
                             <details class="dashboard-faq-item">
                                 <summary><span>How much does ear wax removal cost?</span><i class="ph-bold ph-caret-down"></i></summary>
                                 <div class="faq-dash-content">Our pricing is transparent and includes the home visit. Please check our booking page for the current flat-rate fee for standard clinical sessions.</div>
@@ -1504,93 +1493,63 @@
                         </div>
 
                     </div>
+
+                    <!-- Sidebar CTA (Desktop only) -->
+                    <div class="faq-sidebar-cta desktop-only">
+                        <div class="mini-cta-card">
+                            <div class="cta-bg-icon"><i class="ph-fill ph-phone-call"></i></div>
+                            <h4>Need Help?</h4>
+                            <p>Speak with an ENT clinician 24/7 for emergency care.</p>
+                            <a href="tel:+447852992668" class="cta-link">
+                                +44 7852 992 668 <i class="ph-bold ph-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile CTA (Inside wrapper, visible only on mobile) -->
+                    <div class="mobile-only" style="margin-top: 20px;">
+                        <div class="mini-cta-card">
+                            <h4>Need Help?</h4>
+                            <p>Speak with an ENT clinician 24/7 for emergency care.</p>
+                            <a href="tel:+447852992668" class="cta-link">+44 7852 992 668</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <style>
-                .faq-nav-btn {
-                    width: 100%;
-                    padding: 20px 25px;
-                    border: none;
-                    background: transparent;
-                    border-radius: 20px;
-                    display: flex;
-                    align-items: center;
-                    gap: 15px;
-                    font-size: 1rem;
-                    font-weight: 700;
-                    color: #64748b;
-                    cursor: pointer;
-                    transition: all 0.3s;
-                    text-align: left;
-                    font-family: 'Outfit';
-                }
-                .faq-nav-btn i { font-size: 1.2rem; }
-                .faq-nav-btn.active { background: #f0f7ff; color: #3986FF; }
-                .faq-nav-btn:hover:not(.active) { background: #f8fafc; color: #1e293b; }
-
-                .dashboard-faq-item {
-                    background: #f8fafc;
-                    border-radius: 25px;
-                    overflow: hidden;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                    border: 1px solid transparent;
-                }
-                .dashboard-faq-item summary {
-                    padding: 25px 30px;
-                    font-size: 1.15rem;
-                    font-weight: 700;
-                    color: #1e293b;
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    list-style: none;
-                    font-family: 'Outfit';
-                }
-                .dashboard-faq-item summary i { transition: transform 0.4s; color: #3986FF; flex-shrink: 0; }
-                .dashboard-faq-item[open] { background: white; border-color: #3986FF; box-shadow: 0 15px 40px rgba(57, 134, 255, 0.08); transform: scale(1.01); }
-                .dashboard-faq-item[open] summary i { transform: rotate(180deg); }
-                .faq-dash-content {
-                    padding: 0 30px 30px 30px;
-                    color: #64748b;
-                    font-size: 1.1rem;
-                    line-height: 1.7;
-                    animation: fadeInDown 0.4s ease-out;
-                }
-                
-                @keyframes fadeInDown {
-                    from { opacity: 0; transform: translateY(-10px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-                
-                @media (max-width: 1024px) {
-                    .faq-dashboard-wrapper { grid-template-columns: 1fr; padding: 25px; }
-                    .faq-nav-container { border-right: none; padding-right: 0; padding-bottom: 40px; border-bottom: 1px solid #f1f5f9; }
-                    .faq-content-container { padding-left: 0; padding-top: 40px; }
-                }
-            </style>
 
             <script>
                 function switchFaqCategory(category, btn) {
                     // Hide all categories
                     document.querySelectorAll('.faq-category-content').forEach(el => {
-                        el.style.display = 'none';
                         el.classList.remove('active-category');
                     });
                     // Deactivate all buttons
                     document.querySelectorAll('.faq-nav-btn').forEach(el => {
                         el.classList.remove('active');
                     });
+                    
                     // Show selected category
                     const selected = document.getElementById('faq-' + category);
-                    selected.style.display = 'flex';
-                    selected.classList.add('active-category');
+                    if (selected) {
+                        selected.classList.add('active-category');
+                    }
+                    
                     // Activate button
-                    btn.classList.add('active');
+                    if (btn) {
+                        btn.classList.add('active');
+                    }
                 }
+
+                // Initialize FAQ on load
+                document.addEventListener('DOMContentLoaded', () => {
+                    const firstBtn = document.querySelector('.faq-nav-btn');
+                    if (firstBtn) {
+                        switchFaqCategory('general', firstBtn);
+                    }
+                });
             </script>
-        </section>     </section>
+        </section>
 
     </main>
 
