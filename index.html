@@ -152,22 +152,42 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         @keyframes blob-morph {
-            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            0% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+
+            100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
         }
 
         @keyframes rotate-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+            from {
+                transform: rotate(0deg);
+            }
 
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -180,18 +200,19 @@
                 <img src="assets/user_logo_2.png" alt="Otic Ear Care" class="logo-dark" style="height: 60px;">
             </a>
             <nav class="nav-links">
-                <a href="ear-wax-removal.html">Ear Wax Removal</a>
+
+                <a href="#">Ear Wax Removal</a>
                 <div class="dropdown">
                     <button class="dropbtn">Ear Treatments <i class="ph ph-caret-down"></i></button>
                     <div class="dropdown-content">
-                        <a href="ear-infection.html">Ear Infection Treatment</a>
-                        <a href="foreign-body.html">Ear Foreign Body & Object Removal</a>
-                        <a href="children-care.html">Children’s Ear Wax Removal</a>
+                        <a href="#">Ear Infection Treatment</a>
+                        <a href="#">Foreign Body Removal</a>
+                        <a href="#">Children’s Ear Wax Removal</a>
                     </div>
                 </div>
-                <a href="fees.html">Fees</a>
-                <a href="team.html">Team</a>
-                <a href="insights.html">Insights & Advice</a>
+                <a href="#">Fees</a>
+                <a href="#">Team</a>
+                <a href="#">Insights & Advice</a>
             </nav>
             <a href="book.html" class="btn btn-primary nav-cta">Book Appointment <i
                     class="ph-bold ph-arrow-right"></i></a>
@@ -205,40 +226,41 @@
                 </a>
                 <button class="close-menu" id="close-menu-btn"><i class="ph ph-x"></i></button>
             </div>
-            <div class="mobile-nav-body">
+            <div class="mobile-nav-content">
                 <a href="index.html" class="mobile-nav-link">
                     <i class="ph ph-house"></i>
                     <span>Home</span>
                     <i class="ph ph-caret-right chevron-right"></i>
                 </a>
-                <a href="ear-wax-removal.html" class="mobile-nav-link">
+                <a href="#" class="mobile-nav-link">
                     <i class="ph ph-ear"></i>
                     <span>Ear Wax Removal</span>
                     <i class="ph ph-caret-right chevron-right"></i>
                 </a>
                 <div class="mobile-nav-dropdown">
-                    <button class="mobile-nav-link dropdown-toggle" id="mobile-dropdown-toggle" style="width: 100%; text-align: left; background: none; border: none; border-bottom: 1px solid rgba(0,0,0,0.02);">
+                    <button class="mobile-nav-link dropdown-toggle" id="mobile-dropdown-toggle"
+                        style="width: 100%; text-align: left; background: none; border: none; border-bottom: 1px solid rgba(0,0,0,0.02);">
                         <i class="ph ph-plus-circle"></i>
                         <span>Ear Treatments</span>
                         <i class="ph ph-caret-down chevron-down"></i>
                     </button>
                     <div class="mobile-dropdown-content" id="mobile-dropdown-content">
-                        <a href="ear-infection.html">Ear Infection Treatment</a>
-                        <a href="foreign-body.html">Foreign Body Removal</a>
-                        <a href="children-care.html">Children’s Ear Wax Removal</a>
+                        <a href="#">Ear Infection Treatment</a>
+                        <a href="#">Foreign Body Removal</a>
+                        <a href="#">Children’s Ear Wax Removal</a>
                     </div>
                 </div>
-                <a href="fees.html" class="mobile-nav-link">
+                <a href="#" class="mobile-nav-link">
                     <i class="ph ph-currency-circle-dollar"></i>
                     <span>Fees</span>
                     <i class="ph ph-caret-right chevron-right"></i>
                 </a>
-                <a href="team.html" class="mobile-nav-link">
+                <a href="#" class="mobile-nav-link">
                     <i class="ph ph-users"></i>
                     <span>Team</span>
                     <i class="ph ph-caret-right chevron-right"></i>
                 </a>
-                <a href="insights.html" class="mobile-nav-link">
+                <a href="#" class="mobile-nav-link">
                     <i class="ph ph-lightbulb"></i>
                     <span>Insights & Advice</span>
                     <i class="ph ph-caret-right chevron-right"></i>
@@ -320,20 +342,28 @@
         </section>
 
         <!-- 1. Clinic Comes to You -->
-        <section class="clinic-services" style="padding: 100px 0; background: #ffffff; position: relative; overflow: hidden;">
+        <section class="clinic-services"
+            style="padding: 100px 0; background: #ffffff; position: relative; overflow: hidden;">
             <!-- Colorful background blobs -->
-            <div style="position: absolute; top: -10%; right: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(74, 144, 226, 0.08) 0%, transparent 70%); z-index: 1;"></div>
-            <div style="position: absolute; bottom: -10%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(224, 159, 156, 0.1) 0%, transparent 70%); z-index: 1;"></div>
+            <div
+                style="position: absolute; top: -10%; right: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(74, 144, 226, 0.08) 0%, transparent 70%); z-index: 1;">
+            </div>
+            <div
+                style="position: absolute; bottom: -10%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(224, 159, 156, 0.1) 0%, transparent 70%); z-index: 1;">
+            </div>
 
             <div class="container" style="position: relative; z-index: 2;">
                 <div style="text-align: center; max-width: 800px; margin: 0 auto 60px auto;">
-                    <div style="color: var(--primary); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; background: rgba(74, 144, 226, 0.1); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 99px;">
+                    <div
+                        style="color: var(--primary); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; background: rgba(74, 144, 226, 0.1); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 99px;">
                         Mobile Clinic Service
                     </div>
-                    <h2 class="section-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 2rem; letter-spacing: -0.02em;">
+                    <h2 class="section-title"
+                        style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 2rem; letter-spacing: -0.02em;">
                         Expert Ear Care <span class="text-gradient">Right at Your Doorstep</span>
                     </h2>
-                    <p style="font-size: 1.25rem; line-height: 1.7; color: var(--text-muted); max-width: 700px; margin: 0 auto;">
+                    <p
+                        style="font-size: 1.25rem; line-height: 1.7; color: var(--text-muted); max-width: 700px; margin: 0 auto;">
                         Bringing expert mobile ear care to the comfort and privacy of your own home, 24/7 across London.
                     </p>
                 </div>
@@ -348,7 +378,8 @@
                         </div>
                         <div class="card-body">
                             <h3>Ear Wax Removal</h3>
-                            <p>Specialist mobile micro-suction ear cleaning across London. The safest, most effective method for clear hearing.</p>
+                            <p>Specialist mobile micro-suction ear cleaning across London. The safest, most effective
+                                method for clear hearing.</p>
                             <a href="ear-wax-removal.html" class="learn-more-link">
                                 <span>Explore Treatment</span>
                                 <div class="arrow-wrap"><i class="ph-bold ph-arrow-right"></i></div>
@@ -365,7 +396,8 @@
                         </div>
                         <div class="card-body">
                             <h3>Ear Infection Treatment</h3>
-                            <p>Professional diagnosis and treatment for painful ear infections. Safe for adults and children above 2 years.</p>
+                            <p>Professional diagnosis and treatment for painful ear infections. Safe for adults and
+                                children above 2 years.</p>
                             <a href="ear-infection.html" class="learn-more-link">
                                 <span>Explore Treatment</span>
                                 <div class="arrow-wrap"><i class="ph-bold ph-arrow-right"></i></div>
@@ -376,13 +408,15 @@
                     <!-- Service 3: Teal Theme -->
                     <div class="service-feature-card card-teal">
                         <div class="card-image-section">
-                            <img src="assets/professional_ear_wax_removal_procedure_1776407982983.png" alt="Foreign Body Removal">
+                            <img src="assets/professional_ear_wax_removal_procedure_1776407982983.png"
+                                alt="Foreign Body Removal">
                             <div class="gloss-overlay"></div>
                             <div class="service-tag">NHS Experienced</div>
                         </div>
                         <div class="card-body">
                             <h3>Foreign Body Removal</h3>
-                            <p>Gentle and precise removal of foreign objects from the ear canal, performed by our experienced microsuction specialists.</p>
+                            <p>Gentle and precise removal of foreign objects from the ear canal, performed by our
+                                experienced microsuction specialists.</p>
                             <a href="foreign-body.html" class="learn-more-link">
                                 <span>Explore Treatment</span>
                                 <div class="arrow-wrap"><i class="ph-bold ph-arrow-right"></i></div>
@@ -410,9 +444,17 @@
                     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
                 }
 
-                .card-blue:hover { background: #f8fbff; }
-                .card-coral:hover { background: #fff8f8; }
-                .card-teal:hover { background: #f7fffe; }
+                .card-blue:hover {
+                    background: #f8fbff;
+                }
+
+                .card-coral:hover {
+                    background: #fff8f8;
+                }
+
+                .card-teal:hover {
+                    background: #f7fffe;
+                }
 
                 .card-image-section {
                     position: relative;
@@ -458,7 +500,7 @@
                     text-transform: uppercase;
                     letter-spacing: 1px;
                     color: var(--primary-dark);
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                     z-index: 2;
                 }
 
@@ -516,12 +558,25 @@
                 }
 
                 /* Theme variations */
-                .card-blue { border-bottom: 4px solid var(--primary); }
-                .card-coral { border-bottom: 4px solid #F87171; }
-                .card-teal { border-bottom: 4px solid #2DD4BF; }
+                .card-blue {
+                    border-bottom: 4px solid var(--primary);
+                }
 
-                .card-coral .service-tag { color: #E53E3E; }
-                .card-teal .service-tag { color: #0D9488; }
+                .card-coral {
+                    border-bottom: 4px solid #F87171;
+                }
+
+                .card-teal {
+                    border-bottom: 4px solid #2DD4BF;
+                }
+
+                .card-coral .service-tag {
+                    color: #E53E3E;
+                }
+
+                .card-teal .service-tag {
+                    color: #0D9488;
+                }
 
                 @media (max-width: 768px) {
                     .clinic-services .section-title {
@@ -535,48 +590,64 @@
         <section class="why-choose-section" style="padding: 6rem 0; background: white;">
             <div class="container">
                 <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center;">
-                    <div class="img-wrapper" style="position: relative; display: flex; justify-content: center; align-items: center; min-height: 500px;">
+                    <div class="img-wrapper"
+                        style="position: relative; display: flex; justify-content: center; align-items: center; min-height: 500px;">
                         <!-- Rotating Ring -->
-                        <div style="position: absolute; width: 450px; height: 450px; border: 2px dashed rgba(74, 144, 226, 0.2); border-radius: 50%; animation: rotate-slow 20s linear infinite;"></div>
-                        <div style="position: absolute; width: 480px; height: 480px; border: 1px solid rgba(74, 144, 226, 0.1); border-radius: 50%;"></div>
-                        
+                        <div
+                            style="position: absolute; width: 450px; height: 450px; border: 2px dashed rgba(74, 144, 226, 0.2); border-radius: 50%; animation: rotate-slow 20s linear infinite;">
+                        </div>
+                        <div
+                            style="position: absolute; width: 480px; height: 480px; border: 1px solid rgba(74, 144, 226, 0.1); border-radius: 50%;">
+                        </div>
+
                         <!-- Main Circular Image -->
-                        <div style="position: relative; width: 380px; height: 380px; border-radius: 50%; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.15); border: 8px solid white; z-index: 2;">
+                        <div
+                            style="position: relative; width: 380px; height: 380px; border-radius: 50%; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.15); border: 8px solid white; z-index: 2;">
                             <img src="assets/professional_ear_wax_removal_procedure_1776407982983.png"
-                                alt="Clinical Ear Wax Removal"
-                                style="width: 100%; height: 100%; object-fit: cover;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 40%);"></div>
+                                alt="Clinical Ear Wax Removal" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div
+                                style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 40%);">
+                            </div>
                         </div>
 
                         <!-- Floating Stats -->
                         <div
                             style="position: absolute; bottom: 10%; right: 5%; background: var(--primary); color: white; padding: 1.5rem 2rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(74, 144, 226, 0.3); z-index: 3; text-align: center;">
-                            <div style="color: #FBBF24; font-size: 1rem; margin-bottom: 0.5rem; display: flex; justify-content: center; gap: 2px;">
+                            <div
+                                style="color: #FBBF24; font-size: 1rem; margin-bottom: 0.5rem; display: flex; justify-content: center; gap: 2px;">
                                 <i class="ph-fill ph-star"></i>
                                 <i class="ph-fill ph-star"></i>
                                 <i class="ph-fill ph-star"></i>
                                 <i class="ph-fill ph-star"></i>
                                 <i class="ph-fill ph-star"></i>
                             </div>
-                            <p style="font-size: 2.5rem; font-weight: 800; line-height: 1; margin: 0; font-family: 'Outfit';">20k+</p>
-                            <p style="font-size: 0.8rem; margin: 0; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px;">Procedures</p>
+                            <p
+                                style="font-size: 2.5rem; font-weight: 800; line-height: 1; margin: 0; font-family: 'Outfit';">
+                                20k+</p>
+                            <p
+                                style="font-size: 0.8rem; margin: 0; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px;">
+                                Procedures</p>
                         </div>
 
                         <!-- Feature Badges -->
                         <div
                             style="position: absolute; top: 15%; left: 0%; background: white; padding: 0.8rem 1.2rem; border-radius: 99px; box-shadow: 0 10px 25px rgba(0,0,0,0.06); z-index: 3; display: flex; align-items: center; gap: 0.8rem; border: 1px solid rgba(0,0,0,0.03); animation: float 5s ease-in-out infinite;">
-                            <div style="width: 32px; height: 32px; background: rgba(74, 144, 226, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                            <div
+                                style="width: 32px; height: 32px; background: rgba(74, 144, 226, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
                                 <i class="ph-bold ph-shield-check"></i>
                             </div>
-                            <span style="font-weight: 700; font-size: 0.9rem; color: var(--primary-dark);">Safe & Gentle</span>
+                            <span style="font-weight: 700; font-size: 0.9rem; color: var(--primary-dark);">Safe &
+                                Gentle</span>
                         </div>
 
                         <div
                             style="position: absolute; bottom: 25%; left: -5%; background: white; padding: 0.8rem 1.2rem; border-radius: 99px; box-shadow: 0 10px 25px rgba(0,0,0,0.06); z-index: 3; display: flex; align-items: center; gap: 0.8rem; border: 1px solid rgba(0,0,0,0.03); animation: float 6s ease-in-out infinite; animation-delay: 1s;">
-                            <div style="width: 32px; height: 32px; background: rgba(224, 159, 156, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                            <div
+                                style="width: 32px; height: 32px; background: rgba(224, 159, 156, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
                                 <i class="ph-bold ph-house"></i>
                             </div>
-                            <span style="font-weight: 700; font-size: 0.9rem; color: var(--primary-dark);">Home Visit</span>
+                            <span style="font-weight: 700; font-size: 0.9rem; color: var(--primary-dark);">Home
+                                Visit</span>
                         </div>
                     </div>
                     <div>
@@ -587,7 +658,10 @@
                             <h2 class="section-title"
                                 style="font-size: 3rem; margin-bottom: 1rem; line-height: 1.1; color: var(--primary-dark);">
                                 Why choose <span class="text-gradient">Otic Ear Care</span>?</h2>
-                            <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.6;">Our experienced clinicians have performed over 20,000 procedures across NHS and private settings. Using safe, medical-grade microsuction techniques, we provide effective and comfortable ear care you can trust.</p>
+                            <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.6;">Our experienced
+                                clinicians have performed over 20,000 procedures across NHS and private settings. Using
+                                safe, medical-grade microsuction techniques, we provide effective and comfortable ear
+                                care you can trust.</p>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                             <div
@@ -611,14 +685,16 @@
                                 <i class="ph-duotone ph-microscope"
                                     style="font-size: 2rem; color: var(--primary); margin-bottom: 0.75rem;"></i>
                                 <h4 style="margin-bottom: 0.5rem; color: var(--primary-dark);">Hospital-Grade Kit</h4>
-                                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Using world-class Carl Zeiss optics and DeVilbiss suction units.</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Using
+                                    world-class Carl Zeiss optics and DeVilbiss suction units.</p>
                             </div>
                             <div
                                 style="background: #f8fafc; padding: 1.5rem; border-radius: 16px; border: 1px solid #f1f5f9;">
                                 <i class="ph-duotone ph-ear"
                                     style="font-size: 2rem; color: var(--primary); margin-bottom: 0.75rem;"></i>
                                 <h4 style="margin-bottom: 0.5rem; color: var(--primary-dark);">Instant Results</h4>
-                                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Experience immediate relief and clearer hearing, right in your home.</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">Experience
+                                    immediate relief and clearer hearing, right in your home.</p>
                             </div>
                         </div>
                     </div>
@@ -627,29 +703,38 @@
         </section>
 
         <!-- 3. What is microsuction? (Pixel-Perfect Editorial Redesign) -->
-        <section class="microsuction-editorial" style="padding: 80px 0; background: #ffffff; position: relative; overflow: hidden;">
+        <section class="microsuction-editorial"
+            style="padding: 80px 0; background: #ffffff; position: relative; overflow: hidden;">
             <!-- Background Accent Split -->
-            <div style="position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: #f8fafc; z-index: 0;"></div>
-            
+            <div
+                style="position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: #f8fafc; z-index: 0;">
+            </div>
+
             <div class="container" style="position: relative; z-index: 2;">
                 <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 6rem; align-items: center;">
                     <!-- Left: Content Discovery -->
                     <div>
-                        <div class="editorial-badge" style="background: rgba(74, 144, 226, 0.1); color: #4A90E2; padding: 0.6rem 1.8rem; border-radius: 99px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; display: inline-block; margin-bottom: 2rem;">
+                        <div class="editorial-badge"
+                            style="background: rgba(74, 144, 226, 0.1); color: #4A90E2; padding: 0.6rem 1.8rem; border-radius: 99px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; display: inline-block; margin-bottom: 2rem;">
                             Clinical Procedure
                         </div>
-                        <h2 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.04em; color: var(--primary-dark); font-weight: 800;">
+                        <h2
+                            style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.04em; color: var(--primary-dark); font-weight: 800;">
                             What is <span class="text-gradient">Microsuction?</span>
                         </h2>
-                        
-                        <p style="font-size: 1.2rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 580px;">
-                            The gold standard for safe and effective ear wax removal. We use clinical-grade microscopes and calibrated suction to ensure absolute precision.
+
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 580px;">
+                            The gold standard for safe and effective ear wax removal. We use clinical-grade microscopes
+                            and calibrated suction to ensure absolute precision.
                         </p>
 
                         <!-- Process Steps with Medical Signal Animation -->
-                        <div class="clinical-process" style="display: flex; flex-direction: column; gap: 2.5rem; position: relative;">
+                        <div class="clinical-process"
+                            style="display: flex; flex-direction: column; gap: 2.5rem; position: relative;">
                             <!-- Traveling Signal Path -->
-                            <div style="position: absolute; top: 30px; left: 30px; bottom: 30px; width: 2px; background: rgba(74, 144, 226, 0.1); z-index: 0;">
+                            <div
+                                style="position: absolute; top: 30px; left: 30px; bottom: 30px; width: 2px; background: rgba(74, 144, 226, 0.1); z-index: 0;">
                                 <div class="signal-pulse"></div>
                             </div>
 
@@ -668,7 +753,8 @@
                             <!-- Step 2: Suction (Flow Animation) -->
                             <div class="signal-step-item">
                                 <div class="signal-node">
-                                    <i class="ph-duotone ph-first-aid icon-suction" style="color: var(--secondary);"></i>
+                                    <i class="ph-duotone ph-first-aid icon-suction"
+                                        style="color: var(--secondary);"></i>
                                     <div class="suction-line"></div>
                                 </div>
                                 <div class="pulse-content">
@@ -727,8 +813,13 @@
                             }
 
                             @keyframes signal-flow {
-                                0% { top: -40px; }
-                                100% { top: 100%; }
+                                0% {
+                                    top: -40px;
+                                }
+
+                                100% {
+                                    top: 100%;
+                                }
                             }
 
                             /* 1. Focus Animation for Microscope */
@@ -740,14 +831,31 @@
                                 opacity: 0.3;
                                 animation: rotate-focus 8s infinite linear;
                             }
+
                             @keyframes rotate-focus {
-                                from { transform: rotate(0deg); }
-                                to { transform: rotate(360deg); }
+                                from {
+                                    transform: rotate(0deg);
+                                }
+
+                                to {
+                                    transform: rotate(360deg);
+                                }
                             }
-                            .icon-focus { animation: lens-zoom 4s infinite ease-in-out; }
+
+                            .icon-focus {
+                                animation: lens-zoom 4s infinite ease-in-out;
+                            }
+
                             @keyframes lens-zoom {
-                                0%, 100% { transform: scale(1); }
-                                50% { transform: scale(1.2); }
+
+                                0%,
+                                100% {
+                                    transform: scale(1);
+                                }
+
+                                50% {
+                                    transform: scale(1.2);
+                                }
                             }
 
                             /* 2. Suction Line Animation */
@@ -762,39 +870,62 @@
                                 transform: rotate(-45deg);
                                 opacity: 0.5;
                             }
+
                             @keyframes suction-flow {
-                                0% { transform: rotate(-45deg) translateX(-100%); }
-                                100% { transform: rotate(-45deg) translateX(100%); }
+                                0% {
+                                    transform: rotate(-45deg) translateX(-100%);
+                                }
+
+                                100% {
+                                    transform: rotate(-45deg) translateX(100%);
+                                }
                             }
 
                             /* 3. Specialist Glow */
-                            .icon-specialist { animation: specialist-glow 3s infinite ease-in-out; }
+                            .icon-specialist {
+                                animation: specialist-glow 3s infinite ease-in-out;
+                            }
+
                             @keyframes specialist-glow {
-                                0%, 100% { filter: drop-shadow(0 0 0px var(--primary)); }
-                                50% { filter: drop-shadow(0 0 8px var(--primary)); }
+
+                                0%,
+                                100% {
+                                    filter: drop-shadow(0 0 0px var(--primary));
+                                }
+
+                                50% {
+                                    filter: drop-shadow(0 0 8px var(--primary));
+                                }
                             }
                         </style>
                     </div>
 
                     <!-- Right: Visual Composition -->
                     <div style="position: relative; padding: 20px;">
-                        <div style="width: 100%; border-radius: 60px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,0.12);">
-                            <img src="assets/microsuction.png" alt="Clinical Microsuction" style="width: 100%; height: auto; display: block;">
+                        <div
+                            style="width: 100%; border-radius: 60px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,0.12);">
+                            <img src="assets/microsuction.png" alt="Clinical Microsuction"
+                                style="width: 100%; height: auto; display: block;">
                         </div>
-                        
+
                         <!-- Simple Equipment Card -->
-                        <div style="position: absolute; bottom: 10%; left: -15%; background: white; padding: 1.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(0,0,0,0.02); z-index: 3;">
-                            <div style="width: 45px; height: 45px; background: rgba(59, 130, 246, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #3B82F6; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; bottom: 10%; left: -15%; background: white; padding: 1.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 1rem; border: 1px solid rgba(0,0,0,0.02); z-index: 3;">
+                            <div
+                                style="width: 45px; height: 45px; background: rgba(59, 130, 246, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #3B82F6; flex-shrink: 0;">
                                 <i class="ph-duotone ph-first-aid"></i>
                             </div>
                             <div>
-                                <h4 style="font-size: 1rem; color: #1E3A8A; font-weight: 800; margin: 0;">DeVilBiss Suction</h4>
-                                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0; line-height: 1.4;">Hospital-grade safety & comfort.</p>
+                                <h4 style="font-size: 1rem; color: #1E3A8A; font-weight: 800; margin: 0;">DeVilBiss
+                                    Suction</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+                                    Hospital-grade safety & comfort.</p>
                             </div>
                         </div>
 
                         <!-- Top Floating Icon -->
-                        <div style="position: absolute; top: 0; right: 0; width: 90px; height: 90px; background: white; border-radius: 50%; box-shadow: 0 15px 40px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; z-index: 4;">
+                        <div
+                            style="position: absolute; top: 0; right: 0; width: 90px; height: 90px; background: white; border-radius: 50%; box-shadow: 0 15px 40px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; z-index: 4;">
                             <i class="ph-duotone ph-microscope" style="color: #3B82F6; font-size: 2.5rem;"></i>
                         </div>
                     </div>
@@ -805,17 +936,25 @@
         </section>
 
         <!-- 4. Why microsuction? (Data Tree Redesign) -->
-        <section class="data-tree-section" style="padding: 100px 0; background: #fdfdfd; overflow: hidden; position: relative;">
-            <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(74, 144, 226, 0.05) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
+        <section class="data-tree-section"
+            style="padding: 100px 0; background: #fdfdfd; overflow: hidden; position: relative;">
+            <div
+                style="position: absolute; inset: 0; background-image: radial-gradient(rgba(74, 144, 226, 0.05) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;">
+            </div>
 
             <div class="container">
                 <div style="text-align: center; margin-bottom: 80px;">
-                    <div style="color: var(--primary); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; background: rgba(74, 144, 226, 0.1); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 99px;">
+                    <div
+                        style="color: var(--primary); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; background: rgba(74, 144, 226, 0.1); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 99px;">
                         The Clinical Advantage
                     </div>
-                    <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Why <span class="text-gradient">Microsuction?</span></h2>
-                    <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: var(--text-muted); line-height: 1.7;">
-                        Our specialist clinicians use hospital-grade microsuction technology to provide a safe, dry, and highly effective ear cleaning service. This procedure is widely considered the gold standard for precision and patient comfort.
+                    <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Why <span
+                            class="text-gradient">Microsuction?</span></h2>
+                    <p
+                        style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: var(--text-muted); line-height: 1.7;">
+                        Our specialist clinicians use hospital-grade microsuction technology to provide a safe, dry, and
+                        highly effective ear cleaning service. This procedure is widely considered the gold standard for
+                        precision and patient comfort.
                     </p>
                 </div>
 
@@ -859,7 +998,8 @@
                     <div class="tree-branch right-branch">
                         <div class="tree-node">
                             <div class="node-line"></div>
-                            <div class="node-icon" style="color: var(--secondary);"><i class="ph-duotone ph-stethoscope"></i></div>
+                            <div class="node-icon" style="color: var(--secondary);"><i
+                                    class="ph-duotone ph-stethoscope"></i></div>
                             <div class="node-content">
                                 <h4>Expert Standards</h4>
                                 <p>Clinicians trained to professional NHS & private standards.</p>
@@ -867,7 +1007,8 @@
                         </div>
                         <div class="tree-node">
                             <div class="node-line"></div>
-                            <div class="node-icon" style="color: var(--secondary);"><i class="ph-duotone ph-drop"></i></div>
+                            <div class="node-icon" style="color: var(--secondary);"><i class="ph-duotone ph-drop"></i>
+                            </div>
                             <div class="node-content">
                                 <h4>Itchy Ear Relief</h4>
                                 <p>Vital treatment for swimmer’s ear & otitis externa.</p>
@@ -875,7 +1016,8 @@
                         </div>
                         <div class="tree-node">
                             <div class="node-line"></div>
-                            <div class="node-icon" style="color: var(--secondary);"><i class="ph-duotone ph-waveform"></i></div>
+                            <div class="node-icon" style="color: var(--secondary);"><i
+                                    class="ph-duotone ph-waveform"></i></div>
                             <div class="node-content">
                                 <h4>Instant Hearing</h4>
                                 <p>Immediate relief and clear hearing from your first visit.</p>
@@ -886,106 +1028,273 @@
             </div>
 
             <style>
-                .tree-grid-container { display: grid; grid-template-columns: 1fr 400px 1fr; align-items: center; position: relative; }
-                .tree-branch { display: flex; flex-direction: column; gap: 60px; }
-                .tree-node { display: flex; align-items: center; position: relative; padding: 2rem; background: white; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.03); transition: all 0.4s ease; z-index: 2; }
-                .tree-node:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(74, 144, 226, 0.1); border-color: rgba(74, 144, 226, 0.2); }
-                .left-branch .tree-node { text-align: left; justify-content: flex-start; }
-                .right-branch .tree-node { text-align: left; justify-content: flex-start; }
-                .node-icon { width: 50px; height: 50px; background: rgba(74, 144, 226, 0.08); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary); flex-shrink: 0; margin-right: 1.5rem; }
-                .node-content h4 { font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary-dark); font-weight: 800; }
-                .node-content p { font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
-                .node-line { position: absolute; top: 50%; width: 60px; height: 2px; z-index: 1; }
-                .left-branch .node-line { right: -60px; background: linear-gradient(to left, rgba(74, 144, 226, 0.2), transparent); }
-                .right-branch .node-line { left: -60px; background: linear-gradient(to right, rgba(74, 144, 226, 0.2), transparent); }
-                .tree-core { position: relative; display: flex; justify-content: center; align-items: center; }
-                .core-image-wrap { width: 300px; height: 300px; border-radius: 50%; padding: 15px; background: white; box-shadow: 0 20px 60px rgba(0,0,0,0.1); position: relative; z-index: 3; }
-                .core-image-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-                .core-glow { position: absolute; inset: -20px; background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, transparent 70%); z-index: 0; animation: float 4s ease-in-out infinite; }
-                .pulse-ring { position: absolute; width: 350px; height: 350px; border: 1px solid rgba(74, 144, 226, 0.2); border-radius: 50%; animation: ring-pulse 3s linear infinite; }
-                @keyframes ring-pulse { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; } }
+                .tree-grid-container {
+                    display: grid;
+                    grid-template-columns: 1fr 400px 1fr;
+                    align-items: center;
+                    position: relative;
+                }
+
+                .tree-branch {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 60px;
+                }
+
+                .tree-node {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    padding: 2rem;
+                    background: white;
+                    border-radius: 24px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+                    border: 1px solid rgba(0, 0, 0, 0.03);
+                    transition: all 0.4s ease;
+                    z-index: 2;
+                }
+
+                .tree-node:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 20px 50px rgba(74, 144, 226, 0.1);
+                    border-color: rgba(74, 144, 226, 0.2);
+                }
+
+                .left-branch .tree-node {
+                    text-align: left;
+                    justify-content: flex-start;
+                }
+
+                .right-branch .tree-node {
+                    text-align: left;
+                    justify-content: flex-start;
+                }
+
+                .node-icon {
+                    width: 50px;
+                    height: 50px;
+                    background: rgba(74, 144, 226, 0.08);
+                    border-radius: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.8rem;
+                    color: var(--primary);
+                    flex-shrink: 0;
+                    margin-right: 1.5rem;
+                }
+
+                .node-content h4 {
+                    font-size: 1.15rem;
+                    margin-bottom: 0.4rem;
+                    color: var(--primary-dark);
+                    font-weight: 800;
+                }
+
+                .node-content p {
+                    font-size: 0.9rem;
+                    color: var(--text-muted);
+                    margin: 0;
+                    line-height: 1.5;
+                }
+
+                .node-line {
+                    position: absolute;
+                    top: 50%;
+                    width: 60px;
+                    height: 2px;
+                    z-index: 1;
+                }
+
+                .left-branch .node-line {
+                    right: -60px;
+                    background: linear-gradient(to left, rgba(74, 144, 226, 0.2), transparent);
+                }
+
+                .right-branch .node-line {
+                    left: -60px;
+                    background: linear-gradient(to right, rgba(74, 144, 226, 0.2), transparent);
+                }
+
+                .tree-core {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .core-image-wrap {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                    padding: 15px;
+                    background: white;
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+                    position: relative;
+                    z-index: 3;
+                }
+
+                .core-image-wrap img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                .core-glow {
+                    position: absolute;
+                    inset: -20px;
+                    background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, transparent 70%);
+                    z-index: 0;
+                    animation: float 4s ease-in-out infinite;
+                }
+
+                .pulse-ring {
+                    position: absolute;
+                    width: 350px;
+                    height: 350px;
+                    border: 1px solid rgba(74, 144, 226, 0.2);
+                    border-radius: 50%;
+                    animation: ring-pulse 3s linear infinite;
+                }
+
+                @keyframes ring-pulse {
+                    0% {
+                        transform: scale(0.8);
+                        opacity: 1;
+                    }
+
+                    100% {
+                        transform: scale(1.3);
+                        opacity: 0;
+                    }
+                }
             </style>
         </section>
 
         <!-- 5. Ear Treatments (Vibrant Redesign) -->
-        <section class="ear-treatments-vibrant" style="padding: 120px 0; background: #080b12; position: relative; overflow: hidden; color: white;">
+        <section class="ear-treatments-vibrant"
+            style="padding: 120px 0; background: #080b12; position: relative; overflow: hidden; color: white;">
             <!-- Dynamic Background Elements -->
-            <div style="position: absolute; top: -10%; left: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(57, 134, 255, 0.15) 0%, transparent 70%); animation: pulse-glow 10s infinite alternate;"></div>
-            <div style="position: absolute; bottom: -10%; right: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(139, 224, 158, 0.12) 0%, transparent 70%); animation: pulse-glow 12s infinite alternate-reverse;"></div>
-            
+            <div
+                style="position: absolute; top: -10%; left: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(57, 134, 255, 0.15) 0%, transparent 70%); animation: pulse-glow 10s infinite alternate;">
+            </div>
+            <div
+                style="position: absolute; bottom: -10%; right: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(139, 224, 158, 0.12) 0%, transparent 70%); animation: pulse-glow 12s infinite alternate-reverse;">
+            </div>
+
             <!-- Animated SVG Medical Lines -->
-            <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; pointer-events: none;" viewBox="0 0 1440 800" preserveAspectRatio="none">
+            <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; pointer-events: none;"
+                viewBox="0 0 1440 800" preserveAspectRatio="none">
                 <path d="M0,400 Q360,300 720,400 T1440,400" fill="none" stroke="#3986FF" stroke-width="2">
-                    <animate attributeName="d" values="M0,400 Q360,300 720,400 T1440,400; M0,400 Q360,500 720,400 T1440,400; M0,400 Q360,300 720,400 T1440,400" dur="10s" repeatCount="indefinite" />
+                    <animate attributeName="d"
+                        values="M0,400 Q360,300 720,400 T1440,400; M0,400 Q360,500 720,400 T1440,400; M0,400 Q360,300 720,400 T1440,400"
+                        dur="10s" repeatCount="indefinite" />
                 </path>
                 <path d="M0,450 Q360,550 720,450 T1440,450" fill="none" stroke="#8BE09E" stroke-width="2">
-                    <animate attributeName="d" values="M0,450 Q360,550 720,450 T1440,450; M0,450 Q360,350 720,450 T1440,450; M0,450 Q360,550 720,450 T1440,450" dur="8s" repeatCount="indefinite" />
+                    <animate attributeName="d"
+                        values="M0,450 Q360,550 720,450 T1440,450; M0,450 Q360,350 720,450 T1440,450; M0,450 Q360,550 720,450 T1440,450"
+                        dur="8s" repeatCount="indefinite" />
                 </path>
             </svg>
 
             <div class="container" style="position: relative; z-index: 2;">
                 <div style="text-align: center; margin-bottom: 100px;">
-                    <div class="vibrant-badge" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(57, 134, 255, 0.15); color: #3986FF; padding: 10px 25px; border-radius: 100px; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(57, 134, 255, 0.3); backdrop-filter: blur(10px);">
+                    <div class="vibrant-badge"
+                        style="display: inline-flex; align-items: center; gap: 10px; background: rgba(57, 134, 255, 0.15); color: #3986FF; padding: 10px 25px; border-radius: 100px; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(57, 134, 255, 0.3); backdrop-filter: blur(10px);">
                         <i class="ph-bold ph-sparkle" style="animation: rotate-slow 4s linear infinite;"></i>
                         Advanced Clinical Suite
                     </div>
-                    <h2 style="font-size: 5rem; font-weight: 900; line-height: 1; margin-bottom: 25px; letter-spacing: -2px; font-family: 'Outfit';">
-                        Next-Gen <span style="background: linear-gradient(135deg, #3986FF, #8BE09E, #A78BFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(57,134,255,0.3));">Ear Treatments</span>
+                    <h2
+                        style="font-size: 5rem; font-weight: 900; line-height: 1; margin-bottom: 25px; letter-spacing: -2px; font-family: 'Outfit';">
+                        Next-Gen <span
+                            style="background: linear-gradient(135deg, #3986FF, #8BE09E, #A78BFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(57,134,255,0.3));">Ear
+                            Treatments</span>
                     </h2>
-                    <p style="max-width: 800px; margin: 0 auto; font-size: 1.4rem; color: rgba(255,255,255,0.7); line-height: 1.6; font-weight: 300;">
-                        Precision-engineered medical interventions for complex ear health, delivered with elite clinical standards at your convenience.
+                    <p
+                        style="max-width: 800px; margin: 0 auto; font-size: 1.4rem; color: rgba(255,255,255,0.7); line-height: 1.6; font-weight: 300;">
+                        Precision-engineered medical interventions for complex ear health, delivered with elite clinical
+                        standards at your convenience.
                     </p>
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 50px;">
                     <!-- Treatment Card 1: Infection -->
-                    <div class="vibrant-card" style="background: rgba(255, 255, 255, 0.03); border-radius: 50px; padding: 70px; border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(20px); position: relative; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); overflow: hidden; cursor: pointer;">
-                        <div class="card-glow-overlay" style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(57, 134, 255, 0.15), transparent 70%); opacity: 0; transition: opacity 0.6s;"></div>
-                        
+                    <div class="vibrant-card"
+                        style="background: rgba(255, 255, 255, 0.03); border-radius: 50px; padding: 70px; border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(20px); position: relative; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); overflow: hidden; cursor: pointer;">
+                        <div class="card-glow-overlay"
+                            style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(57, 134, 255, 0.15), transparent 70%); opacity: 0; transition: opacity 0.6s;">
+                        </div>
+
                         <div style="position: relative; z-index: 2;">
-                            <div class="icon-sphere" style="width: 160px; height: 160px; background: rgba(57, 134, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); position: relative; overflow: visible;">
-                                <img src="assets/ear_infection_clinical.png" alt="Ear Infection Management" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid rgba(57, 134, 255, 0.3);">
+                            <div class="icon-sphere"
+                                style="width: 160px; height: 160px; background: rgba(57, 134, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); position: relative; overflow: visible;">
+                                <img src="assets/ear_infection_clinical.png" alt="Ear Infection Management"
+                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid rgba(57, 134, 255, 0.3);">
                                 <!-- Orbiting ring -->
-                                <div style="position: absolute; inset: -20px; border: 2px solid rgba(57, 134, 255, 0.4); border-radius: 50%; border-top-color: white; animation: rotate-slow 5s linear infinite;"></div>
+                                <div
+                                    style="position: absolute; inset: -20px; border: 2px solid rgba(57, 134, 255, 0.4); border-radius: 50%; border-top-color: white; animation: rotate-slow 5s linear infinite;">
+                                </div>
                             </div>
 
-                            <h3 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; font-family: 'Outfit'; color: white; line-height: 1.1;">Ear Infection <br><span style="color: #3986FF;">Management</span></h3>
-                            <p style="font-size: 1.25rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 45px; max-width: 90%;">
-                                Elite clinical diagnosis and targeted intervention for severe infections. We provide immediate pain suppression and curative care.
+                            <h3
+                                style="font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; font-family: 'Outfit'; color: white; line-height: 1.1;">
+                                Ear Infection <br><span style="color: #3986FF;">Management</span></h3>
+                            <p
+                                style="font-size: 1.25rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 45px; max-width: 90%;">
+                                Elite clinical diagnosis and targeted intervention for severe infections. We provide
+                                immediate pain suppression and curative care.
                             </p>
 
-                            <div class="card-action" style="display: inline-flex; align-items: center; gap: 15px; background: #3986FF; color: white; padding: 15px 35px; border-radius: 100px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 10px 20px rgba(57, 134, 255, 0.3); transition: all 0.3s;">
+                            <div class="card-action"
+                                style="display: inline-flex; align-items: center; gap: 15px; background: #3986FF; color: white; padding: 15px 35px; border-radius: 100px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 10px 20px rgba(57, 134, 255, 0.3); transition: all 0.3s;">
                                 Procedure Details <i class="ph-bold ph-arrow-right"></i>
                             </div>
                         </div>
 
                         <!-- Animated Data Stream -->
-                        <div class="data-stream" style="position: absolute; top: 0; right: 40px; height: 100%; width: 1px; background: linear-gradient(to bottom, transparent, #3986FF, transparent); opacity: 0.2; transform: translateY(-100%); transition: transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);"></div>
+                        <div class="data-stream"
+                            style="position: absolute; top: 0; right: 40px; height: 100%; width: 1px; background: linear-gradient(to bottom, transparent, #3986FF, transparent); opacity: 0.2; transform: translateY(-100%); transition: transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);">
+                        </div>
                     </div>
 
                     <!-- Treatment Card 2: Foreign Body -->
-                    <div class="vibrant-card" style="background: rgba(255, 255, 255, 0.03); border-radius: 50px; padding: 70px; border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(20px); position: relative; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); overflow: hidden; cursor: pointer;">
-                        <div class="card-glow-overlay" style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(139, 224, 158, 0.15), transparent 70%); opacity: 0; transition: opacity 0.6s;"></div>
+                    <div class="vibrant-card"
+                        style="background: rgba(255, 255, 255, 0.03); border-radius: 50px; padding: 70px; border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(20px); position: relative; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); overflow: hidden; cursor: pointer;">
+                        <div class="card-glow-overlay"
+                            style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(139, 224, 158, 0.15), transparent 70%); opacity: 0; transition: opacity 0.6s;">
+                        </div>
 
                         <div style="position: relative; z-index: 2;">
-                            <div class="icon-sphere" style="width: 160px; height: 160px; background: rgba(139, 224, 158, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); position: relative; overflow: visible;">
-                                <img src="assets/foreign_body_extraction_microscopy.png" alt="Foreign Body Extraction" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid rgba(139, 224, 158, 0.3);">
+                            <div class="icon-sphere"
+                                style="width: 160px; height: 160px; background: rgba(139, 224, 158, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); position: relative; overflow: visible;">
+                                <img src="assets/foreign_body_extraction_microscopy.png" alt="Foreign Body Extraction"
+                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid rgba(139, 224, 158, 0.3);">
                                 <!-- Orbiting ring -->
-                                <div style="position: absolute; inset: -20px; border: 2px solid rgba(139, 224, 158, 0.4); border-radius: 50%; border-bottom-color: white; animation: rotate-slow 6s linear infinite reverse;"></div>
+                                <div
+                                    style="position: absolute; inset: -20px; border: 2px solid rgba(139, 224, 158, 0.4); border-radius: 50%; border-bottom-color: white; animation: rotate-slow 6s linear infinite reverse;">
+                                </div>
                             </div>
 
-                            <h3 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; font-family: 'Outfit'; color: white; line-height: 1.1;">Foreign Body <br><span style="color: #8BE09E;">Extraction</span></h3>
-                            <p style="font-size: 1.25rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 45px; max-width: 90%;">
-                                High-precision extraction of obstacles using surgical instruments and 4K digital microscopy for absolute safety.
+                            <h3
+                                style="font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; font-family: 'Outfit'; color: white; line-height: 1.1;">
+                                Foreign Body <br><span style="color: #8BE09E;">Extraction</span></h3>
+                            <p
+                                style="font-size: 1.25rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 45px; max-width: 90%;">
+                                High-precision extraction of obstacles using surgical instruments and 4K digital
+                                microscopy for absolute safety.
                             </p>
 
-                            <div class="card-action" style="display: inline-flex; align-items: center; gap: 15px; background: #8BE09E; color: white; padding: 15px 35px; border-radius: 100px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 10px 20px rgba(139, 224, 158, 0.3); transition: all 0.3s;">
+                            <div class="card-action"
+                                style="display: inline-flex; align-items: center; gap: 15px; background: #8BE09E; color: white; padding: 15px 35px; border-radius: 100px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 10px 20px rgba(139, 224, 158, 0.3); transition: all 0.3s;">
                                 Procedure Details <i class="ph-bold ph-arrow-right"></i>
                             </div>
                         </div>
 
                         <!-- Animated Data Stream -->
-                        <div class="data-stream" style="position: absolute; top: 0; right: 40px; height: 100%; width: 1px; background: linear-gradient(to bottom, transparent, #8BE09E, transparent); opacity: 0.2; transform: translateY(-100%); transition: transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);"></div>
+                        <div class="data-stream"
+                            style="position: absolute; top: 0; right: 40px; height: 100%; width: 1px; background: linear-gradient(to bottom, transparent, #8BE09E, transparent); opacity: 0.2; transform: translateY(-100%); transition: transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -995,93 +1304,157 @@
                     transform: translateY(-25px) scale(1.02);
                     background: rgba(255, 255, 255, 0.06);
                     border-color: rgba(255, 255, 255, 0.2);
-                    box-shadow: 0 60px 120px rgba(0,0,0,0.4);
+                    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.4);
                 }
-                .vibrant-card:hover .card-glow-overlay { opacity: 1; }
-                .vibrant-card:hover .data-stream { transform: translateY(100%); }
-                .vibrant-card:hover .card-action { transform: scale(1.05); filter: brightness(1.1); }
-                .vibrant-card:hover .icon-sphere { transform: rotateY(180deg); transition: transform 0.8s; }
+
+                .vibrant-card:hover .card-glow-overlay {
+                    opacity: 1;
+                }
+
+                .vibrant-card:hover .data-stream {
+                    transform: translateY(100%);
+                }
+
+                .vibrant-card:hover .card-action {
+                    transform: scale(1.05);
+                    filter: brightness(1.1);
+                }
+
+                .vibrant-card:hover .icon-sphere {
+                    transform: rotateY(180deg);
+                    transition: transform 0.8s;
+                }
 
                 @keyframes pulse-glow {
-                    0% { transform: scale(1) opacity(0.5); }
-                    100% { transform: scale(1.2) opacity(0.8); }
+                    0% {
+                        transform: scale(1) opacity(0.5);
+                    }
+
+                    100% {
+                        transform: scale(1.2) opacity(0.8);
+                    }
                 }
 
                 @keyframes rotate-slow {
-                    from { transform: rotate(0deg); }
-                    to { transform: rotate(360deg); }
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(360deg);
+                    }
                 }
 
                 @media (max-width: 1024px) {
-                    .ear-treatments-vibrant h2 { font-size: 3.5rem; }
-                    .vibrant-card { padding: 40px; border-radius: 30px; }
-                    .vibrant-card h3 { font-size: 2.2rem; }
+                    .ear-treatments-vibrant h2 {
+                        font-size: 3.5rem;
+                    }
+
+                    .vibrant-card {
+                        padding: 40px;
+                        border-radius: 30px;
+                    }
+
+                    .vibrant-card h3 {
+                        font-size: 2.2rem;
+                    }
                 }
             </style>
         </section>
 
         <!-- 6. Children's Ear Cleaning (Redesign) -->
-        <section class="children-section" style="padding: 100px 0; background: #ffffff; overflow: hidden; position: relative;">
+        <section class="children-section"
+            style="padding: 100px 0; background: #ffffff; overflow: hidden; position: relative;">
             <!-- Playful Background Accents -->
-            <div style="position: absolute; top: 10%; right: -5%; width: 300px; height: 300px; background: rgba(224, 159, 156, 0.1); filter: blur(80px); border-radius: 50%; z-index: 0;"></div>
-            <div style="position: absolute; bottom: 10%; left: -5%; width: 250px; height: 250px; background: rgba(57, 134, 255, 0.08); filter: blur(70px); border-radius: 50%; z-index: 0;"></div>
+            <div
+                style="position: absolute; top: 10%; right: -5%; width: 300px; height: 300px; background: rgba(224, 159, 156, 0.1); filter: blur(80px); border-radius: 50%; z-index: 0;">
+            </div>
+            <div
+                style="position: absolute; bottom: 10%; left: -5%; width: 250px; height: 250px; background: rgba(57, 134, 255, 0.08); filter: blur(70px); border-radius: 50%; z-index: 0;">
+            </div>
 
             <div class="container" style="position: relative; z-index: 2;">
-                <div class="text-img-grid" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 6rem; align-items: center;">
+                <div class="text-img-grid"
+                    style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 6rem; align-items: center;">
                     <!-- Left: Content -->
                     <div style="position: relative;">
-                        <div class="children-badge" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(224, 159, 156, 0.1); color: #E09F9C; padding: 10px 25px; border-radius: 100px; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(224, 159, 156, 0.2);">
+                        <div class="children-badge"
+                            style="display: inline-flex; align-items: center; gap: 10px; background: rgba(224, 159, 156, 0.1); color: #E09F9C; padding: 10px 25px; border-radius: 100px; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(224, 159, 156, 0.2);">
                             <i class="ph-fill ph-heart" style="animation: pulse 2s infinite;"></i>
                             Gentle Pediatric Care
                         </div>
-                        
-                        <h2 style="font-size: 4rem; font-weight: 900; line-height: 1.1; margin-bottom: 25px; color: #1e293b; font-family: 'Outfit';">
-                            Specialist <br><span style="background: linear-gradient(135deg, #E09F9C, #F87171); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Children's Ear Care</span>
+
+                        <h2
+                            style="font-size: 4rem; font-weight: 900; line-height: 1.1; margin-bottom: 25px; color: #1e293b; font-family: 'Outfit';">
+                            Specialist <br><span
+                                style="background: linear-gradient(135deg, #E09F9C, #F87171); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Children's
+                                Ear Care</span>
                         </h2>
 
-                        <p style="font-size: 1.25rem; line-height: 1.7; color: #64748b; margin-bottom: 30px;">
-                            We offer a specialist children’s ear wax removal service in London, providing a safe, gentle, and stress-free environment for your child.
+                        <p style="font-size: 1.25rem; line-height: 1.7; color: #64748b; margin-bottom: 35px;">
+                            We offer a specialist children’s ear wax removal service in London, providing a safe,
+                            gentle, and stress-free environment for your child.
                         </p>
 
                         <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px;">
                             <div style="display: flex; align-items: flex-start; gap: 15px;">
-                                <div style="width: 40px; height: 40px; background: #fdf2f2; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #E09F9C; flex-shrink: 0;">
-                                    <i class="ph-bold ph-baby" style="font-size: 1.5rem;"></i>
+                                <div
+                                    style="width: 40px; height: 40px; background: #fdf2f2; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #E09F9C; flex-shrink: 0;">
+                                    <i class="ph-bold ph-users-three" style="font-size: 1.5rem;"></i>
                                 </div>
-                                <p style="font-size: 1.1rem; color: #475569; margin: 0;">Experts in ear microsuction for babies, toddlers, and school-aged children.</p>
+                                <p style="font-size: 1.1rem; color: #475569; margin: 0;">We provide specialist ear care
+                                    for children and school-aged students (Ages 3+).</p>
                             </div>
                             <div style="display: flex; align-items: flex-start; gap: 15px;">
-                                <div style="width: 40px; height: 40px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #3986FF; flex-shrink: 0;">
+                                <div
+                                    style="width: 40px; height: 40px; background: #f0fdf4; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #22c55e; flex-shrink: 0;">
+                                    <i class="ph-bold ph-baby" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <p style="font-size: 1.1rem; color: #475569; margin: 0;">Experts in ear microsuction for
+                                    babies, toddlers, and school-aged children.</p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                                <div
+                                    style="width: 40px; height: 40px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #3986FF; flex-shrink: 0;">
                                     <i class="ph-bold ph-shield-check" style="font-size: 1.5rem;"></i>
                                 </div>
-                                <p style="font-size: 1.1rem; color: #475569; margin: 0;">Safe extraction of objects and blockages that cause pain or hearing loss.</p>
+                                <p style="font-size: 1.1rem; color: #475569; margin: 0;">Safe extraction of objects and
+                                    blockages that cause pain or hearing loss.</p>
                             </div>
                         </div>
 
                         <!-- Amenity Box -->
-                        <div style="background: white; padding: 25px; border-radius: 24px; border: 1px dashed #E09F9C; box-shadow: 0 10px 30px rgba(224, 159, 156, 0.1); position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: -10px; right: -10px; color: rgba(224, 159, 156, 0.1); font-size: 5rem; transform: rotate(15deg);">
+                        <div
+                            style="background: white; padding: 25px; border-radius: 24px; border: 1px dashed #E09F9C; box-shadow: 0 10px 30px rgba(224, 159, 156, 0.1); position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; top: -10px; right: -10px; color: rgba(224, 159, 156, 0.1); font-size: 5rem; transform: rotate(15deg);">
                                 <i class="ph-fill ph-balloon"></i>
                             </div>
-                            <p style="margin: 0; font-size: 1.1rem; color: #1e293b; line-height: 1.6; font-weight: 500;">
+                            <p
+                                style="margin: 0; font-size: 1.1rem; color: #1e293b; line-height: 1.6; font-weight: 500;">
                                 <i class="ph-bold ph-game-controller" style="color: #E09F9C; margin-right: 8px;"></i>
-                                We provide longer appointments, distracting multimedia, balloons, and animal stickers to ensure a positive experience.
+                                We provide longer appointments, distracting multimedia, balloons, and animal stickers to
+                                ensure a positive experience.
                             </p>
                         </div>
                     </div>
 
                     <!-- Right: Image (Kept as requested) -->
                     <div class="img-wrapper" style="position: relative; animation: float 6s ease-in-out infinite;">
-                        <div style="position: absolute; top: -10%; right: -10%; width: 120%; height: 120%; background: #E09F9C; opacity: 0.15; z-index: 0; animation: blob-morph 8s linear infinite;">
+                        <div
+                            style="position: absolute; top: -10%; right: -10%; width: 120%; height: 120%; background: #E09F9C; opacity: 0.15; z-index: 0; animation: blob-morph 8s linear infinite;">
                         </div>
                         <!-- Floating Icons -->
-                        <div style="position: absolute; top: 10%; left: -5%; color: #E09F9C; font-size: 2.5rem; animation: float 4s ease-in-out infinite; z-index: 2;">
+                        <div
+                            style="position: absolute; top: 10%; left: -5%; color: #E09F9C; font-size: 2.5rem; animation: float 4s ease-in-out infinite; z-index: 2;">
                             <i class="ph-fill ph-balloon"></i>
                         </div>
-                        <div style="position: absolute; bottom: 15%; right: -5%; color: #F87171; font-size: 2rem; animation: float 5s ease-in-out infinite; animation-delay: 1s; z-index: 2;">
+                        <div
+                            style="position: absolute; bottom: 15%; right: -5%; color: #F87171; font-size: 2rem; animation: float 5s ease-in-out infinite; animation-delay: 1s; z-index: 2;">
                             <i class="ph-fill ph-heart"></i>
                         </div>
-                        <div style="position: absolute; top: 40%; right: -10%; color: #FBBF24; font-size: 2.2rem; animation: float 7s ease-in-out infinite; animation-delay: 0.5s; z-index: 2;">
+                        <div
+                            style="position: absolute; top: 40%; right: -10%; color: #FBBF24; font-size: 2.2rem; animation: float 7s ease-in-out infinite; animation-delay: 0.5s; z-index: 2;">
                             <i class="ph-fill ph-star"></i>
                         </div>
                         <img src="assets/child_ear_care.png" alt="Child Ear Care"
@@ -1094,62 +1467,82 @@
         <!-- 7. Corporate & Emergency (Vibrant Redesign) -->
         <section class="corporate-emergency-section container" style="padding: 100px 0;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
-                
+
                 <!-- Corporate Section -->
-                <div class="corporate-card" style="background: white; border-radius: 40px; padding: 50px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 50px rgba(0,0,0,0.03); position: relative; overflow: hidden; transition: all 0.4s ease;">
-                    <div style="position: absolute; top: -20%; right: -10%; width: 300px; height: 300px; background: rgba(57, 134, 255, 0.05); border-radius: 50%; filter: blur(50px); z-index: 0;"></div>
-                    
+                <div class="corporate-card"
+                    style="background: white; border-radius: 40px; padding: 50px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 50px rgba(0,0,0,0.03); position: relative; overflow: hidden; transition: all 0.4s ease;">
+                    <div
+                        style="position: absolute; top: -20%; right: -10%; width: 300px; height: 300px; background: rgba(57, 134, 255, 0.05); border-radius: 50%; filter: blur(50px); z-index: 0;">
+                    </div>
+
                     <div style="position: relative; z-index: 2;">
                         <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-                            <div style="width: 80px; height: 80px; background: #f0f7ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #3986FF; font-size: 2.5rem; box-shadow: 0 10px 20px rgba(57, 134, 255, 0.1);">
+                            <div
+                                style="width: 80px; height: 80px; background: #f0f7ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #3986FF; font-size: 2.5rem; box-shadow: 0 10px 20px rgba(57, 134, 255, 0.1);">
                                 <i class="ph-duotone ph-buildings"></i>
                             </div>
                             <div>
-                                <h3 style="font-size: 2.2rem; color: #1e293b; font-family: 'Outfit'; margin: 0; line-height: 1.1;">Corporate <br>Partnerships</h3>
+                                <h3
+                                    style="font-size: 2.2rem; color: #1e293b; font-family: 'Outfit'; margin: 0; line-height: 1.1;">
+                                    Corporate <br>Partnerships</h3>
                             </div>
                         </div>
-                        
+
                         <p style="font-size: 1.2rem; line-height: 1.6; color: #64748b; margin-bottom: 25px;">
-                            We are proud to provide professional ear care to some of the most prestigious music and media companies in London.
-                        </p>
-                        
-                        <p style="font-size: 1.1rem; line-height: 1.6; color: #64748b; margin-bottom: 40px;">
-                            Boost employee wellbeing with our on-site or clinic-based ear cleaning services. Contact us for bespoke corporate rates.
+                            We are proud to provide professional ear care to some of the most prestigious music and
+                            media companies in London.
                         </p>
 
-                        <a href="mailto:info@oticearcare.co.uk" class="btn-vibrant" style="background: #1e293b; color: white; padding: 18px 35px; border-radius: 100px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s; box-shadow: 0 10px 25px rgba(30, 41, 59, 0.2);">
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: #64748b; margin-bottom: 40px;">
+                            Boost employee wellbeing with our on-site or clinic-based ear cleaning services. Contact us
+                            for bespoke corporate rates.
+                        </p>
+
+                        <a href="mailto:info@oticearcare.co.uk" class="btn-vibrant"
+                            style="background: #1e293b; color: white; padding: 18px 35px; border-radius: 100px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s; box-shadow: 0 10px 25px rgba(30, 41, 59, 0.2);">
                             <i class="ph-bold ph-envelope-simple"></i> Email Corporate Team
                         </a>
                     </div>
                 </div>
 
                 <!-- Emergency Section -->
-                <div class="emergency-card" style="background: linear-gradient(135deg, #0D2E85, #0852C6); border-radius: 40px; padding: 50px; color: white; position: relative; overflow: hidden; box-shadow: 0 30px 70px rgba(13, 46, 133, 0.3); transition: all 0.4s ease;">
+                <div class="emergency-card"
+                    style="background: linear-gradient(135deg, #0D2E85, #0852C6); border-radius: 40px; padding: 50px; color: white; position: relative; overflow: hidden; box-shadow: 0 30px 70px rgba(13, 46, 133, 0.3); transition: all 0.4s ease;">
                     <!-- Animated Medical Grid -->
-                    <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none;"></div>
-                    
+                    <div
+                        style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none;">
+                    </div>
+
                     <div style="position: relative; z-index: 2;">
                         <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-                            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; position: relative; backdrop-filter: blur(10px);">
+                            <div
+                                style="width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; position: relative; backdrop-filter: blur(10px);">
                                 <i class="ph-duotone ph-ambulance"></i>
-                                <span style="position: absolute; top: -5px; right: -5px; width: 15px; height: 15px; background: #F87171; border-radius: 50%; border: 3px solid #0D2E85; animation: pulse 2s infinite;"></span>
+                                <span
+                                    style="position: absolute; top: -5px; right: -5px; width: 15px; height: 15px; background: #F87171; border-radius: 50%; border: 3px solid #0D2E85; animation: pulse 2s infinite;"></span>
                             </div>
                             <div>
-                                <h3 style="font-size: 2.2rem; font-family: 'Outfit'; margin: 0; line-height: 1.1;">Emergency <br>Appointments</h3>
+                                <h3 style="font-size: 2.2rem; font-family: 'Outfit'; margin: 0; line-height: 1.1;">
+                                    Emergency <br>Appointments</h3>
                             </div>
                         </div>
 
-                        <p style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85); margin-bottom: 25px;">
-                            Immediate mobile ear wax removal clinics across London and the Home Counties. Available 24/7 for urgent relief.
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85); margin-bottom: 25px;">
+                            Immediate mobile ear wax removal clinics across London and the Home Counties. Available 24/7
+                            for urgent relief.
                         </p>
 
-                        <div style="background: rgba(255,255,255,0.08); padding: 25px; border-radius: 24px; border: 1px dashed rgba(255,255,255,0.2); margin-bottom: 40px; backdrop-filter: blur(5px);">
+                        <div
+                            style="background: rgba(255,255,255,0.08); padding: 25px; border-radius: 24px; border: 1px dashed rgba(255,255,255,0.2); margin-bottom: 40px; backdrop-filter: blur(5px);">
                             <p style="margin: 0; font-size: 1.15rem; line-height: 1.5; font-weight: 500;">
-                                Emergency appointments incur an additional fee of <span style="color: #8BE09E; font-size: 1.6rem; font-weight: 900; margin-left: 5px;">£175</span>
+                                Emergency appointments incur an additional fee of <span
+                                    style="color: #8BE09E; font-size: 1.6rem; font-weight: 900; margin-left: 5px;">£175</span>
                             </p>
                         </div>
 
-                        <a href="tel:+447852992668" class="btn-vibrant" style="background: white; color: #0D2E85; padding: 18px 35px; border-radius: 100px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s; box-shadow: 0 10px 30px rgba(255,255,255,0.15);">
+                        <a href="tel:+447852992668" class="btn-vibrant"
+                            style="background: white; color: #0D2E85; padding: 18px 35px; border-radius: 100px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 12px; transition: all 0.3s; box-shadow: 0 10px 30px rgba(255,255,255,0.15);">
                             <i class="ph-bold ph-phone-call"></i> (+44) 7852 992 668
                         </a>
                     </div>
@@ -1158,84 +1551,128 @@
             </div>
 
             <style>
-                .corporate-card:hover { transform: translateY(-10px); box-shadow: 0 40px 80px rgba(0,0,0,0.08); }
-                .emergency-card:hover { transform: translateY(-10px); box-shadow: 0 50px 100px rgba(13, 46, 133, 0.4); }
-                .btn-vibrant:hover { transform: scale(1.05); filter: brightness(1.1); }
+                .corporate-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
+                }
+
+                .emergency-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 50px 100px rgba(13, 46, 133, 0.4);
+                }
+
+                .btn-vibrant:hover {
+                    transform: scale(1.05);
+                    filter: brightness(1.1);
+                }
             </style>
         </section>
 
         <!-- 8. Mobile Ear Wax Removal Across London (Redesign) -->
-        <section class="location-section" style="padding: 100px 0; background: #f8fafc; position: relative; overflow: hidden;">
+        <section class="location-section"
+            style="padding: 100px 0; background: #f8fafc; position: relative; overflow: hidden;">
             <!-- Background Decorative Elements -->
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#3986FF 0.5px, transparent 0.5px); background-size: 30px 30px; opacity: 0.05; pointer-events: none;"></div>
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#3986FF 0.5px, transparent 0.5px); background-size: 30px 30px; opacity: 0.05; pointer-events: none;">
+            </div>
 
             <div class="container" style="position: relative; z-index: 2;">
-                <div class="text-img-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 60px; align-items: center;">
-                    
+                <div class="text-img-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 60px; align-items: center;">
+
                     <!-- Left: Location Details -->
                     <div>
-                        <div class="location-badge" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(57, 134, 255, 0.1); color: #3986FF; padding: 8px 20px; border-radius: 100px; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(57, 134, 255, 0.2);">
+                        <div class="location-badge"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: rgba(57, 134, 255, 0.1); color: #3986FF; padding: 8px 20px; border-radius: 100px; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(57, 134, 255, 0.2);">
                             <i class="ph-fill ph-map-pin"></i>
                             London Coverage
                         </div>
-                        
-                        <h2 style="font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: #1e293b; font-family: 'Outfit'; margin-bottom: 30px;">
-                            Mobile Ear Wax Removal <br><span style="background: linear-gradient(135deg, #3986FF, #0852C6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Across London</span>
+
+                        <h2
+                            style="font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: #1e293b; font-family: 'Outfit'; margin-bottom: 15px;">
+                            Mobile Ear Wax Removal <br><span
+                                style="background: linear-gradient(135deg, #3986FF, #0852C6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Across
+                                London</span>
                         </h2>
+                        <p style="font-size: 1.2rem; color: #64748b; margin-bottom: 30px; font-weight: 500;">
+                            We cover London & Essex <span style="color: #3986FF;">[And parts of Kent]</span>
+                        </p>
 
                         <!-- Travel Fee Highlights -->
                         <div style="display: flex; gap: 20px; margin-bottom: 40px;">
-                            <div style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); flex: 1; border: 1px solid rgba(57, 134, 255, 0.1); text-align: center;">
-                                <i class="ph-bold ph-car" style="font-size: 2rem; color: #3986FF; margin-bottom: 10px;"></i>
-                                <h4 style="margin: 0; font-size: 1rem; color: #64748b; font-weight: 600;">Travel Included</h4>
-                                <p style="margin: 5px 0 0; font-size: 1.1rem; color: #1e293b; font-weight: 700;">Within Zones</p>
+                            <div
+                                style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); flex: 1; border: 1px solid rgba(57, 134, 255, 0.1); text-align: center;">
+                                <i class="ph-bold ph-car"
+                                    style="font-size: 2rem; color: #3986FF; margin-bottom: 10px;"></i>
+                                <h4 style="margin: 0; font-size: 1rem; color: #64748b; font-weight: 600;">Travel
+                                    Included</h4>
+                                <p style="margin: 5px 0 0; font-size: 1.1rem; color: #1e293b; font-weight: 700;">Within
+                                    Zones</p>
                             </div>
-                            <div style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); flex: 1; border: 1px solid rgba(57, 134, 255, 0.1); text-align: center;">
-                                <i class="ph-bold ph-currency-gbp" style="font-size: 2rem; color: #8BE09E; margin-bottom: 10px;"></i>
-                                <h4 style="margin: 0; font-size: 1rem; color: #64748b; font-weight: 600;">Travel Charge</h4>
-                                <p style="margin: 5px 0 0; font-size: 1.1rem; color: #1e293b; font-weight: 700;">£50 - £100</p>
+                            <div
+                                style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); flex: 1; border: 1px solid rgba(57, 134, 255, 0.1); text-align: center;">
+                                <i class="ph-bold ph-currency-gbp"
+                                    style="font-size: 2rem; color: #8BE09E; margin-bottom: 10px;"></i>
+                                <h4 style="margin: 0; font-size: 1rem; color: #64748b; font-weight: 600;">Travel Charge
+                                </h4>
+                                <p style="margin: 5px 0 0; font-size: 1.1rem; color: #1e293b; font-weight: 700;">£50 -
+                                    £100</p>
                             </div>
                         </div>
 
                         <!-- Area List -->
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;">
-                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                            <div
+                                style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
                                 <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> North London
                             </div>
-                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                            <div
+                                style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
                                 <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> East London
                             </div>
-                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                            <div
+                                style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
                                 <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> West London
                             </div>
-                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                            <div
+                                style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
                                 <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> North West London
                             </div>
-                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                            <div
+                                style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
                                 <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> South East London
                             </div>
-                            <div style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
+                            <div
+                                style="display: flex; align-items: center; gap: 10px; color: #475569; font-size: 1.1rem; font-weight: 500;">
                                 <i class="ph-bold ph-check-circle" style="color: #3986FF;"></i> South West London
                             </div>
                         </div>
 
                         <!-- Outside London Alert -->
-                        <div style="background: #fef2f2; padding: 25px; border-radius: 20px; border-left: 5px solid #F87171; box-shadow: 0 10px 30px rgba(248, 113, 113, 0.05);">
+                        <div
+                            style="background: #fef2f2; padding: 25px; border-radius: 20px; border-left: 5px solid #F87171; box-shadow: 0 10px 30px rgba(248, 113, 113, 0.05);">
                             <p style="margin: 0; font-size: 1.1rem; color: #991b1b; line-height: 1.6;">
-                                <i class="ph-bold ph-warning-circle" style="margin-right: 8px; font-size: 1.2rem; transform: translateY(2px);"></i>
-                                If you require an appointment outside of the London areas we cover, a minimum travel fee of <strong style="font-size: 1.3rem;">£175</strong> will be charged.
+                                <i class="ph-bold ph-warning-circle"
+                                    style="margin-right: 8px; font-size: 1.2rem; transform: translateY(2px);"></i>
+                                If you require an appointment outside of the London areas we cover, a minimum travel fee
+                                of <strong style="font-size: 1.3rem;">£175</strong> will be charged.
                             </p>
                         </div>
                     </div>
 
                     <!-- Right: Map Image -->
                     <div class="img-wrapper" style="position: relative;">
-                        <div style="position: absolute; inset: -40px; background: radial-gradient(circle, rgba(57, 134, 255, 0.1) 0%, transparent 70%); z-index: 0;"></div>
-                        <img src="assets/map.png" alt="London Map" style="width: 100%; border-radius: 40px; box-shadow: 0 40px 80px rgba(0,0,0,0.1); position: relative; z-index: 1; border: 1px solid rgba(255,255,255,0.8);">
-                        
+                        <div
+                            style="position: absolute; inset: -40px; background: radial-gradient(circle, rgba(57, 134, 255, 0.1) 0%, transparent 70%); z-index: 0;">
+                        </div>
+                        <img src="assets/map.png" alt="London Map"
+                            style="width: 100%; border-radius: 40px; box-shadow: 0 40px 80px rgba(0,0,0,0.1); position: relative; z-index: 1; border: 1px solid rgba(255,255,255,0.8);">
+
                         <!-- Floating Tech Elements -->
-                        <div style="position: absolute; bottom: 10%; right: 5%; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); z-index: 2; display: flex; align-items: center; gap: 12px; animation: float 5s ease-in-out infinite;">
-                            <div style="width: 45px; height: 45px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #3986FF;">
+                        <div
+                            style="position: absolute; bottom: 10%; right: 5%; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); z-index: 2; display: flex; align-items: center; gap: 12px; animation: float 5s ease-in-out infinite;">
+                            <div
+                                style="width: 45px; height: 45px; background: #f0f7ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #3986FF;">
                                 <i class="ph-fill ph-navigation-arrow" style="font-size: 1.5rem;"></i>
                             </div>
                             <div>
@@ -1352,326 +1789,453 @@
                     }
                 }
             </style>
-        <!-- 10. Frequently Asked Questions (Functional Medical Dashboard) -->
-        <section class="faq-dashboard" style="padding: 120px 0; background: #fdfdfd; position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: linear-gradient(135deg, rgba(57, 134, 255, 0.02) 0%, transparent 100%); z-index: 0;"></div>
-            
-            <div class="container" style="position: relative; z-index: 2;">
-                <div class="faq-dashboard-wrapper"
-                    style="display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 40px; background: white; border-radius: 40px; padding: 60px; box-shadow: 0 40px 100px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05);">
+            <!-- 10. Frequently Asked Questions (Functional Medical Dashboard) -->
+            <section class="faq-dashboard"
+                style="padding: 120px 0; background: #fdfdfd; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: linear-gradient(135deg, rgba(57, 134, 255, 0.02) 0%, transparent 100%); z-index: 0;">
+                </div>
 
-                    <div style="grid-column: 1 / -1; margin-bottom: 40px;">
-                        <div
-                            style="display: inline-flex; align-items: center; gap: 10px; background: white; padding: 10px 25px; border-radius: 100px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); color: #3986FF; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; border: 1px solid rgba(0,0,0,0.05);">
-                            <i class="ph-fill ph-info"></i> Clinical Intelligence
-                        </div>
-                        <h2 class="faq-main-title" style="font-size: 3.5rem; font-weight: 900; color: #1e293b; font-family: 'Outfit'; margin: 0; line-height: 1.1;">
-                            Knowledge <span
-                                style="background: linear-gradient(135deg, #3986FF, #0852C6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Base</span>
-                        </h2>
-                    </div>
-                    
-                    <!-- Left: Navigation Sidebar -->
-                    <div class="faq-nav-container" style="border-right: 1px solid #f1f5f9; padding-right: 40px;">
-                        <div style="display: flex; flex-direction: column; gap: 10px;">
-                            <button class="faq-nav-btn active" onclick="switchFaqCategory('general', this)">
-                                <i class="ph-bold ph-first-aid"></i> General Services
-                            </button>
-                            <button class="faq-nav-btn" onclick="switchFaqCategory('procedure', this)">
-                                <i class="ph-bold ph-microscope"></i> Procedure Details
-                            </button>
-                            <button class="faq-nav-btn" onclick="switchFaqCategory('safety', this)">
-                                <i class="ph-bold ph-shield-check"></i> Safety & CQC
-                            </button>
-                            <button class="faq-nav-btn" onclick="switchFaqCategory('pricing', this)">
-                                <i class="ph-bold ph-currency-gbp"></i> Pricing & Booking
-                            </button>
+                <div class="container" style="position: relative; z-index: 2;">
+                    <div class="faq-dashboard-wrapper"
+                        style="display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 40px; background: white; border-radius: 40px; padding: 60px; box-shadow: 0 40px 100px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05);">
+
+                        <div style="grid-column: 1 / -1; margin-bottom: 40px;">
+                            <div
+                                style="display: inline-flex; align-items: center; gap: 10px; background: white; padding: 10px 25px; border-radius: 100px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); color: #3986FF; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; border: 1px solid rgba(0,0,0,0.05);">
+                                <i class="ph-fill ph-info"></i> Clinical Intelligence
+                            </div>
+                            <h2 class="faq-main-title"
+                                style="font-size: 3.5rem; font-weight: 900; color: #1e293b; font-family: 'Outfit'; margin: 0; line-height: 1.1;">
+                                Knowledge <span
+                                    style="background: linear-gradient(135deg, #3986FF, #0852C6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Base</span>
+                            </h2>
                         </div>
 
-                        <!-- Mini CTA Card -->
-                        <div style="margin-top: 60px; padding: 30px; background: #1e293b; border-radius: 30px; color: white; position: relative; overflow: hidden;">
-                            <div style="position: absolute; bottom: -20px; right: -20px; font-size: 8rem; opacity: 0.05; transform: rotate(-15deg); pointer-events: none;"><i class="ph-fill ph-phone-call"></i></div>
-                            <h4 style="margin: 0 0 10px; font-size: 1.2rem; font-family: 'Outfit';">Need Help?</h4>
-                            <p style="margin: 0 0 20px; font-size: 0.9rem; opacity: 0.7;">Speak with an ENT clinician 24/7 for emergency care.</p>
-                            <a href="tel:+447852992668" style="color: #3986FF; font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 8px; font-size: 1.1rem; transition: all 0.3s;">
-                                +44 7852 992 668 <i class="ph-bold ph-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
+                        <!-- Left: Navigation Sidebar -->
+                        <div class="faq-nav-container" style="border-right: 1px solid #f1f5f9; padding-right: 40px;">
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <button class="faq-nav-btn active" onclick="switchFaqCategory('general', this)">
+                                    <i class="ph-bold ph-first-aid"></i> General Services
+                                </button>
+                                <button class="faq-nav-btn" onclick="switchFaqCategory('procedure', this)">
+                                    <i class="ph-bold ph-microscope"></i> Procedure Details
+                                </button>
+                                <button class="faq-nav-btn" onclick="switchFaqCategory('safety', this)">
+                                    <i class="ph-bold ph-shield-check"></i> Safety & CQC
+                                </button>
+                                <button class="faq-nav-btn" onclick="switchFaqCategory('pricing', this)">
+                                    <i class="ph-bold ph-currency-gbp"></i> Pricing & Booking
+                                </button>
+                            </div>
 
-                    <!-- Right: Accordion Content -->
-                    <div class="faq-content-container" style="padding-left: 20px;">
-                        
-                        <!-- General Services Content -->
-                        <div id="faq-general" class="faq-category-content active-category" style="display: flex; flex-direction: column; gap: 15px;">
-                            <details class="dashboard-faq-item">
-                                <summary><span>What ear care services do you provide?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">We specialize in mobile microsuction ear wax removal, ear infection management, safe foreign body extraction, and dedicated pediatric ear cleaning for children and babies across London.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Are you available 24/7?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Yes. We provide standard clinical visits throughout the day and operate a specialized emergency mobile clinic service between 7:00pm and 7:00am daily.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Which areas of London do you cover?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">We cover the entire Greater London area, including North, East, West, North West, South East, and South West London, as well as the Home Counties.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Do I need a GP referral?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">No referral is necessary. You can book an appointment directly with our ENT specialists via our website or by calling our clinical team.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Is your service strictly mobile?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Yes, we are a dedicated mobile service. We bring hospital-grade microsuction equipment and high-resolution microscopy directly to your home or office for maximum convenience.</div>
-                            </details>
+                            <!-- Mini CTA Card -->
+                            <div
+                                style="margin-top: 60px; padding: 30px; background: #1e293b; border-radius: 30px; color: white; position: relative; overflow: hidden;">
+                                <div
+                                    style="position: absolute; bottom: -20px; right: -20px; font-size: 8rem; opacity: 0.05; transform: rotate(-15deg); pointer-events: none;">
+                                    <i class="ph-fill ph-phone-call"></i>
+                                </div>
+                                <h4 style="margin: 0 0 10px; font-size: 1.2rem; font-family: 'Outfit';">Need Help?</h4>
+                                <p style="margin: 0 0 20px; font-size: 0.9rem; opacity: 0.7;">Speak with an ENT
+                                    clinician 24/7 for emergency care.</p>
+                                <a href="tel:+447852992668"
+                                    style="color: #3986FF; font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 8px; font-size: 1.1rem; transition: all 0.3s;">
+                                    +44 7852 992 668 <i class="ph-bold ph-arrow-up-right"></i>
+                                </a>
+                            </div>
                         </div>
 
-                        <!-- Procedure Details Content -->
-                        <div id="faq-procedure" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
-                            <details class="dashboard-faq-item">
-                                <summary><span>How does microsuction ear wax removal work?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Microsuction uses a gentle suction device and high-resolution microscopy to safely remove wax without water. It is the cleanest and safest method currently available.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>How long does a typical appointment take?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">A comprehensive clinical session typically takes between 20 to 30 minutes, ensuring all wax is removed and your ears are thoroughly examined.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Do I need to use ear drops before my appointment?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">While 2-3 days of olive oil drops can help soften the wax, our clinicians carry specialized softening tools and can often complete the procedure without prior preparation.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Will ear microsuction be painful?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">No, microsuction is completely painless. You may hear a suction sound or feel a slight tickle, but most patients find it very comfortable compared to old-fashioned syringing.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Can you treat ear infections during the visit?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Yes. Our ENT doctors can diagnose infections on-site and provide targeted intervention, including cleaning the infected area and advising on appropriate medication.</div>
-                            </details>
-                        </div>
+                        <!-- Right: Accordion Content -->
+                        <div class="faq-content-container" style="padding-left: 20px;">
 
-                        <!-- Safety & CQC Content -->
-                        <div id="faq-safety" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
-                            <details class="dashboard-faq-item">
-                                <summary><span>Are you regulated by the CQC?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Yes, Auris Ear Care is fully regulated by the Care Quality Commission (CQC), ensuring we meet the highest national standards for safety and quality of care.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Are your clinicians qualified ENT doctors?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Yes, all our clinicians are highly experienced Ear, Nose, and Throat (ENT) specialists with medical degrees and extensive clinical backgrounds.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Is microsuction safe for children and babies?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Absolutely. We have a dedicated pediatric service and our clinicians are experts in gentle microsuction for babies, toddlers, and older children.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>What are your sterilization protocols?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">We use single-use, sterile clinical instruments for every patient. Our specialists follow strict hospital-grade hygiene protocols to ensure absolute patient safety.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>What if I have a perforated eardrum?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Microsuction is the only safe method for wax removal if you have a perforated eardrum, as it does not involve the use of water or pressure.</div>
-                            </details>
-                        </div>
+                            <!-- General Services Content -->
+                            <div id="faq-general" class="faq-category-content active-category"
+                                style="display: flex; flex-direction: column; gap: 15px;">
+                                <details class="dashboard-faq-item">
+                                    <summary><span>What ear care services do you provide?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">We specialize in mobile microsuction ear wax removal,
+                                        ear infection management, safe foreign body extraction, and dedicated pediatric
+                                        ear cleaning for children and babies across London.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Are you available 24/7?</span><i class="ph-bold ph-caret-down"></i>
+                                    </summary>
+                                    <div class="faq-dash-content">Yes. We provide standard clinical visits throughout
+                                        the day and operate a specialized emergency mobile clinic service between 7:00pm
+                                        and 7:00am daily.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Which areas of London do you cover?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">We cover the entire Greater London area, including
+                                        North, East, West, North West, South East, and South West London, as well as the
+                                        Home Counties.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Do I need a GP referral?</span><i class="ph-bold ph-caret-down"></i>
+                                    </summary>
+                                    <div class="faq-dash-content">No referral is necessary. You can book an appointment
+                                        directly with our ENT specialists via our website or by calling our clinical
+                                        team.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Is your service strictly mobile?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Yes, we are a dedicated mobile service. We bring
+                                        hospital-grade microsuction equipment and high-resolution microscopy directly to
+                                        your home or office for maximum convenience.</div>
+                                </details>
+                            </div>
 
-                        <!-- Pricing & Booking Content -->
-                        <div id="faq-pricing" class="faq-category-content" style="display: none; flex-direction: column; gap: 15px;">
-                            <details class="dashboard-faq-item">
-                                <summary><span>How much does ear wax removal cost?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Our pricing is transparent and includes the home visit. Please check our booking page for the current flat-rate fee for standard clinical sessions.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Is there an additional fee for emergencies?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Yes, emergency mobile appointments between 7:00pm and 7:00am incur an additional clinical fee of £175 on top of the standard treatment cost.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>Are there travel charges for my area?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">Travel within our core London zones is included. Some areas may incur a £50-£100 travel fee, while locations outside London have a minimum £175 travel charge.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>How do I book an appointment?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">You can book instantly via our secure online system by clicking 'Book Now', or call our clinical team directly for emergency or same-day visits.</div>
-                            </details>
-                            <details class="dashboard-faq-item">
-                                <summary><span>How quickly can you visit?</span><i class="ph-bold ph-caret-down"></i></summary>
-                                <div class="faq-dash-content">We often provide same-day appointments. For emergencies, our mobile team aims to reach you as quickly as possible, usually within a few hours.</div>
-                            </details>
-                        </div>
+                            <!-- Procedure Details Content -->
+                            <div id="faq-procedure" class="faq-category-content"
+                                style="display: none; flex-direction: column; gap: 15px;">
+                                <details class="dashboard-faq-item">
+                                    <summary><span>How does microsuction ear wax removal work?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Microsuction uses a gentle suction device and
+                                        high-resolution microscopy to safely remove wax without water. It is the
+                                        cleanest and safest method currently available.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>How long does a typical appointment take?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">A comprehensive clinical session typically takes
+                                        between 20 to 30 minutes, ensuring all wax is removed and your ears are
+                                        thoroughly examined.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Do I need to use ear drops before my appointment?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">While 2-3 days of olive oil drops can help soften the
+                                        wax, our clinicians carry specialized softening tools and can often complete the
+                                        procedure without prior preparation.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Will ear microsuction be painful?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">No, microsuction is completely painless. You may hear
+                                        a suction sound or feel a slight tickle, but most patients find it very
+                                        comfortable compared to old-fashioned syringing.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Can you treat ear infections during the visit?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Yes. Our ENT doctors can diagnose infections on-site
+                                        and provide targeted intervention, including cleaning the infected area and
+                                        advising on appropriate medication.</div>
+                                </details>
+                            </div>
 
+                            <!-- Safety & CQC Content -->
+                            <div id="faq-safety" class="faq-category-content"
+                                style="display: none; flex-direction: column; gap: 15px;">
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Are you regulated by the CQC?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Yes, Auris Ear Care is fully regulated by the Care
+                                        Quality Commission (CQC), ensuring we meet the highest national standards for
+                                        safety and quality of care.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Are your clinicians qualified ENT doctors?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Yes, all our clinicians are highly experienced Ear,
+                                        Nose, and Throat (ENT) specialists with medical degrees and extensive clinical
+                                        backgrounds.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Is microsuction safe for children and babies?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Absolutely. We have a dedicated pediatric service and
+                                        our clinicians are experts in gentle microsuction for babies, toddlers, and
+                                        older children.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>What are your sterilization protocols?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">We use single-use, sterile clinical instruments for
+                                        every patient. Our specialists follow strict hospital-grade hygiene protocols to
+                                        ensure absolute patient safety.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>What if I have a perforated eardrum?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Microsuction is the only safe method for wax removal
+                                        if you have a perforated eardrum, as it does not involve the use of water or
+                                        pressure.</div>
+                                </details>
+                            </div>
+
+                            <!-- Pricing & Booking Content -->
+                            <div id="faq-pricing" class="faq-category-content"
+                                style="display: none; flex-direction: column; gap: 15px;">
+                                <details class="dashboard-faq-item">
+                                    <summary><span>How much does ear wax removal cost?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Our pricing is transparent and includes the home
+                                        visit. Please check our booking page for the current flat-rate fee for standard
+                                        clinical sessions.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Is there an additional fee for emergencies?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Yes, emergency mobile appointments between 7:00pm and
+                                        7:00am incur an additional clinical fee of £175 on top of the standard treatment
+                                        cost.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>Are there travel charges for my area?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">Travel within our core London zones is included. Some
+                                        areas may incur a £50-£100 travel fee, while locations outside London have a
+                                        minimum £175 travel charge.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>How do I book an appointment?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">You can book instantly via our secure online system by
+                                        clicking 'Book Now', or call our clinical team directly for emergency or
+                                        same-day visits.</div>
+                                </details>
+                                <details class="dashboard-faq-item">
+                                    <summary><span>How quickly can you visit?</span><i
+                                            class="ph-bold ph-caret-down"></i></summary>
+                                    <div class="faq-dash-content">We often provide same-day appointments. For
+                                        emergencies, our mobile team aims to reach you as quickly as possible, usually
+                                        within a few hours.</div>
+                                </details>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <style>
-                .faq-nav-btn {
-                    width: 100%;
-                    padding: 20px 25px;
-                    border: none;
-                    background: transparent;
-                    border-radius: 20px;
-                    display: flex;
-                    align-items: center;
-                    gap: 15px;
-                    font-size: 1rem;
-                    font-weight: 700;
-                    color: #64748b;
-                    cursor: pointer;
-                    transition: all 0.3s;
-                    text-align: left;
-                    font-family: 'Outfit';
-                }
-                .faq-nav-btn i { font-size: 1.2rem; }
-                .faq-nav-btn.active { background: #f0f7ff; color: #3986FF; }
-                .faq-nav-btn:hover:not(.active) { background: #f8fafc; color: #1e293b; }
-
-                .dashboard-faq-item {
-                    background: #f8fafc;
-                    border-radius: 25px;
-                    overflow: hidden;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                    border: 1px solid transparent;
-                }
-                .dashboard-faq-item summary {
-                    padding: 25px 30px;
-                    font-size: 1.15rem;
-                    font-weight: 700;
-                    color: #1e293b;
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    list-style: none;
-                    font-family: 'Outfit';
-                }
-                .dashboard-faq-item summary i { transition: transform 0.4s; color: #3986FF; flex-shrink: 0; }
-                .dashboard-faq-item[open] { background: white; border-color: #3986FF; box-shadow: 0 15px 40px rgba(57, 134, 255, 0.08); transform: scale(1.01); }
-                .dashboard-faq-item[open] summary i { transform: rotate(180deg); }
-                .faq-dash-content {
-                    padding: 0 30px 30px 30px;
-                    color: #64748b;
-                    font-size: 1.1rem;
-                    line-height: 1.7;
-                    animation: fadeInDown 0.4s ease-out;
-                }
-                
-                @keyframes fadeInDown {
-                    from { opacity: 0; transform: translateY(-10px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-                
-                @media (max-width: 1024px) {
-                    .faq-dashboard-wrapper { 
-                        display: flex !important;
-                        flex-direction: column !important;
-                        padding: 30px 20px !important;
-                        gap: 0 !important;
-                        border-radius: 30px !important;
-                    }
-                    
-                    .faq-main-title { 
-                        font-size: 2.5rem !important; 
-                        text-align: center !important;
-                    }
-                    
-                    div[style*="grid-column: 1 / -1"] {
-                        text-align: center !important;
-                        margin-bottom: 30px !important;
-                    }
-
-                    .faq-nav-container { 
-                        border-right: none !important; 
-                        padding-right: 0 !important; 
-                        padding-bottom: 20px !important; 
-                        border-bottom: 1px solid #f1f5f9 !important;
-                        margin-bottom: 25px !important;
-                        width: 100% !important;
-                        display: block !important;
-                    }
-                    
-                    .faq-nav-container > div {
-                        display: grid !important;
-                        grid-template-columns: 1fr 1fr !important;
-                        gap: 10px !important;
-                        width: 100% !important;
-                        padding-bottom: 0 !important;
-                        overflow-x: visible !important;
-                    }
-                    
+                <style>
                     .faq-nav-btn {
-                        width: 100% !important;
-                        white-space: normal !important;
-                        padding: 15px 10px !important;
-                        font-size: 0.85rem !important;
-                        text-align: center !important;
-                        flex-direction: column !important;
-                        gap: 8px !important;
-                        border: 1px solid #f1f5f9 !important;
-                        background: #f8fafc !important;
-                        height: 100% !important;
+                        width: 100%;
+                        padding: 20px 25px;
+                        border: none;
+                        background: transparent;
+                        border-radius: 20px;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: #64748b;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        text-align: left;
+                        font-family: 'Outfit';
                     }
+
                     .faq-nav-btn i {
-                        font-size: 1.2rem !important;
-                        margin: 0 !important;
+                        font-size: 1.2rem;
                     }
+
                     .faq-nav-btn.active {
-                        background: #f0f7ff !important;
+                        background: #f0f7ff;
+                        color: #3986FF;
                     }
 
-                    .faq-content-container { 
-                        padding-left: 0 !important; 
-                        padding-top: 0 !important;
-                        width: 100% !important;
+                    .faq-nav-btn:hover:not(.active) {
+                        background: #f8fafc;
+                        color: #1e293b;
                     }
-                    
-                    .faq-nav-container [style*="margin-top: 60px"] {
-                        display: none !important; /* Hide mini CTA in nav on mobile to save space */
-                    }
-                }
-                
-                @media (max-width: 768px) {
-                    .faq-main-title { font-size: 2rem !important; }
-                    .dashboard-faq-item summary { padding: 18px !important; font-size: 0.95rem !important; }
-                    .faq-dash-content { padding: 0 18px 18px 18px !important; font-size: 0.95rem !important; }
-                }
-            </style>
 
-            <script>
-                function switchFaqCategory(category, btn) {
-                    // Hide all categories
-                    document.querySelectorAll('.faq-category-content').forEach(el => {
-                        el.style.display = 'none';
-                        el.classList.remove('active-category');
-                    });
-                    // Deactivate all buttons
-                    document.querySelectorAll('.faq-nav-btn').forEach(el => {
-                        el.classList.remove('active');
-                    });
-                    // Show selected category
-                    const selected = document.getElementById('faq-' + category);
-                    selected.style.display = 'flex';
-                    selected.classList.add('active-category');
-                    // Activate button
-                    btn.classList.add('active');
-                }
-            </script>
-        </section>     </section>
+                    .dashboard-faq-item {
+                        background: #f8fafc;
+                        border-radius: 25px;
+                        overflow: hidden;
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        border: 1px solid transparent;
+                    }
+
+                    .dashboard-faq-item summary {
+                        padding: 25px 30px;
+                        font-size: 1.15rem;
+                        font-weight: 700;
+                        color: #1e293b;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        list-style: none;
+                        font-family: 'Outfit';
+                    }
+
+                    .dashboard-faq-item summary i {
+                        transition: transform 0.4s;
+                        color: #3986FF;
+                        flex-shrink: 0;
+                    }
+
+                    .dashboard-faq-item[open] {
+                        background: white;
+                        border-color: #3986FF;
+                        box-shadow: 0 15px 40px rgba(57, 134, 255, 0.08);
+                        transform: scale(1.01);
+                    }
+
+                    .dashboard-faq-item[open] summary i {
+                        transform: rotate(180deg);
+                    }
+
+                    .faq-dash-content {
+                        padding: 0 30px 30px 30px;
+                        color: #64748b;
+                        font-size: 1.1rem;
+                        line-height: 1.7;
+                        animation: fadeInDown 0.4s ease-out;
+                    }
+
+                    @keyframes fadeInDown {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-10px);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    @media (max-width: 1024px) {
+                        .faq-dashboard-wrapper {
+                            display: flex !important;
+                            flex-direction: column !important;
+                            padding: 30px 20px !important;
+                            gap: 0 !important;
+                            border-radius: 30px !important;
+                        }
+
+                        .faq-main-title {
+                            font-size: 2.5rem !important;
+                            text-align: center !important;
+                        }
+
+                        div[style*="grid-column: 1 / -1"] {
+                            text-align: center !important;
+                            margin-bottom: 30px !important;
+                        }
+
+                        .faq-nav-container {
+                            border-right: none !important;
+                            padding-right: 0 !important;
+                            padding-bottom: 20px !important;
+                            border-bottom: 1px solid #f1f5f9 !important;
+                            margin-bottom: 25px !important;
+                            width: 100% !important;
+                            display: block !important;
+                        }
+
+                        .faq-nav-container>div {
+                            display: grid !important;
+                            grid-template-columns: 1fr 1fr !important;
+                            gap: 10px !important;
+                            width: 100% !important;
+                            padding-bottom: 0 !important;
+                            overflow-x: visible !important;
+                        }
+
+                        .faq-nav-btn {
+                            width: 100% !important;
+                            white-space: normal !important;
+                            padding: 15px 10px !important;
+                            font-size: 0.85rem !important;
+                            text-align: center !important;
+                            flex-direction: column !important;
+                            gap: 8px !important;
+                            border: 1px solid #f1f5f9 !important;
+                            background: #f8fafc !important;
+                            height: 100% !important;
+                        }
+
+                        .faq-nav-btn i {
+                            font-size: 1.2rem !important;
+                            margin: 0 !important;
+                        }
+
+                        .faq-nav-btn.active {
+                            background: #f0f7ff !important;
+                        }
+
+                        .faq-content-container {
+                            padding-left: 0 !important;
+                            padding-top: 0 !important;
+                            width: 100% !important;
+                        }
+
+                        .faq-nav-container [style*="margin-top: 60px"] {
+                            display: none !important;
+                            /* Hide mini CTA in nav on mobile to save space */
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .faq-main-title {
+                            font-size: 2rem !important;
+                        }
+
+                        .dashboard-faq-item summary {
+                            padding: 18px !important;
+                            font-size: 0.95rem !important;
+                        }
+
+                        .faq-dash-content {
+                            padding: 0 18px 18px 18px !important;
+                            font-size: 0.95rem !important;
+                        }
+                    }
+                </style>
+
+                <script>
+                    function switchFaqCategory(category, btn) {
+                        // Hide all categories
+                        document.querySelectorAll('.faq-category-content').forEach(el => {
+                            el.style.display = 'none';
+                            el.classList.remove('active-category');
+                        });
+                        // Deactivate all buttons
+                        document.querySelectorAll('.faq-nav-btn').forEach(el => {
+                            el.classList.remove('active');
+                        });
+                        // Show selected category
+                        const selected = document.getElementById('faq-' + category);
+                        selected.style.display = 'flex';
+                        selected.classList.add('active-category');
+                        // Activate button
+                        btn.classList.add('active');
+                    }
+                </script>
+            </section>
+        </section>
 
     </main>
 
-    <footer class="main-footer" style="background: #0a0f1e; color: white; padding: 100px 0 40px; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.05);">
+    <footer class="main-footer"
+        style="background: #0a0f1e; color: white; padding: 100px 0 40px; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.05);">
         <!-- Abstract Decoration -->
-        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #3986FF, transparent);"></div>
-        
+        <div
+            style="position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #3986FF, transparent);">
+        </div>
+
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 60px; margin-bottom: 80px;">
-                
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 60px; margin-bottom: 80px;">
+
                 <!-- Brand Column -->
                 <div class="footer-brand-col">
                     <a href="index.html" style="display: inline-block; margin-bottom: 30px;">
                         <img src="assets/white-logo.png" alt="Otic Ear Care" style="height: 60px;">
                     </a>
                     <p style="color: rgba(255,255,255,0.5); line-height: 1.8; font-size: 1.1rem; margin-bottom: 30px;">
-                        London's elite mobile ear care specialists. Providing hospital-grade microsuction and clinical intervention directly to your location.
+                        London's elite mobile ear care specialists. Providing hospital-grade microsuction and clinical
+                        intervention directly to your location.
                     </p>
                     <div style="display: flex; gap: 15px;">
                         <a href="#" class="footer-social"><i class="ph-fill ph-instagram-logo"></i></a>
@@ -1708,25 +2272,35 @@
                 <div class="footer-contact-col">
                     <h4 class="footer-header footer-header-white">Contact</h4>
                     <div style="display: flex; flex-direction: column; gap: 20px;">
-                        <a href="tel:+447852992668" style="text-decoration: none; display: flex; align-items: center; gap: 15px; group">
+                        <a href="tel:+447852992668"
+                            style="text-decoration: none; display: flex; align-items: center; gap: 15px; group">
                             <div class="footer-contact-icon"><i class="ph-fill ph-phone"></i></div>
                             <div>
-                                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">Emergency 24/7</div>
+                                <div
+                                    style="font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">
+                                    Emergency 24/7</div>
                                 <div style="font-size: 1.1rem; color: white; font-weight: 700;">+44 7852 992 668</div>
                             </div>
                         </a>
-                        <a href="mailto:info@oticearcare.co.uk" style="text-decoration: none; display: flex; align-items: center; gap: 15px; group">
+                        <a href="mailto:info@oticearcare.co.uk"
+                            style="text-decoration: none; display: flex; align-items: center; gap: 15px; group">
                             <div class="footer-contact-icon"><i class="ph-fill ph-envelope"></i></div>
                             <div>
-                                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">Email Support</div>
-                                <div style="font-size: 1.1rem; color: white; font-weight: 700;">info@oticearcare.co.uk</div>
+                                <div
+                                    style="font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">
+                                    Email Support</div>
+                                <div style="font-size: 1.1rem; color: white; font-weight: 700;">info@oticearcare.co.uk
+                                </div>
                             </div>
                         </a>
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="footer-contact-icon"><i class="ph-fill ph-clock"></i></div>
                             <div>
-                                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">Clinical Hours</div>
-                                <div style="font-size: 1.1rem; color: white; font-weight: 700;">Mon - Sun: 24/7 Availability</div>
+                                <div
+                                    style="font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">
+                                    Clinical Hours</div>
+                                <div style="font-size: 1.1rem; color: white; font-weight: 700;">Mon - Sun: 24/7
+                                    Availability</div>
                             </div>
                         </div>
                     </div>
@@ -1735,7 +2309,8 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div style="padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div
+                style="padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
                 <p style="color: rgba(255,255,255,0.3); font-size: 0.9rem;">
                     &copy; 2024 Otic Ear Care. All rights reserved. CQC Regulated Clinic.
                 </p>
@@ -1759,6 +2334,7 @@
                 display: inline-block;
                 padding-bottom: 12px;
             }
+
             .footer-header::after {
                 content: '';
                 position: absolute;
@@ -1770,19 +2346,35 @@
                 border-radius: 2px;
                 opacity: 0.5;
             }
-            .footer-header-blue { color: #3986FF; }
-            .footer-header-green { color: #8BE09E; }
-            .footer-header-white { color: white; }
+
+            .footer-header-blue {
+                color: #3986FF;
+            }
+
+            .footer-header-green {
+                color: #8BE09E;
+            }
+
+            .footer-header-white {
+                color: white;
+            }
 
             @media (max-width: 768px) {
-                .footer-header { margin-bottom: 25px; padding-bottom: 10px; }
-                .footer-header::after { left: 50%; transform: translateX(-50%); }
+                .footer-header {
+                    margin-bottom: 25px;
+                    padding-bottom: 10px;
+                }
+
+                .footer-header::after {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
 
             .footer-social {
                 width: 45px;
                 height: 45px;
-                background: rgba(255,255,255,0.05);
+                background: rgba(255, 255, 255, 0.05);
                 border-radius: 12px;
                 display: flex;
                 align-items: center;
@@ -1792,37 +2384,46 @@
                 text-decoration: none;
                 transition: all 0.3s;
             }
-            .footer-social:hover { background: #3986FF; transform: translateY(-5px); }
-            
+
+            .footer-social:hover {
+                background: #3986FF;
+                transform: translateY(-5px);
+            }
+
             .footer-link {
-                color: rgba(255,255,255,0.5);
+                color: rgba(255, 255, 255, 0.5);
                 text-decoration: none;
                 transition: all 0.3s;
                 font-size: 1.1rem;
                 display: inline-block;
             }
-            .footer-link:hover { color: #3986FF; transform: translateX(10px); }
-            
+
+            .footer-link:hover {
+                color: #3986FF;
+                transform: translateX(10px);
+            }
+
             .footer-loc {
-                color: rgba(255,255,255,0.5);
+                color: rgba(255, 255, 255, 0.5);
                 font-size: 1.1rem;
                 display: flex;
                 align-items: center;
                 gap: 12px;
             }
-            .footer-loc::before { 
-                content: ''; 
-                width: 6px; 
-                height: 6px; 
-                background: #8BE09E; 
-                border-radius: 50%; 
+
+            .footer-loc::before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                background: #8BE09E;
+                border-radius: 50%;
                 display: block;
             }
-            
+
             .footer-contact-icon {
                 width: 45px;
                 height: 45px;
-                background: rgba(255,255,255,0.05);
+                background: rgba(255, 255, 255, 0.05);
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -1831,54 +2432,85 @@
                 font-size: 1.2rem;
                 transition: all 0.3s;
             }
-            a:hover .footer-contact-icon { background: #3986FF; color: white; transform: rotate(15deg); }
-            
+
+            a:hover .footer-contact-icon {
+                background: #3986FF;
+                color: white;
+                transform: rotate(15deg);
+            }
+
             .footer-legal {
-                color: rgba(255,255,255,0.3);
+                color: rgba(255, 255, 255, 0.3);
                 text-decoration: none;
                 font-size: 0.9rem;
                 transition: color 0.3s;
             }
-            .footer-legal:hover { color: white; }
-            
+
+            .footer-legal:hover {
+                color: white;
+            }
+
             @media (max-width: 768px) {
-                .main-footer { padding: 60px 0 30px !important; }
-                .footer-brand-col { text-align: center; margin-bottom: 40px; }
-                .footer-brand-col div { justify-content: center; }
-                .footer-nav-col { 
-                    text-align: center; 
-                    margin-bottom: 40px; 
+                .main-footer {
+                    padding: 60px 0 30px !important;
+                }
+
+                .footer-brand-col {
+                    text-align: center;
+                    margin-bottom: 40px;
+                }
+
+                .footer-brand-col div {
+                    justify-content: center;
+                }
+
+                .footer-nav-col {
+                    text-align: center;
+                    margin-bottom: 40px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                 }
+
                 .footer-nav-col ul {
                     align-items: flex-start !important;
                     text-align: left !important;
                     width: fit-content;
                 }
-                .footer-contact-col { 
-                    text-align: center; 
-                    margin-bottom: 40px; 
-                    display: flex; 
-                    flex-direction: column; 
-                    align-items: center; 
+
+                .footer-contact-col {
+                    text-align: center;
+                    margin-bottom: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                 }
-                .footer-contact-col > div {
+
+                .footer-contact-col>div {
                     align-items: flex-start !important;
                     text-align: left !important;
                     width: fit-content;
                 }
-                .footer-loc { justify-content: center; }
-                .footer-contact-col a { justify-content: flex-start !important; }
-                .footer-link:hover { transform: none; }
-                
-                .main-footer .container > div:last-child {
+
+                .footer-loc {
+                    justify-content: center;
+                }
+
+                .footer-contact-col a {
+                    justify-content: flex-start !important;
+                }
+
+                .footer-link:hover {
+                    transform: none;
+                }
+
+                .main-footer .container>div:last-child {
                     flex-direction: column !important;
                     text-align: center !important;
                     gap: 15px !important;
                 }
-                .main-footer .container > div:last-child div {
+
+                .main-footer .container>div:last-child div {
                     justify-content: center !important;
                     gap: 15px !important;
                     flex-wrap: wrap;
