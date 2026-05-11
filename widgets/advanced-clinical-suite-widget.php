@@ -99,31 +99,19 @@ class Otic_Advanced_Clinical_Suite_Widget extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-		$title = str_replace( ['[', ']'], ['<span style="background: linear-gradient(135deg, #3986FF, #8BE09E, #A78BFA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(57,134,255,0.3));">', '</span>'], $settings['title'] );
+		$title = str_replace( ['[', ']'], ['<span class="vibrant-text-gradient">', '</span>'], $settings['title'] );
 		?>
 		<section class="ear-treatments-vibrant" style="padding: 120px 0; background: #080b12; position: relative; overflow: hidden; color: white;">
-			<div style="position: absolute; top: -10%; left: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(57, 134, 255, 0.15) 0%, transparent 70%); animation: pulse-glow 10s infinite alternate;"></div>
-			<div style="position: absolute; bottom: -10%; right: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(139, 224, 158, 0.12) 0%, transparent 70%); animation: pulse-glow 12s infinite alternate-reverse;"></div>
-
-			<svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; pointer-events: none;" viewBox="0 0 1440 800" preserveAspectRatio="none">
-				<path d="M0,400 Q360,300 720,400 T1440,400" fill="none" stroke="#3986FF" stroke-width="2">
-					<animate attributeName="d" values="M0,400 Q360,300 720,400 T1440,400; M0,400 Q360,500 720,400 T1440,400; M0,400 Q360,300 720,400 T1440,400" dur="10s" repeatCount="indefinite" />
-				</path>
-				<path d="M0,450 Q360,550 720,450 T1440,450" fill="none" stroke="#8BE09E" stroke-width="2">
-					<animate attributeName="d" values="M0,450 Q360,550 720,450 T1440,450; M0,450 Q360,350 720,450 T1440,450; M0,450 Q360,550 720,450 T1440,450" dur="8s" repeatCount="indefinite" />
-				</path>
-			</svg>
-
 			<div class="container" style="position: relative; z-index: 2;">
 				<div style="text-align: center; margin-bottom: 100px;">
-					<div class="vibrant-badge" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(57, 134, 255, 0.15); color: #3986FF; padding: 10px 25px; border-radius: 100px; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(57, 134, 255, 0.3); backdrop-filter: blur(10px);">
+					<div class="vibrant-badge" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(57, 134, 255, 0.1); color: #3986FF; padding: 10px 25px; border-radius: 100px; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; border: 1px solid rgba(57, 134, 255, 0.2); backdrop-filter: blur(10px);">
 						<i class="ph-bold ph-sparkle" style="animation: rotate-slow 4s linear infinite;"></i>
 						<?php echo esc_html( $settings['badge_text'] ); ?>
 					</div>
-					<h2 style="font-size: 5rem; font-weight: 900; line-height: 1; margin-bottom: 25px; letter-spacing: -2px; font-family: 'Outfit';">
+					<h2 style="font-size: 5rem; font-weight: 900; line-height: 1.1; margin-bottom: 25px; letter-spacing: -0.04em; font-family: 'Outfit', sans-serif !important;">
 						<?php echo wp_kses_post( $title ); ?>
 					</h2>
-					<p style="max-width: 800px; margin: 0 auto; font-size: 1.4rem; color: rgba(255,255,255,0.7); line-height: 1.6; font-weight: 300;">
+					<p style="max-width: 800px; margin: 0 auto; font-size: 1.35rem; color: rgba(255,255,255,0.7); line-height: 1.6; font-weight: 300; font-family: 'Inter', sans-serif !important;">
 						<?php echo esc_html( $settings['description'] ); ?>
 					</p>
 				</div>

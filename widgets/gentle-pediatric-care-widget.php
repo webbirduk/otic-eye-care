@@ -107,12 +107,9 @@ class Otic_Gentle_Pediatric_Care_Widget extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-		$title = str_replace( ['[', ']'], ['<span style="background: linear-gradient(135deg, #E09F9C, #F87171); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">', '</span>'], $settings['title'] );
+		$title = str_replace( ['[', ']'], ['<span class="pediatric-text-gradient">', '</span>'], $settings['title'] );
 		?>
 		<section class="children-section" style="padding: 100px 0; background: #ffffff; overflow: hidden; position: relative;">
-			<div style="position: absolute; top: 10%; right: -5%; width: 300px; height: 300px; background: rgba(224, 159, 156, 0.1); filter: blur(80px); border-radius: 50%; z-index: 0;"></div>
-			<div style="position: absolute; bottom: 10%; left: -5%; width: 250px; height: 250px; background: rgba(57, 134, 255, 0.08); filter: blur(70px); border-radius: 50%; z-index: 0;"></div>
-
 			<div class="container" style="position: relative; z-index: 2;">
 				<div class="text-img-grid" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 6rem; align-items: center;">
 					<div style="position: relative;">
@@ -152,7 +149,6 @@ class Otic_Gentle_Pediatric_Care_Widget extends Widget_Base {
 					</div>
 
 					<div class="img-wrapper" style="position: relative; animation: float 6s ease-in-out infinite;">
-						<div style="position: absolute; top: -10%; right: -10%; width: 120%; height: 120%; background: #E09F9C; opacity: 0.15; z-index: 0; animation: blob-morph 8s linear infinite;"></div>
 						<div style="position: absolute; top: 10%; left: -5%; color: #E09F9C; font-size: 2.5rem; animation: float 4s ease-in-out infinite; z-index: 2;">
 							<i class="ph-fill ph-balloon"></i>
 						</div>

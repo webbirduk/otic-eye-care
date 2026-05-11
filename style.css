@@ -55,6 +55,30 @@ h5,
     background-clip: text;
 }
 
+.vibrant-text-gradient {
+    background: linear-gradient(135deg, #3986FF, #8BE09E, #A78BFA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(57, 134, 255, 0.2));
+}
+
+.pediatric-text-gradient {
+    background: linear-gradient(135deg, #E09F9C, #F87171);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(224, 159, 156, 0.2));
+}
+
+.london-text-gradient {
+    background: linear-gradient(135deg, #3986FF, #0852C6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(57, 134, 255, 0.2));
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;

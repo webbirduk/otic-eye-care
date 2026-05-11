@@ -70,13 +70,11 @@ class Otic_London_Coverage_Widget extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-		$title = str_replace( ['[', ']'], ['<span style="background: linear-gradient(135deg, #3986FF, #0852C6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">', '</span>'], $settings['title'] );
+		$title = str_replace( ['[', ']'], ['<span class="london-text-gradient">', '</span>'], $settings['title'] );
 		$subtitle = str_replace( ['[', ']'], ['<span style="color: #3986FF;">', '</span>'], $settings['subtitle'] );
 		$alert = str_replace( ['[', ']'], ['<strong style="font-size: 1.3rem;">', '</strong>'], $settings['alert_text'] );
 		?>
 		<section class="location-section" style="padding: 100px 0; background: #f8fafc; position: relative; overflow: hidden;">
-			<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#3986FF 0.5px, transparent 0.5px); background-size: 30px 30px; opacity: 0.05; pointer-events: none;"></div>
-
 			<div class="container" style="position: relative; z-index: 2;">
 				<div class="text-img-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 60px; align-items: center;">
 
@@ -128,7 +126,6 @@ class Otic_London_Coverage_Widget extends Widget_Base {
 
 					<!-- Right: Map Image -->
 					<div class="img-wrapper" style="position: relative;">
-						<div style="position: absolute; inset: -40px; background: radial-gradient(circle, rgba(57, 134, 255, 0.1) 0%, transparent 70%); z-index: 0;"></div>
 						<img src="<?php echo esc_url( $settings['map_image']['url'] ); ?>" alt="London Map" style="width: 100%; border-radius: 40px; box-shadow: 0 40px 80px rgba(0,0,0,0.1); position: relative; z-index: 1; border: 1px solid rgba(255,255,255,0.8);">
 
 						<!-- Floating Tech Elements -->
