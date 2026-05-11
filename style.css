@@ -898,6 +898,208 @@ section {
     }
 }
 
+/* Why Choose Us Section */
+.why-choose-section {
+    padding: 6rem 0;
+    background: white;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.why-choose-section .img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.why-choose-section .circle-dashed {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 2px dashed rgba(74, 144, 226, 0.2);
+    border-radius: 50%;
+    animation: rotate-slow 20s linear infinite;
+}
+
+.why-choose-section .circle-solid {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border: 1px solid rgba(74, 144, 226, 0.1);
+    border-radius: 50%;
+}
+
+.why-choose-section .main-img-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border: 8px solid white;
+    z-index: 2;
+}
+
+.why-choose-section .main-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.why-choose-section .img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 40%);
+}
+
+.why-choose-section .stats-box {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    background: var(--primary);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(74, 144, 226, 0.3);
+    z-index: 3;
+    text-align: center;
+}
+
+.why-choose-section .stats-box .stars {
+    color: #FBBF24;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.why-choose-section .stats-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+    font-family: 'Outfit';
+}
+
+.why-choose-section .stats-label {
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.why-choose-section .floating-badge {
+    position: absolute;
+    background: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 99px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.why-choose-section .badge-top {
+    top: 15%;
+    left: 0%;
+    animation: float 5s ease-in-out infinite;
+}
+
+.why-choose-section .badge-bottom {
+    bottom: 25%;
+    left: -5%;
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.why-choose-section .icon-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-choose-section .icon-shield {
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--primary);
+}
+
+.why-choose-section .icon-house {
+    background: rgba(224, 159, 156, 0.1);
+    color: var(--secondary);
+}
+
+.why-choose-section .floating-badge span {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+}
+
+.why-choose-section .content-header {
+    margin-bottom: 3rem;
+}
+
+.why-choose-section .section-description {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.why-choose-section .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.why-choose-section .feature-card {
+    background: #f8fafc;
+    padding: 1.8rem;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.why-choose-section .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.why-choose-section .feature-icon {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.why-choose-section .feature-title {
+    margin-bottom: 0.6rem;
+    color: var(--primary-dark);
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+}
+
+.why-choose-section .feature-desc {
+    font-size: 0.95rem !important;
+    color: var(--text-muted) !important;
+    line-height: 1.6 !important;
+    font-family: 'Inter', sans-serif !important;
+    margin: 0;
+}
+
 /* FAQ */
 .faq-section {
     background: white;
@@ -1016,26 +1218,40 @@ footer {
         font-size: 3rem;
     }
 
-    .tree-grid-container {
+    .data-tree-section .tree-grid-container {
         grid-template-columns: 1fr !important;
         gap: 60px !important;
     }
 
-    .tree-core {
+    .data-tree-section .tree-core {
         order: 1;
+        min-height: auto !important;
     }
 
-    .left-branch {
+    .data-tree-section .core-image-wrap {
+        width: 280px;
+        height: 280px;
+        border-width: 8px;
+    }
+
+    .data-tree-section .pulse-ring {
+        width: 340px;
+        height: 340px;
+    }
+
+
+    .data-tree-section .left-branch {
         order: 2;
     }
 
-    .right-branch {
+    .data-tree-section .right-branch {
         order: 3;
     }
 
-    .node-line {
+    .data-tree-section .node-line {
         display: none !important;
     }
+
 }
 
 @media (max-width: 991px) {
@@ -1068,7 +1284,7 @@ footer {
     .hero-content,
     .text-img-grid,
     .tree-grid-container,
-    .why-choose-section .container>div,
+    .why-choose-grid,
     .microsuction-editorial .container>div,
     .ear-treatments-vibrant .container>div:nth-child(2),
     .children-section .text-img-grid,
@@ -1160,27 +1376,56 @@ footer {
         grid-template-columns: 1fr !important;
     }
 
-    /* Why Choose Us Stats */
-    .img-wrapper [style*="width: 450px"],
-    .img-wrapper [style*="width: 480px"] {
-        width: 300px !important;
-        height: 300px !important;
+    /* Why Choose Us Responsive */
+    .why-choose-section .img-wrapper {
+        min-height: 400px;
+        margin-bottom: 3rem;
     }
 
-    .img-wrapper [style*="width: 380px"] {
-        width: 260px !important;
-        height: 260px !important;
+    .why-choose-section .circle-dashed {
+        width: 320px;
+        height: 320px;
     }
 
-    .img-wrapper [style*="bottom: 10%; right: 5%"] {
-        position: relative !important;
-        bottom: auto !important;
-        right: auto !important;
-        margin-top: -30px;
-        margin-left: auto;
-        margin-right: auto;
-        width: fit-content;
-        z-index: 10;
+    .why-choose-section .circle-solid {
+        width: 350px;
+        height: 350px;
+    }
+
+    .why-choose-section .main-img-container {
+        width: 280px;
+        height: 280px;
+        border-width: 6px;
+    }
+
+    .why-choose-section .stats-box {
+        bottom: 5%;
+        right: 0;
+        padding: 1rem 1.5rem;
+        border-radius: 18px;
+    }
+
+    .why-choose-section .stats-number {
+        font-size: 2rem;
+    }
+
+    .why-choose-section .floating-badge {
+        padding: 0.6rem 1rem;
+    }
+
+    .why-choose-section .badge-top {
+        top: 10%;
+        left: -2%;
+    }
+
+    .why-choose-section .badge-bottom {
+        bottom: 20%;
+        left: -8%;
+    }
+
+    .why-choose-section .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     /* Ear Treatments Vibrant */
@@ -1597,20 +1842,21 @@ footer {
                             }
                         
             
-                .tree-grid-container {
+                /* Clinical Advantage / Data Tree Section */
+                .data-tree-section .tree-grid-container {
                     display: grid;
                     grid-template-columns: 1fr 400px 1fr;
                     align-items: center;
                     position: relative;
                 }
 
-                .tree-branch {
+                .data-tree-section .tree-branch {
                     display: flex;
                     flex-direction: column;
                     gap: 60px;
                 }
 
-                .tree-node {
+                .data-tree-section .tree-node {
                     display: flex;
                     align-items: center;
                     position: relative;
@@ -1623,23 +1869,13 @@ footer {
                     z-index: 2;
                 }
 
-                .tree-node:hover {
+                .data-tree-section .tree-node:hover {
                     transform: translateY(-5px);
                     box-shadow: 0 20px 50px rgba(74, 144, 226, 0.1);
                     border-color: rgba(74, 144, 226, 0.2);
                 }
 
-                .left-branch .tree-node {
-                    text-align: left;
-                    justify-content: flex-start;
-                }
-
-                .right-branch .tree-node {
-                    text-align: left;
-                    justify-content: flex-start;
-                }
-
-                .node-icon {
+                .data-tree-section .node-icon {
                     width: 50px;
                     height: 50px;
                     background: rgba(74, 144, 226, 0.08);
@@ -1653,21 +1889,21 @@ footer {
                     margin-right: 1.5rem;
                 }
 
-                .node-content h4 {
+                .data-tree-section .node-content h4 {
                     font-size: 1.15rem;
                     margin-bottom: 0.4rem;
                     color: var(--primary-dark);
                     font-weight: 800;
                 }
 
-                .node-content p {
+                .data-tree-section .node-content p {
                     font-size: 0.9rem;
                     color: var(--text-muted);
                     margin: 0;
                     line-height: 1.5;
                 }
 
-                .node-line {
+                .data-tree-section .node-line {
                     position: absolute;
                     top: 50%;
                     width: 60px;
@@ -1675,53 +1911,60 @@ footer {
                     z-index: 1;
                 }
 
-                .left-branch .node-line {
+                .data-tree-section .left-branch .node-line {
                     right: -60px;
                     background: linear-gradient(to left, rgba(74, 144, 226, 0.2), transparent);
                 }
 
-                .right-branch .node-line {
+                .data-tree-section .right-branch .node-line {
                     left: -60px;
                     background: linear-gradient(to right, rgba(74, 144, 226, 0.2), transparent);
                 }
 
-                .tree-core {
+                .data-tree-section .tree-core {
                     position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    min-height: 450px;
                 }
 
-                .core-image-wrap {
-                    width: 300px;
-                    height: 300px;
+                .data-tree-section .core-image-wrap {
+                    width: 320px;
+                    height: 320px;
                     border-radius: 50%;
-                    padding: 15px;
+                    padding: 0;
                     background: white;
-                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+                    border: 10px solid white;
+                    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
                     position: relative;
                     z-index: 3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
                 }
 
-                .core-image-wrap img {
+                .data-tree-section .core-image-wrap img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     border-radius: 50%;
+                    display: block;
                 }
 
-                .core-glow {
+                .data-tree-section .core-glow {
                     position: absolute;
-                    inset: -20px;
-                    background: radial-gradient(circle, rgba(74, 144, 226, 0.15) 0%, transparent 70%);
+                    inset: -30px;
+                    background: radial-gradient(circle, rgba(74, 144, 226, 0.18) 0%, transparent 70%);
                     z-index: 0;
                     animation: float 4s ease-in-out infinite;
                 }
 
-                .pulse-ring {
+                .data-tree-section .pulse-ring {
                     position: absolute;
-                    width: 350px;
-                    height: 350px;
+                    width: 420px;
+                    height: 420px;
                     border: 1px solid rgba(74, 144, 226, 0.2);
                     border-radius: 50%;
                     animation: ring-pulse 3s linear infinite;
@@ -1738,6 +1981,8 @@ footer {
                         opacity: 0;
                     }
                 }
+
+
             
             
                 .vibrant-card:hover {
