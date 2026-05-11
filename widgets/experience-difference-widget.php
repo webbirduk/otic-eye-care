@@ -232,10 +232,10 @@ class Otic_Experience_Difference_Widget extends Widget_Base {
 						</div>
 						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
 							<?php foreach ( $settings['features'] as $feature ) : ?>
-								<div style="background: #f8fafc; padding: 1.5rem; border-radius: 16px; border: 1px solid #f1f5f9;">
-									<i class="<?php echo esc_attr( $feature['feature_icon']['value'] ); ?>" style="font-size: 2rem; color: var(--primary); margin-bottom: 0.75rem;"></i>
-									<h4 style="margin-bottom: 0.5rem; color: var(--primary-dark);"><?php echo esc_html( $feature['feature_title'] ); ?></h4>
-									<p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;"><?php echo esc_html( $feature['feature_description'] ); ?></p>
+								<div style="background: #f8fafc; padding: 1.8rem; border-radius: 20px; border: 1px solid #f1f5f9; transition: all 0.3s ease;">
+									<i class="<?php echo esc_attr( $feature['feature_icon']['value'] ); ?>" style="font-size: 2.2rem; color: var(--primary); margin-bottom: 1rem; display: block;"></i>
+									<h4 style="margin-bottom: 0.6rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif !important; font-weight: 700 !important; font-size: 1.25rem !important;"><?php echo esc_html( $feature['feature_title'] ); ?></h4>
+									<p style="font-size: 0.95rem !important; color: var(--text-muted) !important; line-height: 1.6 !important; font-family: 'Inter', sans-serif !important; margin: 0;"><?php echo esc_html( $feature['feature_description'] ); ?></p>
 								</div>
 							<?php endforeach; ?>
 						</div>

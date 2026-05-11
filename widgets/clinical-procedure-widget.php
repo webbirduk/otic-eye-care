@@ -216,8 +216,8 @@ class Otic_Clinical_Procedure_Widget extends Widget_Base {
 										<?php if ( $index === 1 ) echo '<div class="suction-line"></div>'; ?>
 									</div>
 									<div class="pulse-content">
-										<h5><?php echo esc_html( $step['step_title'] ); ?></h5>
-										<p><?php echo esc_html( $step['step_description'] ); ?></p>
+										<h5 style="margin: 0 0 0.5rem 0; font-family: 'Outfit', sans-serif !important; font-weight: 700 !important; font-size: 1.2rem !important; color: var(--primary-dark) !important;"><?php echo esc_html( $step['step_title'] ); ?></h5>
+										<p style="margin: 0; font-family: 'Inter', sans-serif !important; font-size: 0.95rem !important; line-height: 1.6 !important; color: var(--text-muted) !important;"><?php echo esc_html( $step['step_description'] ); ?></p>
 									</div>
 								</div>
 							<?php endforeach; ?>
