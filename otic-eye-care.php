@@ -120,6 +120,9 @@ final class Otic_Eye_Care {
 			'Corporate_Emergency',
 			'London_Coverage',
 			'Clinical_Intelligence',
+			'Appointment_Hero',
+			'Booking_Dashboard',
+			'Dashboard_Hero',
 			'Footer',
 		];
 
