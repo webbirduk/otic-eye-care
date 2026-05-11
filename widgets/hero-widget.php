@@ -179,13 +179,12 @@ class Otic_Hero_Widget extends Widget_Base {
 								<option value="children">Children's Ear Care</option>
 							</select>
 						</div>
-						<button type="submit" class="btn btn-primary btn-block"
-							style="padding: 1.2rem; border-radius: 16px; font-size: 1.1rem; margin-top: 1rem;">
+						<button type="submit" class="btn btn-primary">
 							Request Callback <i class="ph-bold ph-paper-plane-tilt"></i>
 						</button>
 					</form>
-					<p style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); font-weight: 500;">
-						<i class="ph-fill ph-shield-check" style="color: #10b981;"></i> Secure & Confidential
+					<p class="hero-secure-text">
+						<i class="ph-fill ph-shield-check"></i> Secure & Confidential
 					</p>
 				</div>
 			</div>
