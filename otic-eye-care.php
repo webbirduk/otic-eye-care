@@ -59,6 +59,11 @@ final class Otic_Eye_Care {
 		// Inject global header and footer
 		add_action( 'wp_body_open', [ $this, 'render_global_header' ] );
 		add_action( 'wp_footer', [ $this, 'render_global_footer' ] );
+
+		// Disable comments globally
+		add_filter( 'comments_open', '__return_false', 20, 2 );
+		add_filter( 'pings_open', '__return_false', 20, 2 );
+		add_filter( 'comments_array', '__return_empty_array', 10, 2 );
 	}
 
 	/**

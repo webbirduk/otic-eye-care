@@ -30,6 +30,40 @@
     box-sizing: border-box;
 }
 
+/* Enforce 100% width for all widgets and containers */
+html,
+body,
+main#content,
+.site-main,
+.page-content,
+.elementor,
+.elementor-section-wrap,
+.elementor-element,
+.elementor-widget,
+.elementor-widget-container,
+.e-con,
+.e-con-full {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Ensure flex items stretch to full width */
+.e-con.e-flex {
+    align-items: stretch !important;
+}
+
+/* Hide comments globally */
+#comments,
+.comments-area,
+.comment-respond,
+.comment-list {
+    display: none !important;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
@@ -2736,5 +2770,29 @@ footer {
         width: 100%;
         padding-bottom: 10px;
         border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .otic-footer-socials {
+        justify-content: center;
+    }
+
+    /* Corporate & Emergency Centering */
+    .corporate-card,
+    .emergency-card {
+        text-align: center !important;
+        padding: 40px 20px !important;
+    }
+
+    .corporate-card > div > div:first-child,
+    .emergency-card > div > div:first-child {
+        flex-direction: column !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .corporate-card .btn-vibrant,
+    .emergency-card .btn-vibrant {
+        justify-content: center !important;
+        width: 100% !important;
     }
 }
