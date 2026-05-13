@@ -89,4 +89,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Footer Accordion (Mobile)
+    const footerToggles = document.querySelectorAll('.otic-footer-nav .otic-footer-title');
+    footerToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            if (window.innerWidth <= 767) {
+                const parent = toggle.parentElement;
+                
+                // Optional: Close other accordions
+                document.querySelectorAll('.otic-footer-nav').forEach(nav => {
+                    if (nav !== parent) nav.classList.remove('active');
+                });
+
+                parent.classList.toggle('active');
+            }
+        });
+    });
+
 });

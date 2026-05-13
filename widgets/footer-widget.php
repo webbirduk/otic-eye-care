@@ -90,71 +90,71 @@ class Otic_Footer_Widget extends Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		?>
-		<footer style="background: #000000; color: white; padding: 100px 0 40px 0; font-family: 'Inter', sans-serif;">
+		<footer class="otic-footer">
 			<div class="container">
-				<div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 60px;">
+				<div class="otic-footer-grid">
 					
 					<!-- Brand Column -->
-					<div>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="display: inline-block; margin-bottom: 30px;">
-							<img src="<?php echo esc_url( $settings['logo']['url'] ); ?>" alt="Otic Ear Care" style="height: 70px;">
+					<div class="otic-footer-col otic-footer-brand">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="otic-footer-logo-link">
+							<img src="<?php echo esc_url( $settings['logo']['url'] ); ?>" alt="Otic Ear Care" class="otic-footer-logo">
 						</a>
-						<p style="color: rgba(255,255,255,0.6); line-height: 1.7; font-size: 1.05rem; margin-bottom: 30px;">
+						<p class="otic-footer-desc">
 							<?php echo esc_html( $settings['brand_desc'] ); ?>
 						</p>
-						<div style="display: flex; gap: 15px;">
-							<a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: 0.3s;"><i class="ph-bold ph-instagram-logo"></i></a>
-							<a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: 0.3s;"><i class="ph-bold ph-facebook-logo"></i></a>
-							<a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: 0.3s;"><i class="ph-bold ph-whatsapp-logo"></i></a>
+						<div class="otic-footer-socials">
+							<a href="#" class="otic-footer-social-icon"><i class="ph-bold ph-instagram-logo"></i></a>
+							<a href="#" class="otic-footer-social-icon"><i class="ph-bold ph-facebook-logo"></i></a>
+							<a href="#" class="otic-footer-social-icon"><i class="ph-bold ph-whatsapp-logo"></i></a>
 						</div>
 					</div>
 
 					<!-- Dynamic Columns -->
 					<?php foreach ( $settings['columns'] as $col ) : ?>
-						<div>
-							<h4 style="font-family: 'Outfit'; font-size: 1.3rem; margin-bottom: 30px;"><?php echo esc_html( $col['title'] ); ?></h4>
-							<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+						<div class="otic-footer-col otic-footer-nav">
+							<h4 class="otic-footer-title"><?php echo esc_html( $col['title'] ); ?></h4>
+							<ul class="otic-footer-list">
 								<?php foreach ( $col['links'] as $link ) : ?>
-									<li><a href="<?php echo esc_url( $link['url']['url'] ); ?>" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s; font-size: 1rem;"><?php echo esc_html( $link['text'] ); ?></a></li>
+									<li><a href="<?php echo esc_url( $link['url']['url'] ); ?>" class="otic-footer-link"><?php echo esc_html( $link['text'] ); ?></a></li>
 								<?php endforeach; ?>
 							</ul>
 						</div>
 					<?php endforeach; ?>
 
 					<!-- Contact Column -->
-					<div>
-						<h4 style="font-family: 'Outfit'; font-size: 1.3rem; margin-bottom: 30px;">Contact Us</h4>
-						<div style="display: flex; flex-direction: column; gap: 20px;">
-							<div style="display: flex; gap: 15px; align-items: flex-start;">
-								<div style="width: 40px; height: 40px; background: rgba(57, 134, 255, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #3986FF; flex-shrink: 0;"><i class="ph-bold ph-phone"></i></div>
+					<div class="otic-footer-col otic-footer-contact">
+						<h4 class="otic-footer-title">Contact Us</h4>
+						<div class="otic-footer-contact-list">
+							<div class="otic-footer-contact-item">
+								<div class="otic-footer-contact-icon-box" style="background: rgba(57, 134, 255, 0.1); color: #3986FF;"><i class="ph-bold ph-phone"></i></div>
 								<div>
-									<p style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">24/7 Hotline</p>
-									<p style="margin: 0; font-size: 1.1rem; font-weight: 700;"><?php echo esc_html( $settings['phone'] ); ?></p>
+									<p class="otic-footer-contact-label">24/7 Hotline</p>
+									<p class="otic-footer-contact-value"><?php echo esc_html( $settings['phone'] ); ?></p>
 								</div>
 							</div>
-							<div style="display: flex; gap: 15px; align-items: flex-start;">
-								<div style="width: 40px; height: 40px; background: rgba(139, 224, 158, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #8BE09E; flex-shrink: 0;"><i class="ph-bold ph-envelope"></i></div>
+							<div class="otic-footer-contact-item">
+								<div class="otic-footer-contact-icon-box" style="background: rgba(139, 224, 158, 0.1); color: #8BE09E;"><i class="ph-bold ph-envelope"></i></div>
 								<div>
-									<p style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">Email Support</p>
-									<p style="margin: 0; font-size: 1.1rem; font-weight: 700;"><?php echo esc_html( $settings['email'] ); ?></p>
+									<p class="otic-footer-contact-label">Email Support</p>
+									<p class="otic-footer-contact-value"><?php echo esc_html( $settings['email'] ); ?></p>
 								</div>
 							</div>
-							<div style="display: flex; gap: 15px; align-items: flex-start;">
-								<div style="width: 40px; height: 40px; background: rgba(251, 191, 36, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FBBF24; flex-shrink: 0;"><i class="ph-bold ph-clock"></i></div>
+							<div class="otic-footer-contact-item">
+								<div class="otic-footer-contact-icon-box" style="background: rgba(251, 191, 36, 0.1); color: #FBBF24;"><i class="ph-bold ph-clock"></i></div>
 								<div>
-									<p style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px;">Clinic Hours</p>
-									<p style="margin: 0; font-size: 1.1rem; font-weight: 700;"><?php echo esc_html( $settings['hours'] ); ?></p>
+									<p class="otic-footer-contact-label">Clinic Hours</p>
+									<p class="otic-footer-contact-value"><?php echo esc_html( $settings['hours'] ); ?></p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div style="margin-top: 80px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.4); font-size: 0.9rem;">
+				<div class="otic-footer-bottom">
 					<p>© <?php echo date('Y'); ?> Otic Ear Care. All rights reserved.</p>
-					<div style="display: flex; gap: 30px;">
-						<a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a>
-						<a href="#" style="color: inherit; text-decoration: none;">Terms of Service</a>
+					<div class="otic-footer-legal-links">
+						<a href="#" class="otic-footer-legal-link">Privacy Policy</a>
+						<a href="#" class="otic-footer-legal-link">Terms of Service</a>
 					</div>
 				</div>
 			</div>
