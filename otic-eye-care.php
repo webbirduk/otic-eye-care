@@ -52,6 +52,77 @@ final class Otic_Eye_Care {
 	public function __construct() {
 		add_action( 'init', [ $this, 'i18n' ] );
 		add_action( 'plugins_loaded', [ $this, 'init' ] );
+
+		// Disable default theme header and footer globally
+		add_filter( 'hello_elementor_header_footer', '__return_false' );
+
+		// Inject global header and footer
+		add_action( 'wp_body_open', [ $this, 'render_global_header' ] );
+		add_action( 'wp_footer', [ $this, 'render_global_footer' ] );
+	}
+
+	/**
+	 * Render Global Header
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function render_global_header() {
+		if ( ! did_action( 'elementor/loaded' ) ) {
+			return;
+		}
+
+		// Don't render in editor or preview mode to avoid double headers
+		if ( \Elementor\Plugin::$instance->editor->is_edit_mode() || \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+			return;
+		}
+
+		$file = __DIR__ . '/widgets/header-widget.php';
+		if ( file_exists( $file ) ) {
+			require_once( $file );
+			$widget = \Elementor\Plugin::$instance->elements_manager->create_element_instance( [
+				'elType' => 'widget',
+				'widgetType' => 'otic_header',
+				'id' => 'global-header',
+				'settings' => [],
+			] );
+
+			if ( $widget ) {
+				$widget->print_element();
+			}
+		}
+	}
+
+	/**
+	 * Render Global Footer
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function render_global_footer() {
+		if ( ! did_action( 'elementor/loaded' ) ) {
+			return;
+		}
+
+		// Don't render in editor or preview mode
+		if ( \Elementor\Plugin::$instance->editor->is_edit_mode() || \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+			return;
+		}
+
+		$file = __DIR__ . '/widgets/footer-widget.php';
+		if ( file_exists( $file ) ) {
+			require_once( $file );
+			$widget = \Elementor\Plugin::$instance->elements_manager->create_element_instance( [
+				'elType' => 'widget',
+				'widgetType' => 'otic_footer',
+				'id' => 'global-footer',
+				'settings' => [],
+			] );
+
+			if ( $widget ) {
+				$widget->print_element();
+			}
+		}
 	}
 
 	/**
