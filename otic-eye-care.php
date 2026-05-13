@@ -199,6 +199,11 @@ final class Otic_Eye_Care {
 			'Appointment_Hero',
 			'Booking_Dashboard',
 			'Dashboard_Hero',
+			'Ear_Infection_Page',
+			'Foreign_Body_Removal_Page',
+			'Children_Ear_Wax_Removal_Page',
+			'Treatment_Fees_Page',
+			'Insights_Advice_Page',
 			'Footer',
 		];
 
