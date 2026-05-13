@@ -147,7 +147,9 @@ final class Otic_Eye_Care {
 		wp_enqueue_style( 'otic-google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap', [], null );
 		
 		// Phosphor Icons
-		wp_enqueue_script( 'phosphor-icons', 'https://unpkg.com/@phosphor-icons/web', [], null, true );
+		wp_enqueue_style( 'otic-phosphor-regular', 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css', [], null );
+		wp_enqueue_style( 'otic-phosphor-bold', 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css', [], null );
+		wp_enqueue_style( 'otic-phosphor-fill', 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css', [], null );
 
 		// Plugin Style
 		wp_enqueue_style( 'otic-plugin-style', plugins_url( 'style.css', __FILE__ ), [], '1.0.0' );

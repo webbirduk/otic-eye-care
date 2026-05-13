@@ -2442,3 +2442,311 @@ footer {
                 }
             }
         
+<<<<<<< Updated upstream
+=======
+
+/* Otic Responsive Footer */
+.otic-footer {
+    background: #000000;
+    color: white;
+    padding: 100px 0 40px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.otic-footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 60px;
+}
+
+.otic-footer-logo-link {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.otic-footer-logo {
+    width: 50%;
+    height: auto;
+}
+
+.otic-footer-desc {
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.otic-footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.otic-footer-social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.otic-footer-social-icon:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.otic-footer-title {
+    font-family: 'Outfit';
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.otic-footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.otic-footer-link {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.otic-footer-link:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.otic-footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.otic-footer-contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.otic-footer-contact-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.otic-footer-contact-label {
+    margin: 0;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.otic-footer-contact-value {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.otic-footer-bottom {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.9rem;
+}
+
+.otic-footer-legal-links {
+    display: flex;
+    gap: 30px;
+}
+
+.otic-footer-legal-link {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.otic-footer-legal-link:hover {
+    color: white;
+}
+
+.otic-footer i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+    .otic-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+/* Mobile Layout (Premium Redesign) */
+@media (max-width: 767px) {
+    .otic-footer {
+        padding: 50px 0 30px 0;
+    }
+    
+    .otic-footer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+
+    .otic-footer-brand {
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        margin-bottom: 20px;
+    }
+
+    .otic-footer-logo {
+        width: 30%;
+    }
+
+    .otic-footer-desc {
+        font-size: 1rem;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .otic-footer-socials {
+        justify-content: center;
+    }
+
+    /* Accordion styles for Nav Columns */
+    .otic-footer-nav {
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .otic-footer-nav .otic-footer-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        margin-bottom: 0;
+        cursor: pointer;
+        font-size: 1.15rem;
+        transition: color 0.3s;
+    }
+
+    .otic-footer-nav .otic-footer-title::after {
+        content: '+';
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        color: var(--primary);
+    }
+
+    .otic-footer-nav.active .otic-footer-title {
+        color: var(--primary);
+    }
+
+    .otic-footer-nav.active .otic-footer-title::after {
+        transform: rotate(45deg);
+        color: white;
+    }
+
+    .otic-footer-nav .otic-footer-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        padding-bottom: 0;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .otic-footer-nav.active .otic-footer-list {
+        max-height: 500px;
+        padding-bottom: 30px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Contact Section Redesign */
+    .otic-footer-contact {
+        padding: 40px 0;
+    }
+
+    .otic-footer-contact .otic-footer-title {
+        padding: 0 0 25px 0;
+        text-align: center;
+    }
+
+    .otic-footer-contact-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .otic-footer-contact-item {
+        background: rgba(255,255,255,0.03);
+        padding: 25px;
+        border-radius: 24px;
+        border: 1px solid rgba(255,255,255,0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        transition: all 0.3s;
+    }
+
+    .otic-footer-contact-item:hover {
+        background: rgba(255,255,255,0.05);
+        border-color: rgba(255,255,255,0.15);
+    }
+
+    .otic-footer-contact-item > div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .otic-footer-contact-label {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .otic-footer-contact-value {
+        font-size: 1.2rem;
+    }
+
+    .otic-footer-bottom {
+        margin-top: 30px;
+        flex-direction: column-reverse;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .otic-footer-legal-links {
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+}
+>>>>>>> Stashed changes
