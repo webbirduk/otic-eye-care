@@ -66,6 +66,9 @@ final class Otic_Eye_Care {
 		add_filter( 'pings_open', '__return_false', 20, 2 );
 		add_filter( 'comments_array', '__return_empty_array', 10, 2 );
 
+		// Template Overrides
+		add_filter( 'template_include', [ $this, 'override_single_post_template' ], 99 );
+
 		// AJAX Handlers
 		add_action( 'wp_ajax_otic_load_more_posts', [ $this, 'load_more_posts' ] );
 		add_action( 'wp_ajax_nopriv_otic_load_more_posts', [ $this, 'load_more_posts' ] );
@@ -219,6 +222,7 @@ final class Otic_Eye_Care {
 			'Children_Ear_Wax_Removal_Page',
 			'Treatment_Fees_Page',
 			'Insights_Advice_Page',
+			'Single_Post_Page',
 			'Footer',
 		];
 
@@ -250,6 +254,26 @@ final class Otic_Eye_Care {
 
 		// Plugin JS
 		wp_enqueue_script( 'otic-plugin-js', plugins_url( 'app.js', __FILE__ ), [], '1.0.0', true );
+	}
+
+	/**
+	 * Override Single Post Template
+	 */
+	public function override_single_post_template( $template ) {
+		if ( is_singular( 'post' ) && ! is_admin() ) {
+			// Don't override if we're in Elementor editor
+			if ( did_action( 'elementor/loaded' ) ) {
+				if ( \Elementor\Plugin::$instance->editor->is_edit_mode() || \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+					return $template;
+				}
+			}
+
+			$new_template = __DIR__ . '/templates/single-post.php';
+			if ( file_exists( $new_template ) ) {
+				return $new_template;
+			}
+		}
+		return $template;
 	}
 
 	/**
