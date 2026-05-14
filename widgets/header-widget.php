@@ -71,12 +71,12 @@ class Otic_Header_Widget extends Widget_Base
 					'custom' => esc_html__('Custom Repeater', 'otic-eye-care'),
 					'dynamic' => esc_html__('WordPress Menu', 'otic-eye-care'),
 				],
-				'default' => 'custom',
+				'default' => 'dynamic',
 			]
 		);
 
 		$menus = wp_get_nav_menus();
-		$menu_options = ['' => esc_html__('Select Menu', 'otic-eye-care')];
+		$menu_options = ['' => esc_html__('Select Menu (Defaults to Otic Primary)', 'otic-eye-care')];
 		foreach ($menus as $menu) {
 			$menu_options[$menu->slug] = $menu->name;
 		}
@@ -197,26 +197,37 @@ class Otic_Header_Widget extends Widget_Base
 		$settings = $this->get_settings_for_display();
 		$menu_items = [];
 
-		if ('dynamic' === $settings['menu_type'] && !empty($settings['selected_menu'])) {
-			$wp_menu_items = wp_get_nav_menu_items($settings['selected_menu']);
-			if ($wp_menu_items) {
-				foreach ($wp_menu_items as $menu_item) {
-					if ($menu_item->menu_item_parent == 0) {
-						$child_items = [];
-						foreach ($wp_menu_items as $child) {
-							if ($child->menu_item_parent == $menu_item->ID) {
-								$child_items[] = [
-									'text' => $child->title,
-									'link' => $child->url,
-								];
+		if ('dynamic' === $settings['menu_type']) {
+			$menu = !empty($settings['selected_menu']) ? $settings['selected_menu'] : '';
+			
+			if (empty($menu)) {
+				$locations = get_nav_menu_locations();
+				if (isset($locations['otic_primary'])) {
+					$menu = $locations['otic_primary'];
+				}
+			}
+
+			if (!empty($menu)) {
+				$wp_menu_items = wp_get_nav_menu_items($menu);
+				if ($wp_menu_items) {
+					foreach ($wp_menu_items as $menu_item) {
+						if ($menu_item->menu_item_parent == 0) {
+							$child_items = [];
+							foreach ($wp_menu_items as $child) {
+								if ($child->menu_item_parent == $menu_item->ID) {
+									$child_items[] = [
+										'text' => $child->title,
+										'link' => $child->url,
+									];
+								}
 							}
+							$menu_items[] = [
+								'text' => $menu_item->title,
+								'link' => $menu_item->url,
+								'has_dropdown' => !empty($child_items),
+								'dropdown_items' => $child_items,
+							];
 						}
-						$menu_items[] = [
-							'text' => $menu_item->title,
-							'link' => $menu_item->url,
-							'has_dropdown' => !empty($child_items),
-							'dropdown_items' => $child_items,
-						];
 					}
 				}
 			}

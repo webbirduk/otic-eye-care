@@ -51,6 +51,7 @@ final class Otic_Eye_Care {
 	 */
 	public function __construct() {
 		add_action( 'init', [ $this, 'i18n' ] );
+		add_action( 'init', [ $this, 'register_menus' ] );
 		add_action( 'plugins_loaded', [ $this, 'init' ] );
 
 		// Disable default theme header and footer globally
@@ -64,6 +65,16 @@ final class Otic_Eye_Care {
 		add_filter( 'comments_open', '__return_false', 20, 2 );
 		add_filter( 'pings_open', '__return_false', 20, 2 );
 		add_filter( 'comments_array', '__return_empty_array', 10, 2 );
+	}
+
+	/**
+	 * Register Menus
+	 */
+	public function register_menus() {
+		register_nav_menus( [
+			'otic_primary' => esc_html__( 'Otic Primary Menu', 'otic-eye-care' ),
+			'otic_footer'  => esc_html__( 'Otic Footer Menu', 'otic-eye-care' ),
+		] );
 	}
 
 	/**
