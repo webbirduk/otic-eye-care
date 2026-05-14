@@ -146,21 +146,21 @@ class Otic_Header_Widget extends Widget_Base
 				'default' => [
 					[
 						'item_text' => esc_html__('Ear Wax Removal', 'otic-eye-care'),
-						'item_link' => ['url' => '#'],
+						'item_link' => ['url' => '/'],
 					],
 					[
 						'item_text' => esc_html__('Ear Treatments', 'otic-eye-care'),
 						'item_link' => ['url' => '#'],
 						'has_dropdown' => 'yes',
-						'dropdown_items' => "Ear Infection Treatment|#\nForeign Body Removal|#\nChildren’s Ear Wax Removal|#",
+						'dropdown_items' => "Ear Infection Treatment|/ear-infection-treatment/\nForeign Body Removal|/foreign-body-removal/\nChildren’s Ear Wax Removal|/childrens-ear-wax-removal/",
 					],
 					[
 						'item_text' => esc_html__('Fees', 'otic-eye-care'),
-						'item_link' => ['url' => '#'],
+						'item_link' => ['url' => '/fees/'],
 					],
 					[
 						'item_text' => esc_html__('Insights & Advice', 'otic-eye-care'),
-						'item_link' => ['url' => '#'],
+						'item_link' => ['url' => '/insights-advice/'],
 					],
 				],
 				'title_field' => '{{{ item_text }}}',
@@ -228,16 +228,24 @@ class Otic_Header_Widget extends Widget_Base
 					foreach ($lines as $line) {
 						$parts = explode("|", $line);
 						if (!empty($parts[0])) {
+							$link = $parts[1] ?? '#';
+							if (strpos($link, 'http') !== 0 && $link !== '#' && $link !== '') {
+								$link = home_url($link);
+							}
 							$dropdown_items[] = [
 								'text' => $parts[0],
-								'link' => $parts[1] ?? '#',
+								'link' => $link,
 							];
 						}
 					}
 				}
+				$url = $item['item_link']['url'];
+				if (strpos($url, 'http') !== 0 && $url !== '#' && $url !== '') {
+					$url = home_url($url);
+				}
 				$menu_items[] = [
 					'text' => $item['item_text'],
-					'link' => $item['item_link']['url'],
+					'link' => $url,
 					'has_dropdown' => 'yes' === $item['has_dropdown'],
 					'dropdown_items' => $dropdown_items,
 				];
