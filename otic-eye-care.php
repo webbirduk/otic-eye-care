@@ -65,6 +65,10 @@ final class Otic_Eye_Care {
 		add_filter( 'comments_open', '__return_false', 20, 2 );
 		add_filter( 'pings_open', '__return_false', 20, 2 );
 		add_filter( 'comments_array', '__return_empty_array', 10, 2 );
+
+		// AJAX Handlers
+		add_action( 'wp_ajax_otic_load_more_posts', [ $this, 'load_more_posts' ] );
+		add_action( 'wp_ajax_nopriv_otic_load_more_posts', [ $this, 'load_more_posts' ] );
 	}
 
 	/**
@@ -246,6 +250,64 @@ final class Otic_Eye_Care {
 
 		// Plugin JS
 		wp_enqueue_script( 'otic-plugin-js', plugins_url( 'app.js', __FILE__ ), [], '1.0.0', true );
+	}
+
+	/**
+	 * AJAX Load More Posts
+	 */
+	public function load_more_posts() {
+		$page = isset($_POST['page']) ? $_POST['page'] + 1 : 1;
+		$posts_per_page = isset($_POST['posts_per_page']) ? $_POST['posts_per_page'] : 3;
+		$category = isset($_POST['category']) ? $_POST['category'] : '';
+
+		$args = [
+			'post_type'      => 'post',
+			'posts_per_page' => $posts_per_page,
+			'paged'          => $page,
+			'post_status'    => 'publish',
+		];
+
+		if ( ! empty( $category ) ) {
+			$args['cat'] = $category;
+		}
+
+		$query = new \WP_Query( $args );
+
+		if ( $query->have_posts() ) :
+			while ( $query->have_posts() ) : $query->the_post();
+				$categories = get_the_category();
+				$cat_name = ! empty( $categories ) ? $categories[0]->name : 'Uncategorized';
+				?>
+				<div class="post-card">
+					<div class="post-image-container">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail( 'large' ); ?>
+						<?php else : ?>
+							<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000" alt="<?php the_title(); ?>">
+						<?php endif; ?>
+						<div style="position: absolute; top: 20px; left: 20px;">
+							<span class="post-category"><?php echo esc_html( $cat_name ); ?></span>
+						</div>
+					</div>
+					<div class="post-content">
+						<div class="post-meta">
+							<span class="post-date"><i class="ph-bold ph-calendar" style="margin-right: 5px;"></i> <?php echo get_the_date(); ?></span>
+						</div>
+						<h3 class="post-title"><?php the_title(); ?></h3>
+						<div class="post-footer">
+							<span class="post-read-time"><i class="ph-fill ph-clock"></i> 5 min read</span>
+							<a href="<?php the_permalink(); ?>" class="post-link">
+								<i class="ph-bold ph-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<?php
+			endwhile;
+			wp_reset_postdata();
+		endif;
+
+		die();
 	}
 }
 

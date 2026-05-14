@@ -349,6 +349,12 @@ class Otic_Children_Ear_Wax_Removal_Page_Widget extends Widget_Base {
 				.hero-text { text-align: center; }
 				.hero-actions { justify-content: center; }
 				.expert-grid { grid-template-columns: 1fr !important; gap: 80px !important; }
+				.expert-grid > div:first-child {
+					text-align: center !important;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
 				.solution-grid { grid-template-columns: 1fr !important; }
 				.technique-grid { grid-template-columns: repeat(2, 1fr) !important; }
 			}

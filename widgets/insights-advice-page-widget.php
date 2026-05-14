@@ -73,48 +73,31 @@ class Otic_Insights_Advice_Page_Widget extends Widget_Base {
 
 		$this->end_controls_section();
 
-		// --- Blog Grid ---
+		// --- Blog Settings ---
 		$this->start_controls_section(
-			'section_blog',
+			'section_blog_settings',
 			[
-				'label' => esc_html__( 'Blog Posts', 'otic-eye-care' ),
+				'label' => esc_html__( 'Blog Settings', 'otic-eye-care' ),
 			]
 		);
 
-		$repeater = new Repeater();
-		$repeater->add_control( 'post_title', [ 'label' => 'Title', 'type' => Controls_Manager::TEXT ] );
-		$repeater->add_control( 'post_category', [ 'label' => 'Category', 'type' => Controls_Manager::TEXT ] );
-		$repeater->add_control( 'post_date', [ 'label' => 'Date', 'type' => Controls_Manager::TEXT ] );
-		$repeater->add_control( 'post_read_time', [ 'label' => 'Read Time', 'type' => Controls_Manager::TEXT ] );
-		$repeater->add_control( 'post_image', [ 'label' => 'Image', 'type' => Controls_Manager::MEDIA ] );
-		$repeater->add_control( 'post_link', [ 'label' => 'Link', 'type' => Controls_Manager::URL ] );
+		$this->add_control(
+			'posts_per_page',
+			[
+				'label' => 'Posts Per Page',
+				'type' => Controls_Manager::NUMBER,
+				'default' => 3,
+			]
+		);
 
-		$this->add_control( 'posts', [
-			'label' => 'Posts',
-			'type' => Controls_Manager::REPEATER,
-			'fields' => $repeater->get_controls(),
-			'default' => [
-				[ 
-					'post_title' => 'The Ultimate Guide to Microsuction Ear Wax Removal', 
-					'post_category' => 'Clinical Guide', 
-					'post_date' => 'May 10, 2026',
-					'post_read_time' => '5 min read'
-				],
-				[ 
-					'post_title' => 'Why At-Home Ear Care is Growing in London', 
-					'post_category' => 'Patient News', 
-					'post_date' => 'May 05, 2026',
-					'post_read_time' => '4 min read'
-				],
-				[ 
-					'post_title' => 'Understanding Paediatric Ear Infections: A Parent’s Handbook', 
-					'post_category' => 'Paediatrics', 
-					'post_date' => 'April 28, 2026',
-					'post_read_time' => '8 min read'
-				],
-			],
-			'title_field' => '{{{ post_title }}}',
-		]);
+		$this->add_control(
+			'category_filter',
+			[
+				'label' => 'Filter by Category (ID)',
+				'type' => Controls_Manager::TEXT,
+				'description' => 'Enter category IDs separated by commas, or leave blank for all.',
+			]
+		);
 
 		$this->end_controls_section();
 
@@ -151,6 +134,33 @@ class Otic_Insights_Advice_Page_Widget extends Widget_Base {
 			.post-read-time { font-size: 0.85rem; color: #64748b; display: flex; align-items: center; gap: 6px; }
 			.post-link { width: 45px; height: 45px; background: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1e293b; transition: all 0.3s; }
 			.post-card:hover .post-link { background: #3b82f6; color: white; }
+
+			/* Responsive Utilities */
+			@media (max-width: 1024px) {
+				.hero-content { grid-template-columns: 1fr !important; gap: 60px !important; }
+				.hero-text { text-align: center; }
+				.hero-actions { justify-content: center; }
+				.blog-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 30px !important; }
+				.insights-header-wrap { flex-direction: column !important; text-align: center !important; align-items: center !important; }
+				.insights-filter-tabs { margin-top: 40px !important; flex-wrap: wrap; justify-content: center; }
+			}
+
+			@media (max-width: 768px) {
+				.section-title { font-size: 2.5rem !important; }
+				.hero-title { font-size: 2.8rem !important; }
+				.hero-desc { font-size: 1.1rem !important; }
+				.blog-grid { grid-template-columns: 1fr !important; }
+				.newsletter-wrap { padding: 60px 30px !important; border-radius: 40px !important; }
+				.newsletter-form { flex-direction: column !important; }
+			}
+
+			@media (max-width: 480px) {
+				.section-title { font-size: 2rem !important; }
+				.hero-title { font-size: 2.2rem !important; }
+				.hero-actions { flex-direction: column; width: 100%; gap: 10px !important; }
+				.post-card { border-radius: 30px !important; }
+				.post-content { padding: 30px !important; }
+			}
 		</style>
 
 		<div class="otic-page-container">
@@ -199,63 +209,192 @@ class Otic_Insights_Advice_Page_Widget extends Widget_Base {
 			</section>
 
 			<!-- Latest Insights Grid -->
-			<section id="latest" style="padding: 140px 0; background: #ffffff;">
+			<section id="latest" style="padding: clamp(80px, 15vw, 140px) 0; background: #ffffff;">
 				<div class="container">
-					<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 80px;">
+					<div class="insights-header-wrap" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 80px;">
 						<div style="max-width: 600px;">
 							<div class="badge">Latest Updates</div>
 							<h2 class="section-title">Clinical Articles & <span class="text-gradient">Advice</span></h2>
 						</div>
-						<div style="display: flex; gap: 15px;">
-							<button class="btn btn-outline" style="padding: 12px 25px; border-radius: 99px;">All Posts</button>
-							<button class="btn btn-outline" style="padding: 12px 25px; border-radius: 99px;">Clinical</button>
-							<button class="btn btn-outline" style="padding: 12px 25px; border-radius: 99px;">News</button>
+						<div class="insights-filter-tabs" style="display: flex; gap: 15px;">
+							<button class="filter-btn active" data-category="" style="padding: 12px 25px; border-radius: 99px; background: #3b82f6; color: white; border: none; font-weight: 600; cursor: pointer; transition: all 0.3s;">All Posts</button>
+							<?php
+							$categories = get_categories([
+								'hide_empty' => true,
+								'exclude'    => [1], // Exclude Uncategorized if needed
+							]);
+							foreach ( $categories as $category ) : ?>
+								<button class="filter-btn" data-category="<?php echo esc_attr( $category->term_id ); ?>" style="padding: 12px 25px; border-radius: 99px; background: #f8fafc; color: #1e293b; border: 1px solid #f1f5f9; font-weight: 600; cursor: pointer; transition: all 0.3s;">
+									<?php echo esc_html( $category->name ); ?>
+								</button>
+							<?php endforeach; ?>
 						</div>
 					</div>
 
-					<div class="blog-grid">
-						<?php foreach ( $settings['posts'] as $post ) : ?>
-							<div class="post-card">
-								<div class="post-image-container">
-									<img src="<?php echo esc_url( $post['post_image']['url'] ?: 'http://otic-eye-care.local/wp-content/uploads/2026/05/clinical_pricing_transparency.png' ); ?>" alt="<?php echo esc_attr( $post['post_title'] ); ?>">
-									<div style="position: absolute; top: 20px; left: 20px;">
-										<span class="post-category"><?php echo esc_html( $post['post_category'] ); ?></span>
+					<style>
+						.filter-btn:hover { background: #eff6ff; border-color: #3b82f6; color: #3b82f6; }
+						.filter-btn.active { background: #3b82f6 !important; color: white !important; border-color: #3b82f6 !important; }
+					</style>
+
+					<?php
+					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+					$args = [
+						'post_type'      => 'post',
+						'posts_per_page' => $settings['posts_per_page'],
+						'paged'          => $paged,
+						'post_status'    => 'publish',
+					];
+
+					if ( ! empty( $settings['category_filter'] ) ) {
+						$args['cat'] = $settings['category_filter'];
+					}
+
+					$query = new \WP_Query( $args );
+					?>
+
+					<div class="blog-grid" id="otic-post-container">
+						<?php 
+						if ( $query->have_posts() ) : 
+							while ( $query->have_posts() ) : $query->the_post();
+								$categories = get_the_category();
+								$cat_name = ! empty( $categories ) ? $categories[0]->name : 'Uncategorized';
+								?>
+								<div class="post-card">
+									<div class="post-image-container">
+										<?php if ( has_post_thumbnail() ) : ?>
+											<?php the_post_thumbnail( 'large' ); ?>
+										<?php else : ?>
+											<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000" alt="<?php the_title(); ?>">
+										<?php endif; ?>
+										<div style="position: absolute; top: 20px; left: 20px;">
+											<span class="post-category"><?php echo esc_html( $cat_name ); ?></span>
+										</div>
+									</div>
+									<div class="post-content">
+										<div class="post-meta">
+											<span class="post-date"><i class="ph-bold ph-calendar" style="margin-right: 5px;"></i> <?php echo get_the_date(); ?></span>
+										</div>
+										<h3 class="post-title"><?php the_title(); ?></h3>
+										<div class="post-footer">
+											<span class="post-read-time"><i class="ph-fill ph-clock"></i> 5 min read</span>
+											<a href="<?php the_permalink(); ?>" class="post-link">
+												<i class="ph-bold ph-arrow-right"></i>
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="post-content">
-									<div class="post-meta">
-										<span class="post-date"><i class="ph-bold ph-calendar" style="margin-right: 5px;"></i> <?php echo esc_html( $post['post_date'] ); ?></span>
-									</div>
-									<h3 class="post-title"><?php echo esc_html( $post['post_title'] ); ?></h3>
-									<div class="post-footer">
-										<span class="post-read-time"><i class="ph-fill ph-clock"></i> <?php echo esc_html( $post['post_read_time'] ); ?></span>
-										<a href="<?php echo esc_url( $post['post_link']['url'] ?: '#' ); ?>" class="post-link">
-											<i class="ph-bold ph-arrow-right"></i>
-										</a>
-									</div>
-								</div>
-							</div>
-						<?php endforeach; ?>
+								<?php 
+							endwhile; 
+							wp_reset_postdata();
+						endif; 
+						?>
 					</div>
 
-					<div style="text-align: center; margin-top: 80px;">
-						<button class="btn btn-primary" style="padding: 20px 50px; border-radius: 20px; font-weight: 800; font-family: 'Outfit';">Load More Articles</button>
-					</div>
+					<?php if ( $query->max_num_pages > 1 ) : ?>
+						<div style="text-align: center; margin-top: 80px;">
+							<button id="otic-load-more" class="btn btn-primary" 
+								data-page="1" 
+								data-max="<?php echo $query->max_num_pages; ?>" 
+								data-posts-per-page="<?php echo $settings['posts_per_page']; ?>"
+								data-category="<?php echo $settings['category_filter']; ?>"
+								style="padding: 20px 50px; border-radius: 20px; font-weight: 800; font-family: 'Outfit';">
+								Load More Articles
+							</button>
+						</div>
+					<?php endif; ?>
 				</div>
+
+				<script>
+				jQuery(document).ready(function($) {
+					var loadMoreBtn = $('#otic-load-more');
+					var postContainer = $('#otic-post-container');
+
+					// Handle Category Filter
+					$('.filter-btn').on('click', function() {
+						var categoryId = $(this).data('category');
+						
+						$('.filter-btn').removeClass('active');
+						$(this).addClass('active');
+
+						// Reset container and button
+						postContainer.html('<div style="text-align:center; grid-column: 1/-1; padding: 50px;">Loading articles...</div>');
+						
+						var data = {
+							action: 'otic_load_more_posts',
+							page: 0, // Reset to first page
+							posts_per_page: loadMoreBtn.data('posts-per-page'),
+							category: categoryId
+						};
+
+						$.ajax({
+							url: '<?php echo admin_url('admin-ajax.php'); ?>',
+							data: data,
+							type: 'POST',
+							success: function(response) {
+								postContainer.html(response);
+								loadMoreBtn.data('page', 1);
+								loadMoreBtn.data('category', categoryId);
+								loadMoreBtn.parent().show();
+								
+								// Hide button if no response or less than per page (simple check)
+								if (!response || response.trim() === "") {
+									loadMoreBtn.parent().hide();
+								}
+							}
+						});
+					});
+
+					// Handle Load More
+					loadMoreBtn.on('click', function(e) {
+						e.preventDefault();
+						
+						var button = $(this);
+						var data = {
+							action: 'otic_load_more_posts',
+							page: button.data('page'),
+							max_pages: button.data('max'),
+							posts_per_page: button.data('posts-per-page'),
+							category: button.data('category')
+						};
+
+						$.ajax({
+							url: '<?php echo admin_url('admin-ajax.php'); ?>',
+							data: data,
+							type: 'POST',
+							beforeSend: function() {
+								button.text('Loading...');
+							},
+							success: function(response) {
+								if (response && response.trim() !== "") {
+									button.data('page', data.page + 1);
+									postContainer.append(response);
+									button.text('Load More Articles');
+
+									if (data.page + 1 >= data.max_pages) {
+										button.parent().fadeOut();
+									}
+								} else {
+									button.parent().fadeOut();
+								}
+							}
+						});
+					});
+				});
+				</script>
 			</section>
 
 			<!-- Newsletter Section -->
-			<section id="subscribe" style="padding: 120px 0; background: #0f172a; position: relative; overflow: hidden;">
+			<section id="subscribe" style="padding: clamp(60px, 12vw, 120px) 0; background: #0f172a; position: relative; overflow: hidden;">
 				<div style="position: absolute; inset: 0; opacity: 0.03; background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 40px 40px;"></div>
 				<div class="container" style="position: relative; z-index: 2;">
-					<div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%); padding: 100px; border-radius: 80px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
-						<div style="width: 80px; height: 80px; background: #3b82f6; color: white; border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 40px; box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);">
+					<div class="newsletter-wrap" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%); padding: clamp(40px, 10vw, 100px); border-radius: 80px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+						<div style="width: 60px; height: 60px; background: #3b82f6; color: white; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 30px; box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3);">
 							<i class="ph-fill ph-envelope-simple"></i>
 						</div>
-						<h2 class="section-title" style="color: white; margin-bottom: 20px;">Join Our Clinical <span class="text-gradient">Newsletter</span></h2>
-						<p style="color: #94a3b8; font-size: 1.3rem; max-width: 600px; margin: 0 auto 50px;">Get the latest ear care tips, specialist advice, and exclusive updates delivered to your inbox.</p>
+						<h2 class="section-title" style="color: white; margin-bottom: 20px; font-size: clamp(2rem, 5vw, 3rem);">Join Our Clinical <span class="text-gradient">Newsletter</span></h2>
+						<p style="color: #94a3b8; font-size: clamp(1rem, 2vw, 1.25rem); max-width: 600px; margin: 0 auto 50px;">Get the latest ear care tips, specialist advice, and exclusive updates delivered to your inbox.</p>
 						
-						<form style="max-width: 600px; margin: 0 auto; display: flex; gap: 20px;">
+						<form class="newsletter-form" style="max-width: 600px; margin: 0 auto; display: flex; gap: 20px;">
 							<input type="email" placeholder="Your Email Address" style="flex-grow: 1; padding: 20px 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; font-family: 'Inter'; font-size: 1.1rem; outline: none;" required>
 							<button type="submit" class="btn btn-primary" style="padding: 20px 40px; border-radius: 20px; font-weight: 800; font-family: 'Outfit'; border: none !important; color: white !important;">Subscribe <i class="ph-bold ph-paper-plane-tilt"></i></button>
 						</form>

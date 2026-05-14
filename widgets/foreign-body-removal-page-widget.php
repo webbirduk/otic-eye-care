@@ -104,6 +104,63 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 
 		$this->end_controls_section();
 
+		// --- Expert Insights Section ---
+		$this->start_controls_section(
+			'section_expert_insights',
+			[
+				'label' => esc_html__( 'Expert Insights', 'otic-eye-care' ),
+			]
+		);
+
+		$this->add_control(
+			'insights_badge',
+			[
+				'label' => 'Badge',
+				'type' => Controls_Manager::TEXT,
+				'default' => 'Clinical Intelligence',
+			]
+		);
+
+		$this->add_control(
+			'insights_title',
+			[
+				'label' => 'Title',
+				'type' => Controls_Manager::TEXTAREA,
+				'default' => 'Expert Insights into [Foreign Bodies]',
+			]
+		);
+
+		$this->add_control(
+			'insights_desc',
+			[
+				'label' => 'Description',
+				'type' => Controls_Manager::TEXTAREA,
+				'default' => 'A foreign body in the ear canal is a common clinical presentation, particularly in children. Safe removal requires specialized ENT instrumentation and microscopic visualization.',
+			]
+		);
+
+		$this->add_control(
+			'insights_image',
+			[
+				'label' => 'Insights Image',
+				'type' => Controls_Manager::MEDIA,
+				'default' => [
+					'url' => 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000',
+				],
+			]
+		);
+
+		$this->add_control(
+			'insights_quote',
+			[
+				'label' => 'Quote/Diagnosis Text',
+				'type' => Controls_Manager::TEXTAREA,
+				'default' => '"It is usually straightforward to diagnose a foreign body. Our ENT doctor will examine your ear with a bright light to identify the object and work out the best way to safely remove it."',
+			]
+		);
+
+		$this->end_controls_section();
+
 		// --- Common Objects ---
 		$this->start_controls_section(
 			'section_objects',
@@ -136,6 +193,72 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 			],
 			'title_field' => '{{{ object_name }}}',
 		]);
+
+		$this->end_controls_section();
+
+		// --- Specialized Methods Section ---
+		$this->start_controls_section(
+			'section_specialized_methods',
+			[
+				'label' => esc_html__( 'Removal Methods & Grommets', 'otic-eye-care' ),
+			]
+		);
+
+		$this->add_control(
+			'methods_badge',
+			[
+				'label' => 'Badge',
+				'type' => Controls_Manager::TEXT,
+				'default' => 'Clinical Excellence',
+			]
+		);
+
+		$this->add_control(
+			'methods_title',
+			[
+				'label' => 'Title',
+				'type' => Controls_Manager::TEXTAREA,
+				'default' => 'Specialized [Removal] Methods',
+			]
+		);
+
+		$this->add_control(
+			'methods_desc',
+			[
+				'label' => 'Description',
+				'type' => Controls_Manager::TEXTAREA,
+				'default' => 'Our ENT specialists are equipped with precision instruments to ensure the safe extraction of varied objects from the ear canal.',
+			]
+		);
+
+		$this->add_control(
+			'methods_image',
+			[
+				'label' => 'Methods Image',
+				'type' => Controls_Manager::MEDIA,
+				'default' => [
+					'url' => 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1000',
+				],
+			]
+		);
+
+		$this->add_control(
+			'grommet_title',
+			[
+				'label' => 'Grommet Title',
+				'type' => Controls_Manager::TEXTAREA,
+				'default' => 'A Note on [Grommets]',
+			]
+		);
+
+		$this->add_control(
+			'grommet_desc',
+			[
+				'label' => 'Grommet Description',
+				'type' => Controls_Manager::TEXTAREA,
+				'default' => 'Grommets are small plastic tubes surgically inserted into the eardrum. When they naturally push out, they can sometimes become a foreign body that needs professional removal. Our ENT specialists can identify and extract these safely during your consultation.',
+			]
+		);
 
 		$this->end_controls_section();
 
@@ -184,8 +307,9 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 		?>
 
 		<style>
-			.otic-page-container { font-family: 'Inter', sans-serif; }
-			.section-title { font-family: 'Outfit', sans-serif; font-weight: 800; color: #1e293b; line-height: 1.1; margin-bottom: 30px; font-size: 3.5rem; letter-spacing: -0.02em; }
+			.otic-page-container { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+			.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
+			.section-title { font-family: 'Outfit', sans-serif; font-weight: 800; color: #1e293b; line-height: 1.1; margin-bottom: 30px; font-size: clamp(2.5rem, 8vw, 3.5rem); letter-spacing: -0.02em; }
 			.text-gradient { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 			.badge { display: inline-block; padding: 8px 20px; background: rgba(59, 130, 246, 0.08); color: #2563eb; border-radius: 99px; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; border: 1px solid rgba(59, 130, 246, 0.1); }
 			
@@ -196,6 +320,65 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 
 			.object-card { background: white; padding: 25px; border-radius: 25px; border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.02); transition: all 0.3s ease; text-align: center; }
 			.object-card:hover { transform: translateY(-10px); border-color: #3b82f6; box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1); }
+
+			/* Responsive Utilities */
+			@media (max-width: 1024px) {
+				.hero-content { grid-template-columns: 1fr !important; gap: 60px !important; }
+				.hero-text { text-align: center; }
+				.hero-actions { justify-content: center; }
+				.expert-grid { grid-template-columns: 1fr !important; gap: 60px !important; }
+				.common-objects-grid { grid-template-columns: repeat(3, 1fr) !important; }
+				.methods-grid { grid-template-columns: 1fr !important; }
+			}
+
+			@media (max-width: 768px) {
+				.section-title { font-size: 2.5rem !important; }
+				.hero-title { font-size: 2.8rem !important; }
+				.common-objects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+				
+				.clinical-excellence-badge {
+					background: #3b82f6 !important;
+					color: white !important;
+					box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3) !important;
+					padding: 12px 30px !important;
+					font-size: 0.9rem !important;
+					border: none !important;
+					margin-left: auto !important;
+					margin-right: auto !important;
+				}
+
+				.expert-grid > div:first-child {
+					text-align: center !important;
+				}
+
+				/* Timeline Mobile Adjustments */
+				.process-item { flex-direction: column !important; text-align: left !important; margin-bottom: 50px !important; padding-left: 60px !important; }
+				.process-card-wrapper { width: 100% !important; order: 2 !important; text-align: left !important; }
+				.process-icon-wrapper { 
+					position: absolute !important; 
+					left: 0 !important; 
+					top: 0 !important;
+					transform: none !important; 
+					margin-bottom: 0 !important; 
+					order: 1 !important; 
+					width: 44px !important; 
+					height: 44px !important; 
+					font-size: 1.1rem !important;
+				}
+				.process-line { left: 22px !important; transform: none !important; }
+				.process-card { border-left: 4px solid #3b82f6 !important; border-right: 0 !important; padding: 25px !important; border-radius: 20px !important; }
+				.process-spacer { display: none !important; }
+			}
+
+			@media (max-width: 480px) {
+				.section-title { font-size: 2rem !important; }
+				.hero-title { font-size: 2.2rem !important; }
+				.hero-actions { flex-direction: column; width: 100%; gap: 10px !important; }
+				.btn-lg { width: 100%; text-align: center; }
+				.common-objects-grid { grid-template-columns: 1fr !important; }
+				.pricing-card-item { flex-direction: column; gap: 20px; text-align: center; padding: 30px !important; }
+				.pricing-card-item div { flex-direction: column; }
+			}
 		</style>
 
 		<div class="otic-page-container">
@@ -207,12 +390,12 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 						frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 				<div class="hero-overlay"></div>
-				<div class="container hero-content">
+				<div class="container hero-content" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; position: relative; z-index: 10;">
 					<div class="hero-text">
 						<div class="badge">
 							<i class="ph-fill ph-star"></i> <?php echo esc_html( $settings['hero_badge'] ); ?>
 						</div>
-						<h1 class="section-title" style="color: white; font-size: 4.5rem;"><?php echo wp_kses_post( $title ); ?></h1>
+						<h1 class="section-title hero-title" style="color: white; font-size: clamp(3rem, 10vw, 4.5rem);"><?php echo wp_kses_post( $title ); ?></h1>
 						<p style="font-size: 1.5rem; line-height: 1.6; opacity: 0.9; margin-bottom: 40px; font-family: 'Inter'; font-weight: 400;">
 							<?php echo esc_html( $settings['hero_description'] ); ?>
 						</p>
@@ -266,7 +449,7 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 					
 					<div style="max-width: 900px; margin: 0 auto; position: relative;">
 						<!-- Vertical Center Line -->
-						<div style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: linear-gradient(to bottom, transparent, #e2e8f0 15%, #e2e8f0 85%, transparent); transform: translateX(-50%);">
+						<div class="process-line" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: linear-gradient(to bottom, transparent, #e2e8f0 15%, #e2e8f0 85%, transparent); transform: translateX(-50%);">
 							<div style="position: absolute; width: 10px; height: 10px; background: #3b82f6; border-radius: 50%; left: 50%; transform: translateX(-50%); box-shadow: 0 0 15px #3b82f6; animation: flowLine 4s infinite linear;"></div>
 						</div>
 
@@ -277,7 +460,7 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 							<div class="process-item" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 80px; position: relative; animation: <?php echo $anim_name; ?> 0.8s ease forwards; animation-delay: <?php echo $index * 0.2; ?>s;">
 								
 								<!-- Content Side -->
-								<div style="width: 42%; <?php echo $is_even ? 'text-align: right;' : 'order: 2; text-align: left;'; ?>">
+								<div class="process-card-wrapper" style="width: 42%; <?php echo $is_even ? 'text-align: right;' : 'order: 2; text-align: left;'; ?>">
 									<div class="process-card" style="background: white; padding: 45px; border-radius: 40px; border-left: 6px solid #3b82f6; box-shadow: 0 15px 50px rgba(0,0,0,0.03); transition: all 0.4s ease; <?php echo $is_even ? 'border-left: 0; border-right: 6px solid #3b82f6;' : ''; ?>">
 										<h3 style="font-family: 'Outfit'; font-size: 1.8rem; color: #1e293b; margin-bottom: 12px;"><?php echo esc_html( $step['step_title'] ); ?></h3>
 										<p style="font-family: 'Inter'; font-size: 1.1rem; color: #64748b; line-height: 1.65; margin: 0;"><?php echo esc_html( $step['step_desc'] ); ?></p>
@@ -285,83 +468,77 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 								</div>
 
 								<!-- Center Icon -->
-								<div class="process-icon-wrap" style="width: 80px; height: 80px; background: white; border: 2px solid #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: absolute; left: 50%; transform: translateX(-50%); z-index: 5; color: #3b82f6; font-size: 2.2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+								<div class="process-icon-wrapper" style="width: 80px; height: 80px; background: white; border: 2px solid #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: absolute; left: 50%; transform: translateX(-50%); z-index: 5; color: #3b82f6; font-size: 2.2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: all 0.3s ease;">
 									<i class="<?php echo esc_attr( $step['step_icon']['value'] ); ?>"></i>
 								</div>
 
 								<!-- Spacer Side -->
-								<div style="width: 42%; <?php echo $is_even ? 'order: 2;' : ''; ?>"></div>
+								<div class="process-spacer" style="width: 42%; <?php echo $is_even ? 'order: 2;' : ''; ?>"></div>
 							</div>
 						<?php endforeach; ?>
 					</div>
 				</div>
 			</section>
 
-			<!-- Insights Section Redesign: Paediatric Focus -->
-			<section style="padding: 140px 0; background: #0f172a; color: white; position: relative; overflow: hidden;">
+			<!-- Insights Section Redesign: Clinical Intelligence -->
+			<section style="padding: clamp(80px, 15vw, 140px) 0; background: #0f172a; color: white; position: relative; overflow: hidden;">
 				<!-- Background Blobs -->
 				<div style="position: absolute; top: -10%; right: -5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%); border-radius: 50%; animation: drift 15s infinite alternate;"></div>
 				<div style="position: absolute; bottom: -20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, transparent 70%); border-radius: 50%; animation: drift 20s infinite alternate-reverse;"></div>
 
 				<div class="container" style="position: relative; z-index: 2;">
-					<div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 100px; align-items: center;">
+					<div class="expert-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 8vw, 100px); align-items: center;">
 						<div>
-							<div class="badge" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);">Clinical Intelligence</div>
-							<h2 class="section-title" style="color: white; font-size: 3.8rem;">Expert Insights into <span class="text-gradient">Foreign Bodies</span></h2>
-							<p style="font-size: 1.3rem; line-height: 1.8; color: #94a3b8; margin-bottom: 40px; font-family: 'Inter';">
-								A foreign body in the ear canal is a common clinical presentation, particularly in children. Safe removal requires specialized ENT instrumentation and microscopic visualization.
+							<div class="badge" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);"><?php echo esc_html( $settings['insights_badge'] ); ?></div>
+							<h2 class="section-title" style="color: white; font-size: clamp(2.5rem, 5vw, 3.8rem);"><?php echo wp_kses_post( str_replace( ['[', ']'], ['<span class="text-gradient">', '</span>'], $settings['insights_title'] ) ); ?></h2>
+							<p style="font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.8; color: #94a3b8; margin-bottom: 40px; font-family: 'Inter';">
+								<?php echo esc_html( $settings['insights_desc'] ); ?>
 							</p>
 							
-							<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-								<div style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 35px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.05)';" onmouseout="this.style.background='rgba(255,255,255,0.03)';">
-									<div style="width: 50px; height: 50px; background: #3b82f6; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.5rem;">
+							<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+								<div style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.06);">
+									<div style="width: 40px; height: 40px; background: #3b82f6; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; font-size: 1.2rem;">
 										<i class="ph-bold ph-shield-check"></i>
 									</div>
-									<h4 style="font-family: 'Outfit'; color: white; margin-bottom: 10px;">Safety Protocols</h4>
-									<p style="margin: 0; color: #94a3b8; font-size: 0.95rem; line-height: 1.6;">Prompt removal is essential to prevent inflammation or damage to the eardrum.</p>
+									<h4 style="font-family: 'Outfit'; color: white; margin-bottom: 8px; font-size: 1.1rem;">Safety Protocols</h4>
+									<p style="margin: 0; color: #94a3b8; font-size: 0.85rem; line-height: 1.6;">Prompt removal is essential to prevent inflammation.</p>
 								</div>
-								<div style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 35px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.05)';" onmouseout="this.style.background='rgba(255,255,255,0.03)';">
-									<div style="width: 50px; height: 50px; background: #60a5fa; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.5rem;">
+								<div style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.06);">
+									<div style="width: 40px; height: 40px; background: #60a5fa; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; font-size: 1.2rem;">
 										<i class="ph-bold ph-baby"></i>
 									</div>
-									<h4 style="font-family: 'Outfit'; color: white; margin-bottom: 10px;">Paediatric Care</h4>
-									<p style="margin: 0; color: #94a3b8; font-size: 0.95rem; line-height: 1.6;">Specialist gentle approach for babies and children to ensure a stress-free procedure.</p>
+									<h4 style="font-family: 'Outfit'; color: white; margin-bottom: 8px; font-size: 1.1rem;">Paediatric Care</h4>
+									<p style="margin: 0; color: #94a3b8; font-size: 0.85rem; line-height: 1.6;">Gentle approach for stress-free procedures.</p>
 								</div>
 							</div>
 						</div>
 						
 						<div style="position: relative;">
-							<div style="background: white; padding: 60px; border-radius: 50px; color: #1e293b; box-shadow: 0 40px 100px rgba(0,0,0,0.2); position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-								<!-- Decorative background element -->
-								<div style="position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: rgba(59, 130, 246, 0.05); border-radius: 50%;"></div>
+							<!-- Main Insight Image -->
+							<div style="position: relative; border-radius: 40px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,0.3); margin-bottom: 40px;">
+								<img src="<?php echo esc_url( $settings['insights_image']['url'] ); ?>" alt="Clinical Insight" style="width: 100%; height: 400px; object-fit: cover;">
+								<div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, transparent 60%);"></div>
 								
-								<div style="display: inline-flex; align-items: center; gap: 10px; background: #eff6ff; color: #3b82f6; padding: 8px 20px; border-radius: 99px; font-family: 'Outfit'; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px;">
-									<i class="ph-bold ph-stethoscope"></i> The Diagnosis
-								</div>
-								
-								<p style="font-size: 1.6rem; line-height: 1.5; color: #1e293b; font-family: 'Outfit'; font-weight: 600; margin: 0; position: relative; z-index: 2;">
-									"It is usually straightforward to diagnose a foreign body. Our ENT doctor will examine your ear with a bright light to identify the object and work out the best way to safely remove it."
-								</p>
-								
-								<div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid #f1f5f9; display: flex; align-items: center; gap: 15px;">
-									<div style="width: 40px; height: 40px; background: #f8fafc; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 1.2rem;">
-										<i class="ph-bold ph-magnifying-glass"></i>
+								<!-- Overlaid Quote -->
+								<div style="position: absolute; bottom: 30px; left: 30px; right: 30px;">
+									<div style="display: inline-flex; align-items: center; gap: 8px; background: #3b82f6; color: white; padding: 6px 15px; border-radius: 99px; font-family: 'Outfit'; font-weight: 800; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">
+										<i class="ph-bold ph-stethoscope"></i> The Diagnosis
 									</div>
-									<span style="font-family: 'Inter'; color: #64748b; font-weight: 500; font-size: 0.95rem;">Precision microscopic examination at your home.</span>
+									<p style="font-size: 1.2rem; line-height: 1.5; color: white; font-family: 'Outfit'; font-weight: 600; margin: 0;">
+										<?php echo esc_html( $settings['insights_quote'] ); ?>
+									</p>
 								</div>
 							</div>
 
-							<!-- Paediatric Highlight Card -->
-							<div style="position: absolute; bottom: -30px; right: -20px; width: 240px; animation: drift-flat 8s infinite alternate;">
-								<div style="background: #3b82f6; padding: 30px; border-radius: 35px; box-shadow: 0 30px 60px rgba(59, 130, 246, 0.4); position: relative; overflow: hidden; border: 4px solid white;">
-									<!-- Clinical Pediatric Icon -->
-									<div style="width: 45px; height: 45px; background: rgba(255,255,255,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: white; font-size: 1.5rem;">
+							<!-- Floating Highlight Card -->
+							<div style="position: absolute; bottom: -20px; right: -10px; width: 220px; z-index: 10;">
+								<div style="background: #3b82f6; padding: 25px; border-radius: 30px; box-shadow: 0 30px 60px rgba(59, 130, 246, 0.4); border: 4px solid #0f172a;">
+									<div style="width: 35px; height: 35px; background: rgba(255,255,255,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; color: white; font-size: 1.2rem;">
 										<i class="ph-bold ph-baby"></i>
 									</div>
-									
-									<h5 style="font-family: 'Outfit'; color: white; margin: 0 0 8px; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em;">Kids Love Us!</h5>
-									<p style="margin: 0; color: rgba(255,255,255,0.9); font-family: 'Inter'; font-size: 0.9rem; line-height: 1.5; font-weight: 500;">
-										We provide animal stickers & multimedia for all child appointments.
+									<h5 style="font-family: 'Outfit'; color: white; margin: 0 0 5px; font-size: 1.1rem; font-weight: 800;">Kids Love Us!</h5>
+									<p style="margin: 0; color: rgba(255,255,255,0.9); font-family: 'Inter'; font-size: 0.8rem; line-height: 1.4;">
+										Stickers & multimedia for every child appointment.
 									</p>
 								</div>
 							</div>
@@ -375,6 +552,9 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 						50% { transform: translate(15px, -15px); }
 						100% { transform: translate(-10px, 10px); }
 					}
+					@media (max-width: 1024px) {
+						.expert-grid { grid-template-columns: 1fr !important; gap: 60px !important; }
+					}
 				</style>
 			</section>
 
@@ -386,7 +566,7 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 						<h2 class="section-title">Objects Found Stuck in <span class="text-gradient">Ears</span></h2>
 						<p style="font-family: 'Inter'; font-size: 1.25rem; color: #64748b; max-width: 700px; margin: 0 auto;">A varied range of clinical findings from our specialized mobile clinic across London.</p>
 					</div>
-					<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+					<div class="common-objects-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
 						<?php foreach ( $settings['common_objects'] as $obj ) : ?>
 							<div class="object-card">
 								<div style="font-size: 2.2rem; color: #3b82f6; margin-bottom: 15px; opacity: 0.8;">
@@ -400,62 +580,61 @@ class Otic_Foreign_Body_Removal_Page_Widget extends Widget_Base {
 			</section>
 
 			<!-- Methods Section Redesign -->
-			<section style="padding: 140px 0; background: #ffffff; position: relative; overflow: hidden;">
+			<section style="padding: clamp(80px, 15vw, 140px) 0; background: #ffffff; position: relative; overflow: hidden;">
 				<div class="container">
-					<div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 100px; align-items: center;">
+					<div class="expert-grid" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(40px, 8vw, 100px); align-items: center;">
 						<div>
-							<div class="badge">Clinical Excellence</div>
-							<h2 class="section-title">Specialized <span class="text-gradient">Removal</span> Methods</h2>
-							<p style="font-size: 1.25rem; line-height: 1.8; color: #64748b; margin-bottom: 40px; font-family: 'Inter';">
-								Our ENT specialists are equipped with precision instruments to ensure the safe extraction of varied objects from the ear canal.
+							<div class="badge clinical-excellence-badge"><?php echo esc_html( $settings['methods_badge'] ); ?></div>
+							<h2 class="section-title"><?php echo wp_kses_post( str_replace( ['[', ']'], ['<span class="text-gradient">', '</span>'], $settings['methods_title'] ) ); ?></h2>
+							<p style="font-size: clamp(1.1rem, 2vw, 1.25rem); line-height: 1.8; color: #64748b; margin-bottom: 40px; font-family: 'Inter';">
+								<?php echo esc_html( $settings['methods_desc'] ); ?>
 							</p>
 							
-							<div style="display: grid; gap: 30px;">
+							<div class="methods-grid" style="display: grid; gap: 30px;">
 								<!-- Method 01 -->
-								<div class="method-card" style="background: #f8fbff; padding: 40px; border-radius: 40px; border: 1px solid #eff6ff; display: flex; align-items: center; gap: 30px; transition: all 0.4s ease;" onmouseover="this.style.transform='translateX(15px)'; this.style.background='white'; this.style.boxShadow='0 30px 60px rgba(59, 130, 246, 0.05)';" onmouseout="this.style.transform='translateX(0)'; this.style.background='#f8fbff'; this.style.boxShadow='none';">
-									<div style="width: 70px; height: 70px; background: white; color: #3b82f6; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1); flex-shrink: 0;">
+								<div class="method-card" style="background: #f8fbff; padding: clamp(25px, 5vw, 40px); border-radius: 40px; border: 1px solid #eff6ff; display: flex; align-items: center; gap: clamp(15px, 3vw, 30px); transition: all 0.4s ease;">
+									<div style="width: 60px; height: 60px; background: white; color: #3b82f6; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1); flex-shrink: 0;">
 										<i class="ph-bold ph-needle"></i>
 									</div>
 									<div>
-										<h4 style="font-family: 'Outfit'; font-size: 1.5rem; color: #1e293b; margin-bottom: 8px;">Paediatric Microsuction</h4>
-										<p style="margin: 0; color: #64748b; font-size: 1rem; line-height: 1.6;">Precision suction to safely lift small objects without touching the sensitive canal skin.</p>
+										<h4 style="font-family: 'Outfit'; font-size: 1.4rem; color: #1e293b; margin-bottom: 5px;">Paediatric Microsuction</h4>
+										<p style="margin: 0; color: #64748b; font-size: 0.95rem; line-height: 1.6;">Precision suction to safely lift small objects.</p>
 									</div>
 								</div>
 
 								<!-- Method 02 -->
-								<div class="method-card" style="background: #f0fdfa; padding: 40px; border-radius: 40px; border: 1px solid #ccfbf1; display: flex; align-items: center; gap: 30px; transition: all 0.4s ease;" onmouseover="this.style.transform='translateX(15px)'; this.style.background='white'; this.style.boxShadow='0 30px 60px rgba(13, 148, 136, 0.05)';" onmouseout="this.style.transform='translateX(0)'; this.style.background='#f0fdfa'; this.style.boxShadow='none';">
-									<div style="width: 70px; height: 70px; background: white; color: #0d9488; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 10px 25px rgba(13, 148, 136, 0.1); flex-shrink: 0;">
+								<div class="method-card" style="background: #f0fdfa; padding: clamp(25px, 5vw, 40px); border-radius: 40px; border: 1px solid #ccfbf1; display: flex; align-items: center; gap: clamp(15px, 3vw, 30px); transition: all 0.4s ease;">
+									<div style="width: 60px; height: 60px; background: white; color: #0d9488; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 10px 25px rgba(13, 148, 136, 0.1); flex-shrink: 0;">
 										<i class="ph-bold ph-scissors"></i>
 									</div>
 									<div>
-										<h4 style="font-family: 'Outfit'; font-size: 1.5rem; color: #1e293b; margin-bottom: 8px;">Precision ENT Instruments</h4>
-										<p style="margin: 0; color: #64748b; font-size: 1rem; line-height: 1.6;">Use of specialized forceps and miniature hooks for objects that require mechanical extraction.</p>
+										<h4 style="font-family: 'Outfit'; font-size: 1.4rem; color: #1e293b; margin-bottom: 5px;">Precision ENT Instruments</h4>
+										<p style="margin: 0; color: #64748b; font-size: 0.95rem; line-height: 1.6;">Specialized miniature hooks and forceps.</p>
 									</div>
 								</div>
 							</div>
 						</div>
 						
-						<!-- Grommet Information Card -->
+						<!-- Grommet & Image Card -->
 						<div style="position: relative;">
-							<div style="background: #f8fafc; border-radius: 60px; padding: 70px; border: 1px solid #f1f5f9; position: relative; z-index: 2; overflow: hidden;">
-								<!-- Decorative Watermark Icon -->
-								<div style="position: absolute; bottom: -20px; left: -20px; font-size: 12rem; color: rgba(59, 130, 246, 0.03); transform: rotate(-15deg); pointer-events: none;">
-									<i class="ph-fill ph-info"></i>
-								</div>
-								
-								<div style="width: 60px; height: 60px; background: white; border-radius: 18px; box-shadow: 0 15px 30px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.8rem; margin-bottom: 35px; transform: rotate(-5deg);">
+							<div style="margin-bottom: 30px; border-radius: 40px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.1);">
+								<img src="<?php echo esc_url( $settings['methods_image']['url'] ); ?>" alt="Specialized Methods" style="width: 100%; height: 300px; object-fit: cover;">
+							</div>
+
+							<div style="background: #f8fafc; border-radius: 50px; padding: clamp(30px, 6vw, 60px); border: 1px solid #f1f5f9; position: relative; z-index: 2; overflow: hidden;">
+								<div style="width: 50px; height: 50px; background: white; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.5rem; margin-bottom: 25px;">
 									<i class="ph-bold ph-info"></i>
 								</div>
 								
-								<h3 style="font-family: 'Outfit'; font-size: 2.2rem; color: #1e293b; margin-bottom: 25px; line-height: 1.2;">A Note on <span class="text-gradient">Grommets</span></h3>
-								<p style="line-height: 1.8; color: #475569; font-size: 1.15rem; font-family: 'Inter'; margin: 0;">
-									Grommets are small plastic tubes surgically inserted into the eardrum. When they naturally push out, they can sometimes become a foreign body that needs professional removal. Our ENT specialists can identify and extract these safely during your consultation.
+								<h3 style="font-family: 'Outfit'; font-size: 1.8rem; color: #1e293b; margin-bottom: 20px; line-height: 1.2;"><?php echo wp_kses_post( str_replace( ['[', ']'], ['<span class="text-gradient">', '</span>'], $settings['grommet_title'] ) ); ?></h3>
+								<p style="line-height: 1.8; color: #475569; font-size: 1.05rem; font-family: 'Inter'; margin: 0;">
+									<?php echo esc_html( $settings['grommet_desc'] ); ?>
 								</p>
 							</div>
 							
-							<!-- Floating Paediatric Note Secondary -->
-							<div style="position: absolute; top: -30px; right: -20px; background: #1e293b; color: white; padding: 20px 30px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); font-family: 'Outfit'; font-weight: 700; z-index: 3; font-size: 0.95rem;">
-								<i class="ph-bold ph-clock" style="margin-right: 8px; color: #60a5fa;"></i> Urgent 24/7 Service Available
+							<!-- Urgent Service Floating Note -->
+							<div style="position: absolute; top: -15px; right: -10px; background: #1e293b; color: white; padding: 15px 25px; border-radius: 15px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); font-family: 'Outfit'; font-weight: 700; z-index: 3; font-size: 0.85rem;">
+								<i class="ph-bold ph-clock" style="margin-right: 8px; color: #60a5fa;"></i> 24/7 Urgent Removal
 							</div>
 						</div>
 					</div>

@@ -152,6 +152,37 @@ class Otic_Treatment_Fees_Page_Widget extends Widget_Base {
 			.info-card ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
 			.info-card li { position: relative; padding-left: 40px; font-family: 'Inter'; font-size: 1.1rem; color: #475569; line-height: 1.6; }
 			.info-card li::before { content: '✓'; position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: #3b82f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 900; }
+
+			/* Responsive Utilities */
+			@media (max-width: 1024px) {
+				.hero-content { grid-template-columns: 1fr !important; gap: 60px !important; }
+				.hero-text { text-align: center; }
+				.hero-actions { justify-content: center; }
+				.info-grid { grid-template-columns: 1fr !important; gap: 60px !important; }
+				.info-white-card { margin-right: 0 !important; padding: 40px !important; }
+				.fee-row { padding: 25px 30px !important; }
+			}
+
+			@media (max-width: 768px) {
+				.section-title { font-size: 2.5rem !important; }
+				.hero-title { font-size: 2.8rem !important; }
+				.clinical-transparency-header {
+					text-align: center !important;
+					display: flex !important;
+					flex-direction: column !important;
+					align-items: center !important;
+				}
+				.fee-name { font-size: 1.1rem !important; }
+				.fee-price { font-size: 1.5rem !important; }
+			}
+
+			@media (max-width: 480px) {
+				.section-title { font-size: 2rem !important; }
+				.hero-title { font-size: 2.2rem !important; }
+				.hero-actions { flex-direction: column; width: 100%; gap: 10px !important; }
+				.fee-row { grid-template-columns: 1fr !important; text-align: center; gap: 10px; }
+				.fee-price { color: #3b82f6; }
+			}
 		</style>
 
 		<div class="otic-page-container">
@@ -163,12 +194,12 @@ class Otic_Treatment_Fees_Page_Widget extends Widget_Base {
 						frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 				<div class="hero-overlay"></div>
-				<div class="container hero-content">
+				<div class="container hero-content" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; position: relative; z-index: 10;">
 					<div class="hero-text">
 						<div class="badge">
 							<i class="ph-fill ph-star"></i> <?php echo esc_html( $settings['hero_badge'] ); ?>
 						</div>
-						<h1 class="section-title" style="color: white; font-size: 4.5rem;"><?php echo wp_kses_post( $title ); ?></h1>
+						<h1 class="hero-title" style="color: white; font-size: 4.5rem;"><?php echo wp_kses_post( $title ); ?></h1>
 						<p style="font-size: 1.5rem; line-height: 1.6; opacity: 0.9; margin-bottom: 40px; font-family: 'Inter'; font-weight: 400;">
 							<?php echo esc_html( $settings['hero_desc'] ); ?>
 						</p>
@@ -235,14 +266,16 @@ class Otic_Treatment_Fees_Page_Widget extends Widget_Base {
 					</div>
 
 					<!-- Important Info: High-Fidelity Dashboard Redesign -->
-					<div style="margin-top: 100px; position: relative;">
-						<div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center;">
+					<div style="margin-top: clamp(60px, 10vw, 100px); position: relative;">
+						<div class="info-grid" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(40px, 8vw, 80px); align-items: center;">
 							<!-- Information Content Column -->
 							<div style="position: relative; z-index: 5;">
-								<div class="badge">Clinical Transparency</div>
-								<h2 class="section-title" style="font-size: 4rem; margin-bottom: 35px; letter-spacing: -0.03em;">Important <span class="text-gradient">Information</span></h2>
+								<div class="clinical-transparency-header">
+									<div class="badge">Clinical Transparency</div>
+									<h2 class="section-title" style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 35px; letter-spacing: -0.03em;">Important <span class="text-gradient">Information</span></h2>
+								</div>
 								
-								<div style="background: white; padding: 60px; border-radius: 60px; box-shadow: 0 40px 100px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; position: relative; margin-right: -100px;">
+								<div class="info-white-card" style="background: white; padding: clamp(30px, 5vw, 60px); border-radius: clamp(30px, 5vw, 60px); box-shadow: 0 40px 100px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; position: relative; margin-right: -100px;">
 									<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #eff6ff;">
 										<div style="width: 40px; height: 40px; background: #3b82f6; color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);">
 											<i class="ph-fill ph-scales"></i>
@@ -269,8 +302,8 @@ class Otic_Treatment_Fees_Page_Widget extends Widget_Base {
 
 							<!-- Image Column -->
 							<div style="position: relative;">
-								<div style="position: relative; border-radius: 80px; overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.12); border: 8px solid white;">
-									<img src="<?php echo esc_url( $settings['info_image']['url'] ); ?>" alt="Clinical Transparency" style="width: 100%; height: 700px; object-fit: cover;">
+								<div style="position: relative; border-radius: clamp(40px, 8vw, 80px); overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.12); border: 8px solid white;">
+									<img src="<?php echo esc_url( $settings['info_image']['url'] ); ?>" alt="Clinical Transparency" style="width: 100%; height: clamp(300px, 50vh, 700px); object-fit: cover;">
 									<div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, rgba(15, 23, 42, 0.4));"></div>
 								</div>
 
@@ -287,8 +320,6 @@ class Otic_Treatment_Fees_Page_Widget extends Widget_Base {
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
 				</div>
 			</section>
 
